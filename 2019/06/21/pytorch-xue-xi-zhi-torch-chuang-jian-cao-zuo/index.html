@@ -4,9 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="pytorch,你好, Mrs.GUO的个人博客">
-    <meta name="description" content="你好
-">
+    <meta name="keywords" content="Pytorch学习之torch----创建操作, Mrs.GUO的个人博客">
+    <meta name="description" content="1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
+
+n – 行数，
+m – 列数，如果为None，默认等于n，
+out – 输出张量&gt;&gt;&gt;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>pytorch,你好 | Mrs.GUO的个人博客</title>
+    <title>Pytorch学习之torch----创建操作 | Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +264,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        pytorch,你好
+                        Pytorch学习之torch----创建操作
                     </div>
                 </div>
             </div>
@@ -382,10 +385,27 @@
                                 <span class="chip bg-color">Pytorch</span>
                             </a>
                         
+                            <a href="/tags/人工智能/" target="_blank">
+                                <span class="chip bg-color">人工智能</span>
+                            </a>
+                        
+                            <a href="/tags/编程框架/" target="_blank">
+                                <span class="chip bg-color">编程框架</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
+                                Pytorch
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -400,7 +420,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2
+                        94
                     </div>
                     
 
@@ -423,7 +443,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>你好</p>
+                <h3 id="1-torch-eye-n-m-None-out-None"><a href="#1-torch-eye-n-m-None-out-None" class="headerlink" title="1. torch.eye(n, m=None, out=None)"></a>1. torch.eye(n, m=None, out=None)</h3><p><strong>说明：</strong> 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。<br><strong>参数：</strong></p>
+<ul>
+<li>n – 行数，</li>
+<li>m – 列数，如果为None，默认等于n，</li>
+<li>out – 输出张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> torch
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>eye<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>eye<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -582,9 +616,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《pytorch,你好》
+                    《Pytorch学习之torch----创建操作》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/21/pytorch-ni-hao/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Mrs.GUO
             </a> 采用
@@ -629,20 +663,23 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2019/06/21/pytorch-ni-hao/">
+                <a href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="pytorch,你好">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch学习之torch----创建操作">
                         
-                        <span class="card-title">pytorch,你好</span>
+                        <span class="card-title">Pytorch学习之torch----创建操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你好
+                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
 
+n – 行数，
+m – 列数，如果为None，默认等于n，
+out – 输出张量>>>
                         
                     </div>
                     <div class="publish-info">
@@ -651,8 +688,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            Mrs.GUO
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
+                                    Pytorch
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -665,6 +706,14 @@
                         <span class="chip bg-color">Pytorch</span>
                     </a>
                     
+                    <a href="/tags/人工智能/" target="_blank">
+                        <span class="chip bg-color">人工智能</span>
+                    </a>
+                    
+                    <a href="/tags/编程框架/" target="_blank">
+                        <span class="chip bg-color">编程框架</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -673,23 +722,26 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/21/ni-hao-hexo/">
+                <a href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="你好,Hexo">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch学习之torch----创建操作">
                         
-                        <span class="card-title">你好,Hexo</span>
+                        <span class="card-title">Pytorch学习之torch----创建操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Hexo，是非常简单的一件事，测试文本。
+                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
 
+n – 行数，
+m – 列数，如果为None，默认等于n，
+out – 输出张量>>>
                         
                     </div>
                     <div class="publish-info">
@@ -700,31 +752,28 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/搭建博客/" class="post-category" target="_blank">
-                                    搭建博客
+                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
+                                    Pytorch
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Pytorch/" target="_blank">
+                        <span class="chip bg-color">Pytorch</span>
                     </a>
                     
-                    <a href="/tags/github/" target="_blank">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/人工智能/" target="_blank">
+                        <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/npm/" target="_blank">
-                        <span class="chip bg-color">npm</span>
-                    </a>
-                    
-                    <a href="/tags/基础/" target="_blank">
-                        <span class="chip bg-color">基础</span>
+                    <a href="/tags/编程框架/" target="_blank">
+                        <span class="chip bg-color">编程框架</span>
                     </a>
                     
                 </div>
@@ -882,7 +931,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">91</span>
+                <span class="white-color">94</span>
             
 
             
