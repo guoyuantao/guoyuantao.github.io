@@ -420,7 +420,7 @@ out – 输出张量&gt;&gt;&gt;">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        94
+                        322
                     </div>
                     
 
@@ -456,6 +456,29 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="2-torch-from-numpy-ndarray"><a href="#2-torch-from-numpy-ndarray" class="headerlink" title="2. torch.from_numpy(ndarray)"></a>2. torch.from_numpy(ndarray)</h3></li>
+</ul>
+<p><strong>说明：</strong> 将numpy.ndarray转换为Tensor。返回的Tensor和numpy的ndarray共享同一内存空间。修改一个会导致另外一个也被修改。返回的张量不能调整大小。</p>
+<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> numpy
+<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> numpy<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> t <span class="token operator">=</span> torch<span class="token punctuation">.</span>from_numpy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> t
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>int32<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> t<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="3-torch-linspace-start-end-steps-100-out-None"><a href="#3-torch-linspace-start-end-steps-100-out-None" class="headerlink" title="3. torch.linspace(start, end, steps=100, out=None)"></a>3. torch.linspace(start, end, steps=100, out=None)</h3><p><strong>说明：</strong> 返回start和end之间长度为steps的一维张量，也就是start和end之间的steps个数。并且其返回的是一个等差数列。<br><strong>参数：</strong></p>
+<ul>
+<li>start(float) – 点集的起始值，</li>
+<li>end(float) – 点集的最终值，</li>
+<li>steps(int) – start和end之间的采样数，即返回多少个数</li>
+<li>out(Tensor,可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> steps<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span>   <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span>   <span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">10</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.0000</span><span class="token punctuation">,</span> <span class="token number">1.2500</span><span class="token punctuation">,</span> <span class="token number">2.5000</span><span class="token punctuation">,</span> <span class="token number">3.7500</span><span class="token punctuation">,</span> <span class="token number">5.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span>start<span class="token operator">=</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> steps<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10.0000</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">7.7778</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">5.5556</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">3.3333</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">1.1111</span><span class="token punctuation">,</span>   <span class="token number">1.1111</span><span class="token punctuation">,</span>   <span class="token number">3.3333</span><span class="token punctuation">,</span>
+        <span class="token number">5.5556</span><span class="token punctuation">,</span>   <span class="token number">7.7778</span><span class="token punctuation">,</span>  <span class="token number">10.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 </li>
 </ul>
 
@@ -931,7 +954,7 @@ out – 输出张量>>>
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">94</span>
+                <span class="white-color">322</span>
             
 
             
