@@ -4,12 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Pytorch学习之torch----创建操作, Mrs.GUO的个人博客">
-    <meta name="description" content="1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
+    <meta name="keywords" content="Mrs.GUO的个人博客">
+    <meta name="description" content="1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。
+参数：
 
 n – 行数，
 m – 列数，如果为None，默认等于n，
-out – 输出张量&gt;&gt;&gt;">
+out – 输出张量&gt;&gt;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@ out – 输出张量&gt;&gt;&gt;">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Pytorch学习之torch----创建操作 | Mrs.GUO的个人博客</title>
+    <title>Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -264,13 +265,13 @@ out – 输出张量&gt;&gt;&gt;">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Pytorch学习之torch----创建操作
+                        
                     </div>
                 </div>
             </div>
@@ -379,33 +380,12 @@ out – 输出张量&gt;&gt;&gt;">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Pytorch/" target="_blank">
-                                <span class="chip bg-color">Pytorch</span>
-                            </a>
-                        
-                            <a href="/tags/人工智能/" target="_blank">
-                                <span class="chip bg-color">人工智能</span>
-                            </a>
-                        
-                            <a href="/tags/编程框架/" target="_blank">
-                                <span class="chip bg-color">编程框架</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                Pytorch
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -413,21 +393,21 @@ out – 输出张量&gt;&gt;&gt;">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-21
+                    2019-06-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        322
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        5 分
                     </div>
                     
                 
@@ -443,7 +423,8 @@ out – 输出张量&gt;&gt;&gt;">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-torch-eye-n-m-None-out-None"><a href="#1-torch-eye-n-m-None-out-None" class="headerlink" title="1. torch.eye(n, m=None, out=None)"></a>1. torch.eye(n, m=None, out=None)</h3><p><strong>说明：</strong> 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。<br><strong>参数：</strong></p>
+                <h3 id="1-torch-eye-n-m-None-out-None"><a href="#1-torch-eye-n-m-None-out-None" class="headerlink" title="1. torch.eye(n, m=None, out=None)"></a>1. torch.eye(n, m=None, out=None)</h3><p><strong>说明：</strong> 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。</p>
+<p><strong>参数：</strong></p>
 <ul>
 <li>n – 行数，</li>
 <li>m – 列数，如果为None，默认等于n，</li>
@@ -479,8 +460,91 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 <span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span>start<span class="token operator">=</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> steps<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
 tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10.0000</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">7.7778</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">5.5556</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">3.3333</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">1.1111</span><span class="token punctuation">,</span>   <span class="token number">1.1111</span><span class="token punctuation">,</span>   <span class="token number">3.3333</span><span class="token punctuation">,</span>
         <span class="token number">5.5556</span><span class="token punctuation">,</span>   <span class="token number">7.7778</span><span class="token punctuation">,</span>  <span class="token number">10.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="4-torch-logspace-start-end-steps-100-out-None"><a href="#4-torch-logspace-start-end-steps-100-out-None" class="headerlink" title="4. torch.logspace(start, end, steps=100, out=None)"></a>4. torch.logspace(start, end, steps=100, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回一个1维张量，包含在区间和上，以对数刻度均匀间隔的steps个点。输出1维张量的长度为steps。<br><strong>参数：</strong></p>
+<ul>
+<li>start(float) – 点集的起始点</li>
+<li>end(float) – 点集的最终点</li>
+<li>steps(int) – 在start和end间生成的样本数</li>
+<li>out(Tensor,可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>logspace<span class="token punctuation">(</span>start<span class="token operator">=</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> steps<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0000e-10</span><span class="token punctuation">,</span> <span class="token number">1.0000e-05</span><span class="token punctuation">,</span> <span class="token number">1.0000e+00</span><span class="token punctuation">,</span> <span class="token number">1.0000e+05</span><span class="token punctuation">,</span> <span class="token number">1.0000e+10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>logspace<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">1.2589</span><span class="token punctuation">,</span>  <span class="token number">2.1135</span><span class="token punctuation">,</span>  <span class="token number">3.5481</span><span class="token punctuation">,</span>  <span class="token number">5.9566</span><span class="token punctuation">,</span> <span class="token number">10.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="5-torch-ones-sizes-out-None"><a href="#5-torch-ones-sizes-out-None" class="headerlink" title="5. torch.ones(*sizes, out=None)"></a>5. torch.ones(*sizes, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回一个全为1的张量，形状由可变参数sizes定义。<br><strong>参数：</strong></p>
+<ul>
+<li>sizes(int) – 整数序列，定义了输出的形状。如(3,3）</li>
+<li>out(Tensor, 可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="6-torch-rand-size-out-None"><a href="#6-torch-rand-size-out-None" class="headerlink" title="6. torch.rand(*size, out=None)"></a>6. torch.rand(*size, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回一个张量，填充在[0,1]区间的一组均匀分布随机数。Tensor的形状由变量sizes定义。<br><strong>参数：</strong></p>
+<ul>
+<li>sizes(int) – 整数序列，定义了输出形状</li>
+<li>out(Tensor, 可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.4962</span><span class="token punctuation">,</span> <span class="token number">0.0724</span><span class="token punctuation">,</span> <span class="token number">0.0478</span><span class="token punctuation">,</span> <span class="token number">0.3524</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.3200</span><span class="token punctuation">,</span> <span class="token number">0.7308</span><span class="token punctuation">,</span> <span class="token number">0.3226</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0.8039</span><span class="token punctuation">,</span> <span class="token number">0.2359</span><span class="token punctuation">,</span> <span class="token number">0.7256</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="7-torch-randn-size-out-None"><a href="#7-torch-randn-size-out-None" class="headerlink" title="7. torch.randn(*size, out=None)"></a>7. torch.randn(*size, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回一个张量，包含了从正态分布(均值为0，方差为1)中抽取一组随机数。Tensor的形状由变量sizes定义。<br><strong>参数：</strong></p>
+<ul>
+<li>sizes(int) – 整数序列，定义了输出形状</li>
+<li>out(Tensor, 可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.3094</span><span class="token punctuation">,</span>  <span class="token number">0.4774</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.1807</span><span class="token punctuation">,</span>  <span class="token number">0.9894</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.3299</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.0495</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.4758</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.0680</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.3875</span><span class="token punctuation">,</span>  <span class="token number">0.9846</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="8-torch-randperm-n-out-None"><a href="#8-torch-randperm-n-out-None" class="headerlink" title="8. torch.randperm(n, out=None)"></a>8. torch.randperm(n, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回以LongTenor，输入参数n，返回一个从0到n-1的随机整数排列。<br><strong>参数：</strong></p>
+<ul>
+<li>n(int) – 上限，即最大值。<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>randperm<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="9-torch-arange-start-end-step-1-out-None"><a href="#9-torch-arange-start-end-step-1-out-None" class="headerlink" title="9. torch.arange(start, end, step=1, out=None)"></a>9. torch.arange(start, end, step=1, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong>  返回一个1维张量，长度为，中间计算值，向下取整的意思。包含从start到end，以step为步长的一组序列值。默认步长为1。<br><strong>参数：</strong></p>
+<ul>
+<li>start(float) – 该点集的起始点</li>
+<li>end(float) – 点集的终止点</li>
+<li>step(float) – 相邻点的间隔大小</li>
+<li>out(Tensor, 可选的) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0000</span><span class="token punctuation">,</span> <span class="token number">1.5000</span><span class="token punctuation">,</span> <span class="token number">2.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="10-torch-range-start-end-step-1-out-None"><a href="#10-torch-range-start-end-step-1-out-None" class="headerlink" title="10. torch.range(start, end, step=1, out=None)"></a>10. torch.range(start, end, step=1, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong> 返回一维张量，长度为+1，从start开始，到end结束。以step为步长的一组值。step是两个值之间的间隔。<br><strong>参数：</strong></p>
+<ul>
+<li>start(float) – 点集的起始点</li>
+<li>end(float) – 点集的最终值</li>
+<li>step(int) – 相邻点之间的间隔大小</li>
+<li>out(Tensor, 可选的) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+__main__<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">:</span> UserWarning<span class="token punctuation">:</span> torch<span class="token punctuation">.</span>range <span class="token keyword">is</span> deprecated <span class="token keyword">in</span> favor of torch<span class="token punctuation">.</span>arange <span class="token operator">and</span> will be removed <span class="token keyword">in</span> <span class="token number">0.5</span><span class="token punctuation">.</span> Note that arange generates values <span class="token keyword">in</span> <span class="token punctuation">[</span>start<span class="token punctuation">;</span> end<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">not</span> <span class="token punctuation">[</span>start<span class="token punctuation">;</span> end<span class="token punctuation">]</span><span class="token punctuation">.</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0000</span><span class="token punctuation">,</span> <span class="token number">1.5000</span><span class="token punctuation">,</span> <span class="token number">2.0000</span><span class="token punctuation">,</span> <span class="token number">2.5000</span><span class="token punctuation">,</span> <span class="token number">3.0000</span><span class="token punctuation">,</span> <span class="token number">3.5000</span><span class="token punctuation">,</span> <span class="token number">4.0000</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="11-torch-zeros-size-out-None"><a href="#11-torch-zeros-size-out-None" class="headerlink" title="11. torch.zeros(*size, out=None)"></a>11. torch.zeros(*size, out=None)</h3></li>
+</ul>
+<p><strong>说明：</strong>返回一个全0的张量，形状由可变参数sizes定义。<br><strong>参数：</strong></p>
+<ul>
+<li>sizes(int) – 整数序列，定义了输出形状</li>
+<li>out(Tensor, 可选) – 结果张量<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 </li>
 </ul>
+<p><strong>总结：</strong> 这部分内容主要是创建操作，创建一些随机数，或者是矩阵。在pytorch中，他们都是张量类型。简单的创建操作。反复练习。方可掌握。如果有numpy的基础。那就更加容易学习。其实无论numpy，tensorflow，pytorch等。在创建一些随机数/矩阵中，他们都是相同的。只不过是存在不同的第三方库中。</p>
 
             </div>
             <hr/>
@@ -639,9 +703,9 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Pytorch学习之torch----创建操作》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/22/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Mrs.GUO
             </a> 采用
@@ -686,58 +750,39 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
+                <a href="/2019/06/22/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch学习之torch----创建操作">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Pytorch学习之torch----创建操作</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
+                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。
+参数：
 
 n – 行数，
 m – 列数，如果为None，默认等于n，
-out – 输出张量>>>
+out – 输出张量>>
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            Mrs.GUO
                             
                         </span>
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
-                    </a>
-                    
-                    <a href="/tags/人工智能/" target="_blank">
-                        <span class="chip bg-color">人工智能</span>
-                    </a>
-                    
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -748,58 +793,39 @@ out – 输出张量>>>
                 本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
+                <a href="/2019/06/22/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch学习之torch----创建操作">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Pytorch学习之torch----创建操作</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。参数：
+                            1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。
+参数：
 
 n – 行数，
 m – 列数，如果为None，默认等于n，
-out – 输出张量>>>
+out – 输出张量>>
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            Mrs.GUO
                             
                         </span>
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
-                    </a>
-                    
-                    <a href="/tags/人工智能/" target="_blank">
-                        <span class="chip bg-color">人工智能</span>
-                    </a>
-                    
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -954,7 +980,7 @@ out – 输出张量>>>
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">322</span>
+                <span class="white-color">1.2k</span>
             
 
             
