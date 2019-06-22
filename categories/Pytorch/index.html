@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, Mrs.GUO的个人博客">
-    <meta name="description" content="标签 | Mrs.GUO的个人博客">
+    <meta name="keywords" content="分类: Pytorch, Mrs.GUO的个人博客">
+    <meta name="description" content="分类: Pytorch | Mrs.GUO的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>标签 | Mrs.GUO的个人博客</title>
+    <title>分类: Pytorch | Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -286,40 +286,24 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Pytorch/" title="Pytorch: 1">
+                
+                <a href="/categories/Pytorch/" title="Pytorch: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Pytorch" style="background-color: #F9EBEA;">Pytorch
+                             chip-active "
+                            style="background-color: #F9EBEA;">Pytorch
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
-                
-                <a href="/tags/人工智能/" title="人工智能: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="人工智能" style="background-color: #F5EEF8;">人工智能
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/编程框架/" title="编程框架: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="编程框架" style="background-color: #D5F5E3;">编程框架
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
@@ -327,31 +311,73 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/06/21/pytorch-xue-xi-zhi-torch-chuang-jian-cao-zuo/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch学习之torch----创建操作">
+                            
+                            <span class="card-title">Pytorch学习之torch----创建操作</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1. torch.eye(n, m=None, out=None)说明： 创建一个2维张量，对角线数字为1， 其他位置为0。也就是一个单位矩阵。
+参数：
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
+n – 行数，
+m – 列数，如果为None，默认等于n，
+out – 输出张量>>
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Pytorch/" class="post-category" target="_blank">
+                                    Pytorch
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    $('#tag-wordcloud').jQCloud([{"text":"Pytorch","weight":1,"link":"http://guoyuantao.github.io/tags/Pytorch/"},{"text":"人工智能","weight":1,"link":"http://guoyuantao.github.io/tags/人工智能/"},{"text":"编程框架","weight":1,"link":"http://guoyuantao.github.io/tags/编程框架/"}], {
-        autoResize: true
-    });
-</script>
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Pytorch/" target="_blank">
+                            <span class="chip bg-color">Pytorch</span>
+                        </a>
+                        
+                        <a href="/tags/人工智能/" target="_blank">
+                            <span class="chip bg-color">人工智能</span>
+                        </a>
+                        
+                        <a href="/tags/编程框架/" target="_blank">
+                            <span class="chip bg-color">编程框架</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
