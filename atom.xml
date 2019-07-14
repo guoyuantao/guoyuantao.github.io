@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoyuantao.github.io/"/>
-  <updated>2019-06-23T08:30:16.184Z</updated>
+  <updated>2019-07-14T07:41:15.684Z</updated>
   <id>http://guoyuantao.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pytorch学习之torch----比较操作</title>
+    <link href="http://guoyuantao.github.io/2019/07/14/pytorch-xue-xi-zhi-torch-bi-jiao-cao-zuo-comparison-ops/"/>
+    <id>http://guoyuantao.github.io/2019/07/14/pytorch-xue-xi-zhi-torch-bi-jiao-cao-zuo-comparison-ops/</id>
+    <published>2019-07-14T07:41:30.000Z</published>
+    <updated>2019-07-14T07:41:15.684Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-torch-eq-input-other-out-None&quot;&gt;&lt;a href=&quot;#1-torch-eq-input-other-out-None&quot; class=&quot;headerlink&quot; title=&quot;1. torch.eq(input, other,
+        
+      
+    
+    </summary>
+    
+      <category term="Pytorch" scheme="http://guoyuantao.github.io/categories/Pytorch/"/>
+    
+    
+      <category term="Pytorch" scheme="http://guoyuantao.github.io/tags/Pytorch/"/>
+    
+      <category term="人工智能" scheme="http://guoyuantao.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="编程框架" scheme="http://guoyuantao.github.io/tags/%E7%BC%96%E7%A8%8B%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pytorch学习之torch----Reduction Ops</title>
+    <link href="http://guoyuantao.github.io/2019/07/14/pytorch-xue-xi-zhi-torch-reduction-ops/"/>
+    <id>http://guoyuantao.github.io/2019/07/14/pytorch-xue-xi-zhi-torch-reduction-ops/</id>
+    <published>2019-07-14T06:29:30.000Z</published>
+    <updated>2019-07-14T07:42:49.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-torch-cumprod-input-dim-out-None&quot;&gt;&lt;a href=&quot;#1-torch-cumprod-input-dim-out-None&quot; class=&quot;headerlink&quot; title=&quot;1. torch.cumprod(input,
+        
+      
+    
+    </summary>
+    
+      <category term="Pytorch" scheme="http://guoyuantao.github.io/categories/Pytorch/"/>
+    
+    
+      <category term="Pytorch" scheme="http://guoyuantao.github.io/tags/Pytorch/"/>
+    
+      <category term="人工智能" scheme="http://guoyuantao.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="编程框架" scheme="http://guoyuantao.github.io/tags/%E7%BC%96%E7%A8%8B%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Pytorch学习之torch----数学操作(二)</title>
