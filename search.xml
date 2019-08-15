@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>AI圣经《深度学习》读书笔记----第一章：引言</title>
+      <link href="/2019/08/15/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-yi-zhang-yin-yan/"/>
+      <url>/2019/08/15/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-yi-zhang-yin-yan/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这本书从我开始学习深度学习时，就买了这本书。但是，因为自身知识储备不够，觉得这本书很难。多次想学习这本书，但是都失败了。距离本次学习，已经时隔一年。希望这次能将这本书看完，学习书中的知识。并通过博客的方式，记录自己学习的过程和对知识进行总结。</p></blockquote><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所谓的人工智能就是让机器具有智能，能像人类一样处理事务。具有人的智能。目前，人工智能已经成为一个具有众多实际应用和活跃研究课题的领域，并这在蓬勃发展，我们希望通过智能软件自动地处理常规劳动、理解语音或图像、帮助医学诊断和支持基础科学研究。在人工智能的早期，那些对人类智力来说比较困难，但对计算机来说很简单的问题得到迅速解决。比如说可以用一系列形式化的数学规则来描述的问题。然而，<font color="red" size="3">人工智能真正的挑战是解决那些对人类来说很容易做到，但是很难形式化的任务。</font>例如，识别图像中的物体。本书给出一种解决方案，该方案可以让计算机从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。我们称这种方法为 <strong>AI深度学习</strong>。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的一个关键挑战就是如何一些非形式化的知识传达给计算机。一些人工智能项目将关于世界得知识用形式化的语言进行硬编码。然后计算机可以通过逻辑推理规则自动地理解这些形式化语言中的声明。这就是众所周知的<strong>知识库</strong>方法。但是这些声明是人类监督者输入的，它没有足够的形式化规则来精确地描述世界。因此，AI系统具备自己获取知识的能力，<font color="red" size="3">即从原始数据从提取模式的能力。</font>这种能力叫做<strong>机器学习</strong>。机器学习算法的性能依赖于<strong>数据的表示</strong>。例如一个称为逻辑回归的简单算法，用它判断产妇是否适合剖腹产时，AI系统不能直接检查患者，需要医生给出患者的相关信息。表示患者的每条信息称为一个特征。<font color="red" size="3">逻辑回归学习病人的这些特征如何与各种结果相关联。</font>因此，表示的选择对机器学习算法的性能产生巨大的影响。许多问题都是先提取一个合适的特征集，然后将这些特征提供给简单的机器学习算法。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，提取特征来说是一件很难的事情，依靠人类来说，并不知道应该提取那些特征。因此，解决这个问题的途径是使用机器学习来发掘表示的本身，而不仅仅是把表示映射到输出，这种方法我们称为<strong>表示学习</strong>。<font color="red" size="3">学习到的表示往往比手动设计的表示表现的更好。</font>表示学习的典型例子是自编码器，自编码器由一个编码器和一个解码器组成。编码器函数就是将输入数据转换为一种不同的表示。当设计特征或设计用于学习特征的算法时，我们的目标是分离出能解释观察数据的<strong>变差因素</strong>。这些因素不能被直接观察到的量，但会影响可观测的量。有时具有多个变差因素时，会影响到我们观察到的每个数据。而<strong>深度学习</strong>通过其他较简单的表示来表达复杂表示，解决了表示学习中的核心问题。深度学习让计算机通过简单的概念构造复杂的概念。典型例子是多层感知器。它是一个将一组输入映射到输出值的数学函数。该函数由许多简单的函数复合而成。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深度学习是通向人工智能的途径之一，是机器学习的一种，能够使计算机系统从经验和数据中得到提高的技术。<font color="red" size="3">深度学习是一种特定类型的机器学习，具有强大的能力和灵活性，它将大千世界表示为嵌套的层次概念体系(由简单概念间的联系定义复杂概念、从一般抽象概括到高级抽象表示。</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用维恩图表示深度学习的关系。<br><img src="https://img-blog.csdnimg.cn/20190815195543929.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_8,color_FFFFFF,t_70" alt><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下图展示AI系统在不同的AI学科中彼此相关，阴影框表示能从数据中学习的组件。<br><img src="https://img-blog.csdnimg.cn/20190815201143926.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt></p><h3 id="二、深度学习的发展"><a href="#二、深度学习的发展" class="headerlink" title="二、深度学习的发展"></a>二、深度学习的发展</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的历史要追溯到1956年的达特茅斯会议，其实早在这之前就提过。只是达特茅斯会议算是一个正式的提出。有兴趣研究人工智能历史的可以去读《人工智能简史》这本书。深度学习的历史可以总结为经历了3次发展浪潮。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>20世界40年代到60年代，</strong> 深度学习的雏形出现在控制论中。随着生物学习理论的发展和一个模型的实现，能实现单个神经元的训练。感知机是第一个能根据每个类别的输入样本来学习权重的模型，在同一时期，自适应线性单元简单地返回函数f(x)本身的值来预测一个实数，并且它还可以学习从数据预测这些数。基于感知机和自适应线性单元中使用的函数f(x,w)的模型称为线性模型。但是这种线性模型存在局限性，最著名的是无法解决异或问题。这也导致了神经网络热潮的第一次大衰退。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>20世纪80年代到90年代</strong>，深度学习表现为联结主义。联结主义在认知科学的背景下出现的。认知科学是理解思维的跨学科途径，即它融合多个不同的分析层次。20世纪80年代初期，大多数认知科学家研究符号推理模型。但符号模型很难解释大脑如何真正使用神经元实现推理功能。联结主义者开始研究真正基于神经系统实现的认知模型。<font color="red" size="3">联结主义的中心思想是，当网络将大量简单的计算单元连接在一起时可以实现智能行为。</font>其中一个概念是分布式表示，思想是：系统的每一个输入都应该由多个特征表示，并且每一个特征都应该参与到多个可能输入的表示。联结主义潮流的另一个重要成就是反向传播在训练具有内部表示的深度神经网络中的成功使用以及反向传播算法的普及。神经网络的第二次浪潮一直持续到20世纪90年代中期，由于基于神经网络的深度学习并不能满足应用的需要，而同时其他机器学习方法取得了进步。这两个因素导致了神经网络浪潮的第二次衰退。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>2006年至今，</strong> 人工智能的第三次浪潮在2006年，以深度学习之名复兴。起因是Geoffrey Hinton大神名为“深度信念网络”的神经网络可以使用一种“贪婪逐层预训练”的策略有效地训练。从此，深度学习的浪潮一直持续至今。第三次浪潮开始着眼于新的无监督学习技术和深度模型在小数据集的泛化能力。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前，深度学习的发展已经为人类的生活带来了很多应用。如在人脸识别，目标检测，机器翻译，语言识别等。深度学习的发展伴随着三个方面的发展。**一是，数据量的增大。二是，模型的规模变大。三是，精度的提高以及对现实世界的影响。深度学习能发展的这么好，也是因为数据量的增大，深度学习的模型是基于数据的。从MNIST到ImageNet。数据越来越大。<font color="red" size="3">截止2016年，一个经验法则是，监督深度学习算法在每类给定约5000个标注样本情况下一般将达到可以接受的性能，当至少有1000万个标注样本的数据集用于训练时，它将到达或超过人类表现。</font>。随着数据的增加。深度学习模型的规模也在增加，体现在参数的增加。人工神经网络的规模大概每2.4年增加一倍。但是与人类的神经元还是差很多。这也意味着计算机的计算能力要增加。最后，随着数据和模型的进化，带来的是实际问题上精度的提高。可以将一些模型应用到实际的问题中，解决实际的生活问题。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深度学习的发展解决了现实生活中的实际问题，为我们的生活带来了方便。也让我们看到了人工智能的曙光。未来的很长时间。深度学习都将是主要的研究方向。</p><blockquote><p>友情链接：<br>github主页：<a href="https://github.com/guoyuantao" target="_blank" rel="noopener">https://github.com/guoyuantao</a><br>CSDN博客：<a href="https://blog.csdn.net/gyt15663668337" target="_blank" rel="noopener">https://blog.csdn.net/gyt15663668337</a><br>个人博客主页：<a href="https://guoyuantao.github.io/">https://guoyuantao.github.io/</a><br>QQ讨论群：218803539</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 读书笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pytorch学习之torch----比较操作</title>
       <link href="/2019/07/14/pytorch-xue-xi-zhi-torch-bi-jiao-cao-zuo-comparison-ops/"/>
       <url>/2019/07/14/pytorch-xue-xi-zhi-torch-bi-jiao-cao-zuo-comparison-ops/</url>
