@@ -420,14 +420,14 @@ other(Tenosr or">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        1.8k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        8 分
                     </div>
                     
                 
@@ -605,6 +605,65 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 torch<span class="token punctuation">.</span>return_types<span class="token punctuation">.</span>min<span class="token punctuation">(</span>
 values<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.7382</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.2856</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.0284</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2.3428</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 indices<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h3 id="13-torch-ne-input-other-out-None"><a href="#13-torch-ne-input-other-out-None" class="headerlink" title="13. torch.ne(input, other, out=None)"></a>13. torch.ne(input, other, out=None)</h3><p><strong>说明：</strong> 逐元素比较input和other，即是否input 不等于 other。第二个参数可以为一个数或与第一个参数相同形状和类型的张量</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>input(Tensor) —- 待对比的张量</li>
+<li>other(Tensor or float) —- 对比的张量或float值</li>
+<li>out(Tensor, 可选的) —- 输出张量</li>
+</ul>
+<p>** 返回值：** 一个torch.ByteTensor 张量，包含了每个位置的比较结果，如果tensor和other不相等为True，返回1.</p>
+<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> torch
+<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>ne<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span></code></pre>
+<h3 id="14-torch-sort-input-dim-None-descending-False-out-None"><a href="#14-torch-sort-input-dim-None-descending-False-out-None" class="headerlink" title="14. torch.sort(input, dim=None, descending=False, out=None)"></a>14. torch.sort(input, dim=None, descending=False, out=None)</h3><p><strong>说明：</strong> 对输入张量input沿指定维度按升序排序，如果不给定dim，则默认为输入的最后一维。如果指定参数descending为True，则按降序排序。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>input(Tensor) —- 要排序的张量</li>
+<li>dim(int,可选的) —- 沿着此维度排序</li>
+<li>descending(bool,可选的) —- 布尔值，控制升序排序</li>
+<li>out(tuple,可选的) —- 输出张量</li>
+</ul>
+<p><strong>返回值：</strong> 为ByteTensor类型或与tensor相同类型，为元组(sorted_tensor,sorted_indices)，sorted_indices为原始输入中的下标</p>
+<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> x <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> x
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.3613</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2583</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.4276</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.3106</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.1577</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.7505</span><span class="token punctuation">,</span>  <span class="token number">1.7217</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.6247</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.1338</span><span class="token punctuation">,</span>  <span class="token number">0.4423</span><span class="token punctuation">,</span>  <span class="token number">0.0280</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.4796</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> sorted<span class="token punctuation">,</span> indices <span class="token operator">=</span> torch<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> sorted
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.3106</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.4276</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.3613</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2583</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.1577</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.7505</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.6247</span><span class="token punctuation">,</span>  <span class="token number">1.7217</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.4796</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.1338</span><span class="token punctuation">,</span>  <span class="token number">0.0280</span><span class="token punctuation">,</span>  <span class="token number">0.4423</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> indices
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="15-torch-topk-input-dim-None-largest-True-sorted-True-out-None"><a href="#15-torch-topk-input-dim-None-largest-True-sorted-True-out-None" class="headerlink" title="15. torch.topk(input, dim=None, largest=True, sorted=True, out=None)"></a>15. torch.topk(input, dim=None, largest=True, sorted=True, out=None)</h3><p><strong>说明：</strong> 沿指定dim维度返回输入张量input中k个最大值。如果不指定dim，则默认input的最后一维，如果largest为False，则返回最小的k个值。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>input(Tensor) —- 输入张量</li>
+<li>k(int) —- “top-k”中的k值</li>
+<li>dim(int,可选的) —- 排序的维度</li>
+<li>largest(bool,可选的) —- 布尔值，控制返回最大或最小值</li>
+<li>sorted(bool,可选的) —- 布尔值，控制返回值是否排序</li>
+<li>out(tuple,可选的) —- 可选输出张量</li>
+</ul>
+<p><strong>返回值：</strong> 返回一个元组(values, indices)，其中indices是原始输入张量input中排序元素下标。如果设定布尔值sorted为True，将会确保返回的k个值被排序</p>
+<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> x <span class="token operator">=</span> torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> x
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>topk<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+torch<span class="token punctuation">.</span>return_types<span class="token punctuation">.</span>topk<span class="token punctuation">(</span>
+values<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+indices<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>topk<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> largest<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+torch<span class="token punctuation">.</span>return_types<span class="token punctuation">.</span>topk<span class="token punctuation">(</span>
+values<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+indices<span class="token operator">=</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
             </div>
             <hr/>
@@ -1073,7 +1132,7 @@ other(Tenosr or
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">10.8k</span>
+                <span class="white-color">11.3k</span>
             
 
             
