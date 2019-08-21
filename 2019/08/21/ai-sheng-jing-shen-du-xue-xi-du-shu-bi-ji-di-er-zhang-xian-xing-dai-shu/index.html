@@ -4,9 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="AI圣经《深度学习》读书笔记----第一章：引言, Mrs.GUO的个人博客">
+    <meta name="keywords" content="AI圣经《深度学习》读书笔记----第二章：线性代数, Mrs.GUO的个人博客">
     <meta name="description" content="
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这本书从我开始学习深度学习时，就买了这本书。但是，因为自身知识储备不够，觉得这本书很难。多次想学习这本书，但是都失败了。距离本次学习，已经时隔">
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;线性代数是数学的一个分支，应用于科学和工程中。线性代数主要是面向连续数学，而非离散数学。掌握好线性代数对于学习机器学习算法是必要的，尤其是深度">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>AI圣经《深度学习》读书笔记----第一章：引言 | Mrs.GUO的个人博客</title>
+    <title>AI圣经《深度学习》读书笔记----第二章：线性代数 | Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        AI圣经《深度学习》读书笔记----第一章：引言
+                        AI圣经《深度学习》读书笔记----第二章：线性代数
                     </div>
                 </div>
             </div>
@@ -410,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-15
+                    2019-08-21
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.6k
+                        2.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        9 分
+                        8 分
                     </div>
                     
                 
@@ -441,12 +441,33 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这本书从我开始学习深度学习时，就买了这本书。但是，因为自身知识储备不够，觉得这本书很难。多次想学习这本书，但是都失败了。距离本次学习，已经时隔一年。希望这次能将这本书看完，学习书中的知识。并通过博客的方式，记录自己学习的过程和对知识进行总结。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线性代数是数学的一个分支，应用于科学和工程中。线性代数主要是面向连续数学，而非离散数学。掌握好线性代数对于学习机器学习算法是必要的，尤其是深度学习算法。因此，本章学习必要的线性代数知识。</p>
 </blockquote>
-<h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所谓的人工智能就是让机器具有智能，能像人类一样处理事务。具有人的智能。目前，人工智能已经成为一个具有众多实际应用和活跃研究课题的领域，并这在蓬勃发展，我们希望通过智能软件自动地处理常规劳动、理解语音或图像、帮助医学诊断和支持基础科学研究。在人工智能的早期，那些对人类智力来说比较困难，但对计算机来说很简单的问题得到迅速解决。比如说可以用一系列形式化的数学规则来描述的问题。然而，<font color="red" size="3">人工智能真正的挑战是解决那些对人类来说很容易做到，但是很难形式化的任务。</font>例如，识别图像中的物体。本书给出一种解决方案，该方案可以让计算机从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。我们称这种方法为 <strong>AI深度学习</strong>。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的一个关键挑战就是如何一些非形式化的知识传达给计算机。一些人工智能项目将关于世界得知识用形式化的语言进行硬编码。然后计算机可以通过逻辑推理规则自动地理解这些形式化语言中的声明。这就是众所周知的<strong>知识库</strong>方法。但是这些声明是人类监督者输入的，它没有足够的形式化规则来精确地描述世界。因此，AI系统具备自己获取知识的能力，<font color="red" size="3">即从原始数据从提取模式的能力。</font>这种能力叫做<strong>机器学习</strong>。机器学习算法的性能依赖于<strong>数据的表示</strong>。例如一个称为逻辑回归的简单算法，用它判断产妇是否适合剖腹产时，AI系统不能直接检查患者，需要医生给出患者的相关信息。表示患者的每条信息称为一个特征。<font color="red" size="3">逻辑回归学习病人的这些特征如何与各种结果相关联。</font>因此，表示的选择对机器学习算法的性能产生巨大的影响。许多问题都是先提取一个合适的特征集，然后将这些特征提供给简单的机器学习算法。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，提取特征来说是一件很难的事情，依靠人类来说，并不知道应该提取那些特征。因此，解决这个问题的途径是使用机器学习来发掘表示的本身，而不仅仅是把表示映射到输出，这种方法我们称为<strong>表示学习</strong>。<font color="red" size="3">学习到的表示往往比手动设计的表示表现的更好。</font>表示学习的典型例子是自编码器，自编码器由一个编码器和一个解码器组成。编码器函数就是将输入数据转换为一种不同的表示。当设计特征或设计用于学习特征的算法时，我们的目标是分离出能解释观察数据的<strong>变差因素</strong>。这些因素不能被直接观察到的量，但会影响可观测的量。有时具有多个变差因素时，会影响到我们观察到的每个数据。而<strong>深度学习</strong>通过其他较简单的表示来表达复杂表示，解决了表示学习中的核心问题。深度学习让计算机通过简单的概念构造复杂的概念。典型例子是多层感知器。它是一个将一组输入映射到输出值的数学函数。该函数由许多简单的函数复合而成。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深度学习是通向人工智能的途径之一，是机器学习的一种，能够使计算机系统从经验和数据中得到提高的技术。<font color="red" size="3">深度学习是一种特定类型的机器学习，具有强大的能力和灵活性，它将大千世界表示为嵌套的层次概念体系(由简单概念间的联系定义复杂概念、从一般抽象概括到高级抽象表示。</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用维恩图表示深度学习的关系。<br><img src="https://img-blog.csdnimg.cn/20190815195543929.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_8,color_FFFFFF,t_70" alt><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下图展示AI系统在不同的AI学科中彼此相关，阴影框表示能从数据中学习的组件。<br><img src="https://img-blog.csdnimg.cn/20190815201143926.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt></p>
-<h3 id="二、深度学习的发展"><a href="#二、深度学习的发展" class="headerlink" title="二、深度学习的发展"></a>二、深度学习的发展</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的历史要追溯到1956年的达特茅斯会议，其实早在这之前就提过。只是达特茅斯会议算是一个正式的提出。有兴趣研究人工智能历史的可以去读《人工智能简史》这本书。深度学习的历史可以总结为经历了3次发展浪潮。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>20世界40年代到60年代，</strong> 深度学习的雏形出现在控制论中。随着生物学习理论的发展和一个模型的实现，能实现单个神经元的训练。感知机是第一个能根据每个类别的输入样本来学习权重的模型，在同一时期，自适应线性单元简单地返回函数f(x)本身的值来预测一个实数，并且它还可以学习从数据预测这些数。基于感知机和自适应线性单元中使用的函数f(x,w)的模型称为线性模型。但是这种线性模型存在局限性，最著名的是无法解决异或问题。这也导致了神经网络热潮的第一次大衰退。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>20世纪80年代到90年代</strong>，深度学习表现为联结主义。联结主义在认知科学的背景下出现的。认知科学是理解思维的跨学科途径，即它融合多个不同的分析层次。20世纪80年代初期，大多数认知科学家研究符号推理模型。但符号模型很难解释大脑如何真正使用神经元实现推理功能。联结主义者开始研究真正基于神经系统实现的认知模型。<font color="red" size="3">联结主义的中心思想是，当网络将大量简单的计算单元连接在一起时可以实现智能行为。</font>其中一个概念是分布式表示，思想是：系统的每一个输入都应该由多个特征表示，并且每一个特征都应该参与到多个可能输入的表示。联结主义潮流的另一个重要成就是反向传播在训练具有内部表示的深度神经网络中的成功使用以及反向传播算法的普及。神经网络的第二次浪潮一直持续到20世纪90年代中期，由于基于神经网络的深度学习并不能满足应用的需要，而同时其他机器学习方法取得了进步。这两个因素导致了神经网络浪潮的第二次衰退。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>2006年至今，</strong> 人工智能的第三次浪潮在2006年，以深度学习之名复兴。起因是Geoffrey Hinton大神名为“深度信念网络”的神经网络可以使用一种“贪婪逐层预训练”的策略有效地训练。从此，深度学习的浪潮一直持续至今。第三次浪潮开始着眼于新的无监督学习技术和深度模型在小数据集的泛化能力。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前，深度学习的发展已经为人类的生活带来了很多应用。如在人脸识别，目标检测，机器翻译，语言识别等。深度学习的发展伴随着三个方面的发展。**一是，数据量的增大。二是，模型的规模变大。三是，精度的提高以及对现实世界的影响。深度学习能发展的这么好，也是因为数据量的增大，深度学习的模型是基于数据的。从MNIST到ImageNet。数据越来越大。<font color="red" size="3">截止2016年，一个经验法则是，监督深度学习算法在每类给定约5000个标注样本情况下一般将达到可以接受的性能，当至少有1000万个标注样本的数据集用于训练时，它将到达或超过人类表现。</font>。随着数据的增加。深度学习模型的规模也在增加，体现在参数的增加。人工神经网络的规模大概每2.4年增加一倍。但是与人类的神经元还是差很多。这也意味着计算机的计算能力要增加。最后，随着数据和模型的进化，带来的是实际问题上精度的提高。可以将一些模型应用到实际的问题中，解决实际的生活问题。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深度学习的发展解决了现实生活中的实际问题，为我们的生活带来了方便。也让我们看到了人工智能的曙光。未来的很长时间。深度学习都将是主要的研究方向。</p>
+<h4 id="知识点一：标量、向量、矩阵和张量"><a href="#知识点一：标量、向量、矩阵和张量" class="headerlink" title="知识点一：标量、向量、矩阵和张量"></a>知识点一：标量、向量、矩阵和张量</h4><p><strong>标量(scalar)：</strong> 一个标量就是一个单独的数，不同于线性代数中研究的其他大部分对象。当介绍标量时，会明确标量的类型。<br><strong>向量(vector)：</strong> 一个向量是一列数。这些数是有序排列的，通过次序的索引，可以得到每个单独的数。表示为</p>
+<p>$$<br>x =<br>\begin{pmatrix}<br>x_{1}\<br>x_{2}\<br>\vdots\<br>x_{n}\<br>\end{pmatrix}<br>$$<br><strong>矩阵(matrix)：</strong> 矩阵是一个二维数组，其中的每一个元素由两个索引确定。一个2行2列的矩阵表示为<br>$$<br>A =<br>\begin{pmatrix}<br>A_{1,1}&amp;A_{1,2}\<br>A_{2,1}&amp;A_{2,2}\<br>\end{pmatrix}<br>$$<br><strong>张量(tensor)：</strong> 某些情况下，会讨论坐标超过两维的数组。一般地，一个数组中的元素分布在若干维坐标的规则网格中，我们称之为张量。<br><strong>转置：</strong> 矩阵的转置是以对角线为轴的镜像。从左上角到右下角的对角线称为主对角线。表示为$(A^T)<em>{i,j}=A</em>{j,i}$。向量可看作是只有一列的矩阵，那么向量的转置就是只有一行的矩阵。标量的转置等于其本身。</p>
+<h4 id="知识点二：矩阵的运算"><a href="#知识点二：矩阵的运算" class="headerlink" title="知识点二：矩阵的运算"></a>知识点二：矩阵的运算</h4><p> <strong>矩阵相加：</strong> 当矩阵形状相同时，矩阵对应位置的元素相加，表示为$C_{i,j}=A_{i,j}+B_{i,j}$。<br> <strong>标量和矩阵相加或相乘：</strong> 只需将标量与矩阵的每个元素相乘或相加。表示为$D_{i,j}=a<em>B_{i,j}+c$<br> *</em>矩阵和向量相加：** 就是将向量和矩阵的每一行相加。表示为$C_{i,j}=A_{i,j}+b_{j}$。这种方法类似于将向量展开成一个与矩阵同维度的矩阵，然后在相加。这种方式称为<strong>广播。</strong><br> <strong>矩阵相乘：</strong> 矩阵A和B相乘，矩阵A的列数必须和矩阵B的行数相等。表示为$C_{i,j}=\sum A_{i,k}B_{k,j}$。还有一种是矩阵元素对应乘积，也就是对应元素的乘积。</p>
+<h4 id="知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量"><a href="#知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量" class="headerlink" title="知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量"></a>知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量</h4><p> <strong>单位矩阵：</strong> 对角线为1，其他位置为0的矩阵，单位矩阵与任何向量相乘，都不会改变。<br>$$<br>A =<br>\begin{pmatrix}<br>A_{1,1}&amp;A_{1,2}\<br>A_{2,1}&amp;A_{2,2}\<br>\end{pmatrix}<br>$$<br><strong>逆矩阵：</strong> 矩阵A的逆矩阵记作$A^{-1}$，满足$A^{-1}A=I_{n}$。<br><strong>对角矩阵：</strong> 对角矩阵是在主对角线上含有非零元素，其他位置都为零。对角矩阵的逆矩阵就是将对角线元素取倒数。<br><strong>对称矩阵：</strong> 矩阵是转置和自己相等的矩阵。即$A=A^T$。<br><strong>单位向量：</strong> 是具有单位范数的向量。即$||x||_{2}=1$。<br><strong>正交矩阵：</strong> 指行向量和列向量是分别标准正交的方阵。标准正交是矩阵中的行向量或者列向量两两相乘等于0，并且范数为1.正交矩阵满足：<br>$$<br>A^TA=AA^T=I<br>$$<br>$$<br>A^{-1}=A^T<br>$$</p>
+<h4 id="知识点四：范数"><a href="#知识点四：范数" class="headerlink" title="知识点四：范数"></a>知识点四：范数</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;范数是用来衡量向量的大小，形式上，$L^p$范数可以定义为<br>$$<br>||x||<em>{p}=(\sum</em>{i} |x_{i}|^p)^{\frac{1}{p}}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，$p\geq1$。范数是将向量映射到非负值的函数。x的范数可以理解为衡量从原点到点x的距离。范数需要满足如下性质：</p>
+<ul>
+<li>$f(x)=0=&gt;x=0$</li>
+<li>$f(x+y)\leq f(x)+f(y)$</li>
+<li>$\forall \alpha \in \mathbb{R}f(\alpha x)=\left | \alpha  \right |f(x)$</li>
+<li><em>$L^2$范数：*</em> 又叫欧几里得范数，表示从原点到向量x的欧几里得距离。常用来衡量向量的大小。计算公式为：<br>$$<br>\left | x \right |<em>{2}=\left | x \right |=\sqrt{\sum</em>{i}x_{i}^{2}}<br>$$</li>
+<li><em>$L^{1}$范数：*</em> 当问题中，零和非零元素之间的差异非常重要时，使用$L^1$范数。表示为<br>$$<br>\left | x \right |<em>{1}=\sum</em>{i}\left | x_{i} \right |<br>$$</li>
+<li><em>$L^0$范数：*</em> 统计向量中非零元素的个数来衡量向量的大小。但是非零元素的数目并不是范数，因为对向量进行缩放，非零元素的个数不变。因此，使用$L^1$范数替代。</li>
+<li><em>$L^{\propto }$范数：*</em> 也叫最大范数。表示向量中具有最大幅值的元素的绝对值。表示为<br>$$<br>\left | x \right |<em>{\propto }=\underset{i}{max}\left | x \right |</em>{i}<br>$$</li>
+<li><em>Frobenius范数：*</em> 用来衡量矩阵的大小。表示为<br>$$<br>\left | A \right |<em>{F}=\sqrt{\sum</em>{i,j}A^{2}_{i,j} }<br>$$<h4 id="知识点五：特征值分解与奇异值分解"><a href="#知识点五：特征值分解与奇异值分解" class="headerlink" title="知识点五：特征值分解与奇异值分解"></a>知识点五：特征值分解与奇异值分解</h4></li>
+<li><em>特征分解：*</em> 是将矩阵分解为一组特征向量和特征值。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方阵A的特征向量是指与A相乘后相当于对该向量进行缩放的非零向量。表示为<br>$$<br>Av=\lambda v<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，$\lambda$为特征值，v为特征向量。我们将特征向量连接成一个矩阵，使得每一列是一个特征向量：$V=\left { v^{(1)},v^{(2)},…,v^{(3)} \right }$。同样，可以将一个特征值连接成一个向量$\lambda =\left [ \lambda _{1},…,\lambda _{n} \right ]$。因此，A的<strong>特征分解</strong>可以记作<br>$$A=Vdiag(\lambda )V^{-1}$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并不是所有的矩阵都是可以特征分解的。所有特征值都是正数的矩阵称为正定。</li>
+<li><em>奇异值分解(SVD)：*</em> 将矩阵分解为奇异向量和奇异值。每个实数矩阵都有一个奇异值分解。但是不一定存在特征值分解。奇异值分解可将矩阵A分解为<br>$$<br>A=UDV^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，A是一个$m\times n$的矩阵，U是一个$m\times m$的矩阵，D是一个$m\times n$的矩阵，V是一个$n\times n$的矩阵。矩阵U和V都是正交矩阵。D是对角矩阵。但不一定是方阵，D的对角线上的元素是矩阵A的奇异值。矩阵U的列向量是左奇异向量，矩阵V的列向量是右奇异向量。<h4 id="知识点六：Moore-Penrose伪逆"><a href="#知识点六：Moore-Penrose伪逆" class="headerlink" title="知识点六：Moore-Penrose伪逆"></a>知识点六：Moore-Penrose伪逆</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当矩阵是非方阵时，是没有逆矩阵的。当我们求解线性方程$Ax=y$时。使用A的逆矩阵$A^{-1}$来求解。得到<br>$$<br>x = A^{-1}y<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，如果矩阵A的行数大于列数，那么上述方程没有解。如果矩阵A的行数小于列数，那么上述方程可能有多个解。因此，我们使用Moore-Penrose伪逆解决这个问题。矩阵A的伪逆定义为<br>$$<br>A^{+}=\underset{\alpha \rightarrow 0}{lim}(A^{T}A+\alpha I)^{-1}A^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，我们使用如下公式计算<br>$$<br>A^{+}=VD^{+}U^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，U、D和V时矩阵A奇异值分解后得到的矩阵。对角矩阵D的伪逆$D^+$是其非零元素取倒数之后在转置得到的。使用伪逆求得的x使得Ax和y的欧几里得距离最小。<h4 id="知识点七：迹运算和行列式"><a href="#知识点七：迹运算和行列式" class="headerlink" title="知识点七：迹运算和行列式"></a>知识点七：迹运算和行列式</h4></li>
+<li><em>迹运算：*</em> 返回的是矩阵对角元素的和<br>$$<br>Tr(A)=\sum_{i}A_{i,i}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以使用矩阵的迹运算，描述很多运算</li>
+<li>Frobennins范数：$\left | A \right |_{F}=\sqrt{Tr(AA^{T})}$</li>
+<li>迹运算在转置运算下是不变的：$Tr(A)=Tr(A^{T})$</li>
+<li>多个矩阵相乘得到的方阵的迹。等于把矩阵中最后一个挪到最前面之后相乘的迹：$Tr(ABC)=Tr(CAB)=Tr(BCA)$</li>
+<li>循环置换后矩阵乘积得到的矩阵形状改变，但是迹运算的结果不变:$Tr(AB)=Tr(BA)$</li>
+<li>标量在迹运算后仍是自己：$a=Tr(a)$</li>
+</ul>
+<p><strong>行列式：</strong> 记作$det(A)$，是一个将方阵A映射到实数的函数。行列式等于矩阵特征值的乘积。用来衡量矩阵参与矩阵乘法后空间扩大或者缩小了多少。如果为0，那么空间至少沿着某一维完全收缩。失去了所有的体积。如果行列式是1。则转换空间保持不变。</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线性代数在机器学习中扮演着重要的角色。因此，了解线性代数的知识是必要的。本章只是介绍了线性代数的一些基本知识。如果有精力，还需要仔细学习线性代数的知识。</p>
 <blockquote>
 <p>友情链接：<br>github主页：<a href="https://github.com/guoyuantao" target="_blank" rel="noopener">https://github.com/guoyuantao</a><br>CSDN博客：<a href="https://blog.csdn.net/gyt15663668337" target="_blank" rel="noopener">https://blog.csdn.net/gyt15663668337</a><br>个人博客主页：<a href="https://guoyuantao.github.io/">https://guoyuantao.github.io/</a><br>QQ讨论群：218803539</p>
 </blockquote>
@@ -608,9 +629,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《AI圣经《深度学习》读书笔记----第一章：引言》
+                    《AI圣经《深度学习》读书笔记----第二章：线性代数》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/15/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-yi-zhang-yin-yan/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Mrs.GUO
             </a> 采用
@@ -650,9 +671,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/">
                     <div class="card-image">
@@ -671,9 +693,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -686,6 +708,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -712,35 +735,32 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/14/pytorch-xue-xi-zhi-torch-bi-jiao-cao-zuo-comparison-ops/">
+                <a href="/2019/08/15/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-yi-zhang-yin-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Pytorch学习之torch----比较操作">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="AI圣经《深度学习》读书笔记----第一章：引言">
                         
-                        <span class="card-title">Pytorch学习之torch----比较操作</span>
+                        <span class="card-title">AI圣经《深度学习》读书笔记----第一章：引言</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.eq(input, other, out=None)说明： 比较元素是否相等，第二个参数可以是一个数，或者是第一个参数同类型形状的张量
-参数：
-
-input(Tensor) —- 待比较张量
-other(Tenosr or
+                            
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这本书从我开始学习深度学习时，就买了这本书。但是，因为自身知识储备不够，觉得这本书很难。多次想学习这本书，但是都失败了。距离本次学习，已经时隔
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
+                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
+                                    读书笔记
                                 </a>
                             
                             
@@ -750,16 +770,16 @@ other(Tenosr or
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
-                    </a>
-                    
                     <a href="/tags/人工智能/" target="_blank">
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/读书笔记/" target="_blank">
+                        <span class="chip bg-color">读书笔记</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoyuantao.github.io/"/>
-  <updated>2019-08-15T13:46:12.026Z</updated>
+  <updated>2019-08-21T03:10:41.750Z</updated>
   <id>http://guoyuantao.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI圣经《深度学习》读书笔记----第二章：线性代数</title>
+    <link href="http://guoyuantao.github.io/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/"/>
+    <id>http://guoyuantao.github.io/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/</id>
+    <published>2019-08-21T06:29:30.000Z</published>
+    <updated>2019-08-21T03:10:41.750Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;线性代数是数学的一个分支，应用于科学和工程中。线性代数主要是面向连续数学，而非离散数学。掌握好线性代数对于学习机器学习算法是必要的，尤其是深度学习算法。
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://guoyuantao.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="人工智能" scheme="http://guoyuantao.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="深度学习" scheme="http://guoyuantao.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="读书笔记" scheme="http://guoyuantao.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>AI圣经《深度学习》读书笔记----第一章：引言</title>
