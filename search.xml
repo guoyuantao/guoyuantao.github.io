@@ -4,6 +4,97 @@
   
     
     <entry>
+      <title>CNN模型之AlexNet</title>
+      <link href="/2019/09/05/cnn-mo-xing-zhi-alexnet/"/>
+      <url>/2019/09/05/cnn-mo-xing-zhi-alexnet/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet是Alex Krizhevsky等人2012年提出。这个模型具有重大的意义，将ImageNet ILSVRC-2010竞赛的120万张图片1000个类别。top-1错误率为37.5%，top-5错误率为17.0%。在2012年的比赛中，将top-5错误率降到了15.3%，相较于第二名26.2%的错误率。AlexNet的性能提升了很多。</p><h4 id="二、网络结构"><a href="#二、网络结构" class="headerlink" title="二、网络结构"></a>二、网络结构</h4><p><img src="https://img-blog.csdnimg.cn/20190905211805456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet的网络结构：5个卷积层+3个全连接层(包含一个输出层)。</p><ul><li>第一个卷积层：Conv+LRN+ReLU+MaxPool。96个大小为$11\times 11\times 3$的卷积核，步长为4</li><li>第二个卷积层：Conv+LRN+ReLU+MaxPool。256个大小为$5 \times 5\times 48$的卷积核。</li><li>第三个卷积层：Conv+ReLU。256个大小为$3\times 3\times 256$的卷积核。</li><li>第四个卷积层：Conv+ReLU。384个大小为$3\times 3\times 192$的卷积核。</li><li>第五个卷积层：Conv+ReLU+MaxPool。256个大小为$3\times 3\times 192$的卷积核。</li><li>两个全连接层：都配有ReLU和Dropout。4096个单元。</li><li>输出层：1000个单元。配有softmax多分类器。</li></ul><h5 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h5><ul><li>使用ReLU代替传统的激活函数</li><li>LRN：局部响应归一化，将数据归一化到0-1之间。</li><li>重叠池化使特征图更加稠密，类似于2*2滤波器卷积</li><li>Dropout防止过拟合，正则化方法。</li><li>使用了数据增强来丰富样本。</li><li>Softmax损失函数，分类器。<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet在卷积神经网络的发展上非常重要，也是从这个模型开始，卷积神经网络蓬勃发展。其使用了ReLU、LRN、Dropout等方法来提高模型的精度。虽然现在有很多模型，但这个模型也是我们必须学习的模型，从模型的分析来理解模型每个技术的作用。<blockquote><p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 卷积神经网络模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 卷积神经网络 </tag>
+            
+            <tag> CNN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CNN模型之LeNet-5</title>
+      <link href="/2019/09/05/cnn-mo-xing-zhi-lenet-5/"/>
+      <url>/2019/09/05/cnn-mo-xing-zhi-lenet-5/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卷积神经网络是当前深度学习领域比较火的研究方法。其应用主要是在计算机视觉上。例如，图像分类，目标检测，人脸识别等等。并且已经在这些领域取得了相当大的成就。本文主要介绍卷积神经网络的开篇之作：LeNet-5。LeNet-5由Y. LeCun 在1998年发表的文章《Gradient-Based Learning Applied to Document Recognition 》中正式提出。在论文中，应用MNIST手写数字体数据做实验。LeNet并不是1998年才存在的。在1989年Y.LeCun的另一篇文章就已经提到。知识在1998年正式提出。下面，我们就看一下LeNet-5的网络结构。</p><h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><p><img src="https://img-blog.csdnimg.cn/20190826193656596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="图1：LeNet-5网络结构图"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上图是LeNet-5的网络结构图。该网络一共包含7层，输入时一个$32\times 32$的图像。当我们实际应用这个网络的时候可以根据实际的问题来修改输入尺寸与网络中的结构。</p><ol><li>Layer C1：第一个卷积层，得到6个$28\times28$的特征图。卷积核的大小为$5\times5$。</li><li>Layer S2：下采样层等同于池化层，我们一般使用最大池化操作。得到6个$14\times14$的特征图。设置$2\times2$的过滤器。</li><li>Layer C3：第二个卷积层，得到16个$5\times5$的特征图。卷积核的大小为$5\times5$。</li><li>Layer S4：下采样层等同于池化层。得到16个$5\times5$的特征图。设置$2\times2$的过滤器。</li><li>Layer C5：第三个卷积层，得到120个$1\times1$的特征图。卷积核的大小为$5\times5$。因为S4得到的特征图也是$5\times5$。所以得到的输出是1个数。这步相当于全连接。通常我们直接设置全连接层。</li><li>Layer F6：全连接层，设置84个单元。激活函数可以使用Relu。</li><li>Layer F7：输出层，10个单元。根据问题来决定，因为从0-9一共10类。随意设置为10。激活函数使用softmax。</li></ol><p><strong>主要贡献：</strong></p><ul><li>局部感受野(local receptive fields)，局部连接</li><li>权值共享（参数共享）</li><li>下采样(sub-sampling)，pooling层<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LeNet-5是一个简单的卷积神经网络，相较于传统的神经网络其参数更少，性能也更优。是卷积神经网络的一个开端。最后的损失函数我们使用了均方差损失函数。如果对神经网络有一定的了解，应该可以了解整个神经网络的运行过程。到这里这篇文章就完事了。我们只是为了来记录LeNet-5的网络结构。并没有细讲网络的具体知识。如有不懂，想深入讨论。可以加我联系方式一起学习。<blockquote><p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 卷积神经网络模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 卷积神经网络 </tag>
+            
+            <tag> CNN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>周志华《机器学习》读书笔记----第二章：模型评估与选择</title>
+      <link href="/2019/09/05/zhou-zhi-hua-ji-qi-xue-xi-du-shu-bi-ji-di-er-zhang-mo-xing-ping-gu-yu-xuan-ze/"/>
+      <url>/2019/09/05/zhou-zhi-hua-ji-qi-xue-xi-du-shu-bi-ji-di-er-zhang-mo-xing-ping-gu-yu-xuan-ze/</url>
+      
+        <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机器学习要做的工作可以这样理解：给定一些数据，在数据上训练模型，得到能解决我们实际问题的模型。在这个过程中，数据的处理，模型的选择，模型的评估都需要花费一些时间来处理。这节内容就是模型的选择与评估。</p><h4 id="一、经验误差与过拟合"><a href="#一、经验误差与过拟合" class="headerlink" title="一、经验误差与过拟合"></a>一、经验误差与过拟合</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在训练过程中，学习器的实际预测输出与样本的真实输出之间的差异称为<strong>误差</strong>。学习器在训练集上的误差称为<strong>训练误差</strong>或<strong>经验误差</strong>。在新样本上的误差称为<strong>泛化误差</strong>。我们希望得到泛化误差小的学习器。然而我们实际能做的是使经验误差最小化。可惜的是经验误差最小时，泛化误差不一定是最好的。我们希望学习器能从训练样本中尽可能学出适用于所有潜在样本的<strong>普遍规律</strong>。但是有时候学习器的能力过强，将一些样本自身的特点当作了样本的一般性质。导致泛化性能下降，造成<strong>过拟合</strong>现象。还有时学习器的学习能力不够，学习不到样本的潜在规律，会造成<strong>欠拟合</strong>现象。也会使泛化性能下降。因此，我们要解决模型存在的欠拟合或者过拟合现象，提高模型的泛化性能。在实际的问题中，我们可以获得多种学习算法，不同的参数会出现不同的模型。因此，模型的选择就是要对候选模型的泛化误差进行评估，然后选择泛化误差最小的模型。</p><h4 id="二、评估方法"><a href="#二、评估方法" class="headerlink" title="二、评估方法"></a>二、评估方法</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经验误差由于过拟合问题的存在，不能作为选择模型的标准。又无法直接获得泛化误差。因此，我们通过实验测试来对学习器的泛化误差进行评估，然后做出选择。我们设置一个<strong>测试集</strong>来测试学习器对新样本的判别性能。在测试集上的误差我们称之为<strong>测试误差</strong>。使用测试误差来作为泛化误差的近似。我们假设测试数据也是从真实样本中独立同分布采样得到。要求测试集与训练集要互斥。通常我们可以得到一个包含$m$个样本的数据集D,然后对D进行适当的划分，划分为测试集和训练集。<br>$$D=\left { (x_{1},y_{1}), (x_{2},y_{2}), …,(x_{m},y_{m})\right }$$</p><h5 id="方法一：留出法"><a href="#方法一：留出法" class="headerlink" title="方法一：留出法"></a>方法一：留出法</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>留出法</strong>直接将数据集D划分为两个互斥的集合，其中一个集合作为训练集S，另一个作为测试机T，用数学公式表示为：$D=S\cup T,S\cap T=\varnothing$。在训练集上训练出模型后，在测试集上评估测试误差，作为对泛化误差的估计。例如，包含1000个样本的数据集，S包含700个样本，T包含300个样本。留出法需要注意以下三点：</p><ol><li>划分数据时，要保证数据的一致性。例如1000个样本中包含500个正例，500个反例。如果按照S：70%，T：30%的比例划分。那么对于正例，应该取350个作为S，150个作为T。反例也是如此。这叫保持样本的列别比例相似。假如S、T中的样本类别比例差别很大，则测试估计将由于训练/测试数据分布的差异而产生偏差。</li><li>单次使用留出法得到的估计结果往往不够稳定可靠。因此，可以多次划分，重复实验，取平均值做留出法的评估结果。</li><li>选择训练集与测试集的比例也很重要，一般训练集大约占$\frac{2}{3}\sim \frac{4}{5}$，剩下的样本用作测试集。</li></ol><h5 id="方法二：交叉验证法"><a href="#方法二：交叉验证法" class="headerlink" title="方法二：交叉验证法"></a>方法二：交叉验证法</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>交叉验证法</strong>先将数据集D划分为k个大小相似的互斥子集。即$D=D_{1}\cup D_{2}\cup …\cup D_{k},D_{i}\cap D{j}=\varnothing (i\neq j)$。将前k-1个子集作为训练集，余下的那个子集作为测试集。获得k组训练集/测试集。可以进行k次训练和测试，返回k个测试结果的均值。这种方法一般叫做<strong>k折交叉验证法</strong>。k值是此方法的关键，一般常用的值为5、10、20等。与留出法相同，k折交叉验证法仍然可以重复多次实验，最后取平均值作为最终的评估结果。</p><h5 id="方法三：自助法"><a href="#方法三：自助法" class="headerlink" title="方法三：自助法"></a>方法三：自助法</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>自助法</strong>是让我们可以使用数据集D来训练模型，然而并不是真正意义上的数据集D，只是训练数据集的规模与数据集D相同。留出法与交叉验证法都保留了一些数据用作测试数据。会引入一些因训练样本规模不同而导致的估计偏差。自助法以<strong>自助采样</strong>为基础。自助法从包含m个样本的数据集D中采样得到训练数据集$D^{‘}$。每次从数据集D中抽取一个一样，将其放入到$D^{‘}$中，然后再将该样本放回初始数据集D中，使得样本在下次采样时仍然可以被采到。重复执行m次后，得到包含m个样本的数据集$D^{‘}$。D中会有一部分样本多次出现在$D^{‘}$中，有一部分不会出现在其中。我们可以估计样本在m次采样中始终不被采到的概率为$(1-\frac{1}{m})^{m}$,取极限得到$\underset{m\rightarrow \infty }{lim}(1-\frac{1}{m})^{m}=\frac{1}{e}\approx 0.368$，也就是说数据集D中有36.8%的数据未出现在采样数据$D^{‘}$中，因此，数据集$D^{‘}$作为训练集，$D-D^{‘}$作为测试集。自助法产生的数据集改变了初始数据集的分布，这会引入估计偏差。因此，我们常用留出法和交叉验证法。</p><h5 id="方法四：调参与最终模型"><a href="#方法四：调参与最终模型" class="headerlink" title="方法四：调参与最终模型"></a>方法四：调参与最终模型</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机器学习算法通常涉及两类参数，一类是算法的参数，也就是超参数，数目在10以内，另一类是模型的参数，参数有很多。因此，<strong>调参</strong>是一个重要的任务。通常的做法是给定一个参数取值范围，在其中选取几个值测试模型，选取泛化性能最好的。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们通常把学得模型在实际使用中遇到的数据称为测试集，模型评估与选择中用于评估测试的数据集通常称为<strong>验证集</strong>。因此，用测试集上的判别效果来估计模型在实际应用中的泛化能力，把训练集划分为训练集和测试集，基于验证集上的性能来进行模型选择和调参。</p><h4 id="三、性能度量"><a href="#三、性能度量" class="headerlink" title="三、性能度量"></a>三、性能度量</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了衡量模型的泛化能力，要有一个评价标准，就是性能度量。当我们使用不同的性能度量来对比不同模型的能力时，往往可以得到不同的评判结果。因此，要根据实际问题的需求，使用正确的性能度量来评判模型。给定数据集$D=\left { (x_{1},y_{1}), (x_{2},y_{2}), …,(x_{m},y_{m})\right }$，评估学习器$f$的性能，就需要将预测结果$f(x)$与真实标记$y$进行比较。</p><h5 id="1-均方误差"><a href="#1-均方误差" class="headerlink" title="1. 均方误差"></a>1. 均方误差</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;均方误差是回归任务常用的性能度量。<br>$$<br>E(f;D)=\frac{1}{m}\sum_{i=1}^{m}(f(x_{i})-y_{i})^{2}<br>$$</p><h5 id="2-错误率与精度"><a href="#2-错误率与精度" class="headerlink" title="2. 错误率与精度"></a>2. 错误率与精度</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>错误率</strong>是分类错误的样本数占样本总数的比例，<strong>精度</strong>是分类正确的样本数占样本总数的比例。<br>错误率：<br>$$<br>E(f;D)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}(f(x_{i})\neq y_{i})<br>$$<br>精度：<br>$$<br>acc(f;D)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}(f(x_{i})=  y_{i})=1-E(f;D)<br>$$</p><h5 id="3-查准率、查全率与F1"><a href="#3-查准率、查全率与F1" class="headerlink" title="3. 查准率、查全率与F1"></a>3. 查准率、查全率与F1</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>查准率</strong>是在所有预测为正例的结果中，真实为正例的比例。<strong>查全率</strong>是所有真实为正例的样本中，预测出为正例所占的比例。查准率与查全率是为了应对我们存在不同需求时的性能度量。二分类问题中，将样例根据真实类别与学习器预测类别的组合划分为真正例(TP)、假正例(FP)、真反例(TN)、假反例(FN)四种情况。<strong>F1</strong>度量是综合考虑了查准率和查全率。</p><table>    <tr>        <th rowspan="2">真实情况</th>        <th colspan="2">预测结果</th>    </tr>    <tr>        <td>正例</td>        <td>反例</td>    </tr>    <tr>        <td>正例</td>        <td>TP(真正例)</td>        <td>FN(假反例)</td>    </tr>    <tr>        <td>反例</td>        <td>FP(假正例)</td>        <td>TN(真反例)</td>    </tr></table><p>查准率：<br>$$<br>P=\frac{TP}{TP+FP}<br>$$<br>查全率：<br>$$<br>R=\frac{TP}{TP+FN}<br>$$<br>F1度量：<br>$$<br>F1=\frac{2\times P\times R}{R+P}<br>$$</p><h5 id="4-ROC与AUC"><a href="#4-ROC与AUC" class="headerlink" title="4. ROC与AUC"></a>4. ROC与AUC</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ROC</strong>的全称是“受试者工作特征”曲线，ROC曲线的纵轴是“真正例率”(TPR)，横轴是“假正例率”(FPR)。<br>TPR：<br>$$<br>TPR=\frac{TP}{TP+FN}<br>$$<br>FPR:<br>$$<br>FPR=\frac{FP}{FP+TN}<br>$$</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>AUC</strong>代表的是ROC曲线与坐标轴围成的面积。</p><h5 id="5-代价敏感错误率与代价曲线"><a href="#5-代价敏感错误率与代价曲线" class="headerlink" title="5. 代价敏感错误率与代价曲线"></a>5. 代价敏感错误率与代价曲线</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在现实的任务中，不同类型的错误所造成的后果不同。为了权衡不同类型错误所造成的不同损失，可以为错误赋予<strong>非均等代价</strong>。以二分类为例，设定一个代价矩阵，其中$cost_{ij}$表示将第i类样本预测为第j类样本的代价。一般来说，$cost_{ii}=0$.若将第0类判别为第1类所造成的损失更大。则$cost_{01}&gt;cost_{10}$。</p><table>    <tr>        <th rowspan="2">真实类别</th>        <th colspan="2">预测类别</th>    </tr>    <tr>        <td>第0类</td>        <td>第1类</td>    </tr>    <tr>        <td>第0类</td>        <td>0</td>        <td>cost01</td>    </tr>    <tr>        <td>第1类</td>        <td>cost10</td>        <td>0</td>    </tr></table><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，我们希望最小化总体代价。将第0类作为正类，第1类作为反类。令$D^{+}$与$D^{-}$分别代表数据D的正例子集和反例子集。则<strong>代价敏感错误率</strong>为$$<br>E(f;D;cost)=\frac{1}{m}(\sum_{x_{i}\in D^{+}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{01}+\sum_{x_{i}\in D^{-}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{10})<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，ROC曲线不能直接反应出学习器的期望总体代价，我么可以使用<strong>代价曲线</strong>。代价曲线的横轴取值为$[0,1]$的正例概率代价：<br>$$<br>P(+)cost=\frac{p\times cost_{01}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$<br>p代表样例为正例的概率。纵轴是取值为[0,1]的归一化代价：<br>$$<br>cost_{norm}=\frac{FNR\times p\times cost_{01}+FPR\times (1-p)\times cost_{10}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$</p><h4 id="四、比较检验"><a href="#四、比较检验" class="headerlink" title="四、比较检验"></a>四、比较检验</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先使用某种实验的评估方法测得学习器的某个性能度量结果，然后对这些结果进行比较选择模型。但是，怎么进行比较，在机器学习中的性能比较涉及几个重要因素：</p><ol><li>我们得到的是在测试集上的性能，我们希望比较的是泛化性能。那测试性能是否可以代表泛化性能。</li><li>测试性能因测试数据本身的选择有关系，测试集的大小和测试集样例不同，都会影响到测试的性能。</li><li>机器学习算法本身存在随机性，即使参数相同，结果也不相同。</li></ol><p>这些因此，造成了我们比较学习器的性能时，就不能只进行普通的比较。<strong>统计假设检验</strong>为我们进行学习器的性能比较提供了重要依据。<font color="red">基于假设检验结果我们可推断出，若在测试集上观察到学习器A比B好，则A的泛化性能是否在统计意义上优于B，以及这个结论的把握有多大。</font>简单的说就是如果测试集上的性能A好于B，那么是否就可以说A的泛化性能好于B。对于这个结论有多大的可能认为是正确的。<br>常用的假设检验方法：</p><ul><li>假设检验</li><li>t检验</li><li>交叉验证t检验</li></ul><p>常用的性能比较方法：</p><ul><li>McNemar检验</li><li>Friedman检验与Nemenyi后续检验</li></ul><h5 id="1-偏差与方差"><a href="#1-偏差与方差" class="headerlink" title="1. 偏差与方差"></a>1. 偏差与方差</h5><p>我们试图理解学习算法为什么具有这样的性能，<strong>偏差-方差分解</strong>是解释学习算法泛化性能的一种重要工具。偏差-方差分解试图对学习算法的期望泛化错误率进行拆解。测试样本$x$。$x$在数据集中的标记为$y_{D}$，$x$的真实标记$y$。$f(x;D)$为模型的输出结果。<strong>偏差</strong>度量了学习算法的期望预测与真实结果的偏离程度，刻画了算法的本身拟合能力。<strong>方差</strong>度量了同样大小的训练集的变动所导致的学习性能的变化，刻画了数据扰动所造成的影响。<strong>噪声</strong>表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界。刻画了问题的本身难度。<br>学习算法的期望预测：$\overline{f}(x)=E_{D}[f(x;D)]$<br>样本数相同的不同训练集产生的方差：$var(x)=E_{D}[(f(x;D)-\overline{f}(x))^{2}]$<br>噪声：$\varepsilon^{2}=E_{D}[(y_{D}-y)^{2}]$<br>偏差：$bias^{2}(x)=(\overline{f}(x)-y)^{2}$<br>算法的<strong>期望泛化误差</strong>：$$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可以分解为偏差、方差和噪声之和。因此，泛化性能是由学习算法的能力、数据的充分性以及学习任务本身的难度所共同决定的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 周志华《机器学习》 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 读书笔记 </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AI圣经《深度学习》读书笔记----第二章：线性代数</title>
       <link href="/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/"/>
       <url>/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/</url>
@@ -78,9 +169,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -107,9 +198,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -136,9 +227,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -165,9 +256,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -194,9 +285,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -223,9 +314,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -252,9 +343,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             
@@ -281,9 +372,9 @@
       
         <tags>
             
-            <tag> Pytorch </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> Pytorch </tag>
             
             <tag> 编程框架 </tag>
             

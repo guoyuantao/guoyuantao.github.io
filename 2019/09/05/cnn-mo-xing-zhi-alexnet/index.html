@@ -4,13 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Pytorch学习之torch----数学操作(三), Mrs.GUO的个人博客">
-    <meta name="description" content="1. torch.reciprocal(input, out=None)说明： 返回一个新张量，包含输入input张量每个元素的倒数。参数：
-
-input(Tensor) – 输入张量
-out(Tensor, 可选) – 输出张量
-
-&gt;&gt;&gt;">
+    <meta name="keywords" content="CNN模型之AlexNet, Mrs.GUO的个人博客">
+    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;AlexNet是Alex Krizhevsky等人2012年提出。这个模型具有重大的意义，将ImageNet ILSVRC-2010竞赛">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +13,7 @@ out(Tensor, 可选) – 输出张量
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Pytorch学习之torch----数学操作(三) | Mrs.GUO的个人博客</title>
+    <title>CNN模型之AlexNet | Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -265,13 +260,13 @@ out(Tensor, 可选) – 输出张量
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Pytorch学习之torch----数学操作(三)
+                        CNN模型之AlexNet
                     </div>
                 </div>
             </div>
@@ -386,12 +381,16 @@ out(Tensor, 可选) – 输出张量
                                 <span class="chip bg-color">人工智能</span>
                             </a>
                         
-                            <a href="/tags/Pytorch/" target="_blank">
-                                <span class="chip bg-color">Pytorch</span>
+                            <a href="/tags/深度学习/" target="_blank">
+                                <span class="chip bg-color">深度学习</span>
                             </a>
                         
-                            <a href="/tags/编程框架/" target="_blank">
-                                <span class="chip bg-color">编程框架</span>
+                            <a href="/tags/卷积神经网络/" target="_blank">
+                                <span class="chip bg-color">卷积神经网络</span>
+                            </a>
+                        
+                            <a href="/tags/CNN/" target="_blank">
+                                <span class="chip bg-color">CNN</span>
                             </a>
                         
                     </div>
@@ -402,8 +401,8 @@ out(Tensor, 可选) – 输出张量
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                卷积神经网络模型
                             </a>
                         
                     </div>
@@ -414,21 +413,21 @@ out(Tensor, 可选) – 输出张量
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-23
+                    2019-09-05
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        884
+                        503
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        2 分
                     </div>
                     
                 
@@ -444,118 +443,28 @@ out(Tensor, 可选) – 输出张量
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-torch-reciprocal-input-out-None"><a href="#1-torch-reciprocal-input-out-None" class="headerlink" title="1. torch.reciprocal(input, out=None)"></a>1. torch.reciprocal(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的倒数。<br><strong>参数：</strong></p>
+                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet是Alex Krizhevsky等人2012年提出。这个模型具有重大的意义，将ImageNet ILSVRC-2010竞赛的120万张图片1000个类别。top-1错误率为37.5%，top-5错误率为17.0%。在2012年的比赛中，将top-5错误率降到了15.3%，相较于第二名26.2%的错误率。AlexNet的性能提升了很多。</p>
+<h4 id="二、网络结构"><a href="#二、网络结构" class="headerlink" title="二、网络结构"></a>二、网络结构</h4><p><img src="https://img-blog.csdnimg.cn/20190905211805456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet的网络结构：5个卷积层+3个全连接层(包含一个输出层)。</p>
 <ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor, 可选) – 输出张量</li>
+<li>第一个卷积层：Conv+LRN+ReLU+MaxPool。96个大小为$11\times 11\times 3$的卷积核，步长为4</li>
+<li>第二个卷积层：Conv+LRN+ReLU+MaxPool。256个大小为$5 \times 5\times 48$的卷积核。</li>
+<li>第三个卷积层：Conv+ReLU。256个大小为$3\times 3\times 256$的卷积核。</li>
+<li>第四个卷积层：Conv+ReLU。384个大小为$3\times 3\times 192$的卷积核。</li>
+<li>第五个卷积层：Conv+ReLU+MaxPool。256个大小为$3\times 3\times 192$的卷积核。</li>
+<li>两个全连接层：都配有ReLU和Dropout。4096个单元。</li>
+<li>输出层：1000个单元。配有softmax多分类器。</li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.6535</span><span class="token punctuation">,</span>  <span class="token number">1.3616</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.6167</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.0142</span><span class="token punctuation">,</span>  <span class="token number">0.0186</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>reciprocal<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span>  <span class="token number">1.5303</span><span class="token punctuation">,</span>   <span class="token number">0.7345</span><span class="token punctuation">,</span>  <span class="token operator">-</span><span class="token number">0.6186</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">70.6554</span><span class="token punctuation">,</span>  <span class="token number">53.8015</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="2-torch-remainder-input-divisor-out-None"><a href="#2-torch-remainder-input-divisor-out-None" class="headerlink" title="2. torch.remainder(input, divisor, out=None)"></a>2. torch.remainder(input, divisor, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的除法余数。除数与被除数可能同时包含整数或浮点数，余数与除数有相同的符号<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 被除数</li>
-<li>divisor(Tensor or float) – 除数，一个数或者与除数相同大小的张量</li>
-<li>out(Tensor，可选) – 输出张量</li>
+<h5 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h5><ul>
+<li>使用ReLU代替传统的激活函数</li>
+<li>LRN：局部响应归一化，将数据归一化到0-1之间。</li>
+<li>重叠池化使特征图更加稠密，类似于2*2滤波器卷积</li>
+<li>Dropout防止过拟合，正则化方法。</li>
+<li>使用了数据增强来丰富样本。</li>
+<li>Softmax损失函数，分类器。<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet在卷积神经网络的发展上非常重要，也是从这个模型开始，卷积神经网络蓬勃发展。其使用了ReLU、LRN、Dropout等方法来提高模型的精度。虽然现在有很多模型，但这个模型也是我们必须学习的模型，从模型的分析来理解模型每个技术的作用。<blockquote>
+<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
+</blockquote>
+</li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>remainder<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="3-torch-round-input-out-None"><a href="#3-torch-round-input-out-None" class="headerlink" title="3. torch.round(input, out=None)"></a>3. torch.round(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，将输入input张量每个元素舍入到最近的整数<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>round<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="4-torch-rsqrt-input-out-None"><a href="#4-torch-rsqrt-input-out-None" class="headerlink" title="4. torch.rsqrt(input, out=None)"></a>4. torch.rsqrt(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的平方根倒数。<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选0 – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.0934</span><span class="token punctuation">,</span>  <span class="token number">0.2079</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.4841</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">3.2004</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>rsqrt<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3.2716</span><span class="token punctuation">,</span> <span class="token number">2.1930</span><span class="token punctuation">,</span>    nan<span class="token punctuation">,</span>    nan<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="5-torch-sigmoid-input-out-None"><a href="#5-torch-sigmoid-input-out-None" class="headerlink" title="5. torch.sigmoid(input, out=None)"></a>5. torch.sigmoid(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的sigmoid值<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.6220</span><span class="token punctuation">,</span>  <span class="token number">0.4341</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.5248</span><span class="token punctuation">,</span>  <span class="token number">0.8342</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>sigmoid<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.6507</span><span class="token punctuation">,</span> <span class="token number">0.6068</span><span class="token punctuation">,</span> <span class="token number">0.3717</span><span class="token punctuation">,</span> <span class="token number">0.6973</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="6-torch-sign-input-out-None"><a href="#6-torch-sign-input-out-None" class="headerlink" title="6. torch.sign(input, out=None)"></a>6. torch.sign(input, out=None)</h3><p><strong>说明：</strong> 符号函数，返回一个新张量，包含输入input张量每个元素的正负<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.1224</span><span class="token punctuation">,</span>  <span class="token number">0.6647</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.3843</span><span class="token punctuation">,</span>  <span class="token number">1.2878</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>sign<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="7-torch-sin-input-out-None"><a href="#7-torch-sin-input-out-None" class="headerlink" title="7. torch.sin(input, out=None)"></a>7. torch.sin(input, out=None)</h3><p><strong>说明：</strong>返回一个新张量，包含输入input张量每个元素的正弦。<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor, 可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.8258</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.8077</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.5048</span><span class="token punctuation">,</span>  <span class="token number">0.9997</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="8-torch-sinh-input-out-None"><a href="#8-torch-sinh-input-out-None" class="headerlink" title="8. torch.sinh(input, out=None)"></a>8. torch.sinh(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的双曲正弦<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">1.1792</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.0052</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2577</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.1537</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>sinh<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">1.4722</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.1833</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2605</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.1543</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="9-torch-sqrt-input-out-None"><a href="#9-torch-sqrt-input-out-None" class="headerlink" title="9. torch.sqrt(input, out=None)"></a>9. torch.sqrt(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的平方根<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor, 可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.3252</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.8610</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.1563</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2361</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.5703</span><span class="token punctuation">,</span>    nan<span class="token punctuation">,</span>    nan<span class="token punctuation">,</span>    nan<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="10-torch-tan-input-out-None"><a href="#10-torch-tan-input-out-None" class="headerlink" title="10. torch.tan(input, out=None)"></a>10. torch.tan(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的正切。<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor, 可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.4005</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2229</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.4596</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.7481</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>tan<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.4233</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.2267</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">8.9521</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.9280</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="11-torch-tanh-input-out-None"><a href="#11-torch-tanh-input-out-None" class="headerlink" title="11. torch.tanh(input, out=None)"></a>11. torch.tanh(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入input张量每个元素的双曲正切<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>tanh<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.2677</span><span class="token punctuation">,</span>  <span class="token number">0.7824</span><span class="token punctuation">,</span>  <span class="token number">0.0271</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.0853</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="12-torch-trunc-input-out-None"><a href="#12-torch-trunc-input-out-None" class="headerlink" title="12. torch.trunc(input, out=None)"></a>12. torch.trunc(input, out=None)</h3><p><strong>说明：</strong> 返回一个新张量，包含输入张量每个元素的截断值（标量x的截断值是最接近其的整数）<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入张量</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.1385</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.7681</span><span class="token punctuation">,</span>  <span class="token number">0.4294</span><span class="token punctuation">,</span>  <span class="token number">0.4270</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>trunc<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 
             </div>
             <hr/>
@@ -714,9 +623,9 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Pytorch学习之torch----数学操作(三)》
+                    《CNN模型之AlexNet》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/23/pytorch-xue-xi-zhi-torch-shu-xue-cao-zuo-san/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/05/cnn-mo-xing-zhi-alexnet/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Mrs.GUO
             </a> 采用
@@ -756,41 +665,43 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/14/pytorch-xue-xi-zhi-torch-reduction-ops/">
+                <a href="/2019/09/05/cnn-mo-xing-zhi-alexnet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Pytorch学习之torch----Reduction Ops">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CNN模型之AlexNet">
                         
-                        <span class="card-title">Pytorch学习之torch----Reduction Ops</span>
+                        <span class="card-title">CNN模型之AlexNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.cumprod(input, dim, out=None)说明： 返回输入沿指定维度的累积积。如果输入是一个N元向量，则结果也是一个N元向量，第i个输出元素值为 $$y_{i} = x_{1} * x_{2} * … * 
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet是Alex Krizhevsky等人2012年提出。这个模型具有重大的意义，将ImageNet ILSVRC-2010竞赛
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -798,12 +709,16 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
@@ -817,34 +732,31 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/23/pytorch-xue-xi-zhi-torch-shu-xue-cao-zuo-er/">
+                <a href="/2019/09/05/cnn-mo-xing-zhi-lenet-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Pytorch学习之torch----数学操作(二)">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CNN模型之LeNet-5">
                         
-                        <span class="card-title">Pytorch学习之torch----数学操作(二)</span>
+                        <span class="card-title">CNN模型之LeNet-5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.floor(input, out=None)说明： 床函数，返回一个新张量，包含输入input张量每个元素的floor，即不小于元素的最大整数。参数：
-
-input(Tensor) – 输入张量
-out(Tenosr, 可
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卷积神经网络是当前深度学习领域比较火的研究方法。其应用主要是在计算机视觉上。例如，图像分类，目标检测，人脸识别等等。并且已经在这些领域取
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
@@ -858,12 +770,16 @@ out(Tenosr, 可
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
