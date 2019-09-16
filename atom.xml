@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoyuantao.github.io/"/>
-  <updated>2019-09-16T08:13:58.711Z</updated>
+  <updated>2019-09-16T08:17:17.349Z</updated>
   <id>http://guoyuantao.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CNN模型之AlexNet</title>
+    <title>CNN模型之ZFNet</title>
     <link href="http://guoyuantao.github.io/2019/09/16/cnn-mo-xing-zhi-zfnet/"/>
     <id>http://guoyuantao.github.io/2019/09/16/cnn-mo-xing-zhi-zfnet/</id>
     <published>2019-09-16T08:13:30.000Z</published>
-    <updated>2019-09-16T08:13:58.711Z</updated>
+    <updated>2019-09-16T08:17:17.349Z</updated>
     
     <summary type="html">
     
