@@ -95,6 +95,15 @@
     </li>
     
     <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>Contact</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
         <a href="/friends" class="waves-effect waves-light">
             
             <i class="fa fa-address-book"></i>
@@ -170,6 +179,15 @@
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
                 关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                Contact
             </a>
         </li>
         
@@ -666,6 +684,28 @@
         </div>
     </div>
 
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'b90a7af5bbf6a37ab22b',
+        clientSecret: 'a3486a22dc85822104ae83060319484dcd542295',
+        repo: 'guoyuantao.github.io',
+        owner: 'guoyuantao',
+        admin: "guoyuantao",
+        id: '2019-09-05T21-48-30',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
     
 
     

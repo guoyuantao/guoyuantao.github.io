@@ -95,6 +95,15 @@
     </li>
     
     <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>Contact</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
         <a href="/friends" class="waves-effect waves-light">
             
             <i class="fa fa-address-book"></i>
@@ -170,6 +179,15 @@
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
                 关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                Contact
             </a>
         </li>
         
@@ -428,6 +446,41 @@ $(function () {
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"情深深雨濛濛","artist":"杨胖雨","url":"http://music.163.com/song/media/outer/url?id=1367368790.mp3","cover":"http://p1.music.126.net/EEoGnr4Fm1KoYWtVPr2cwQ==/109951164096171163.jpg"},{"name":"问","artist":"林忆莲","url":"http://music.163.com/song/media/outer/url?id=255950.mp3","cover":"http://p2.music.126.net/DwgWuxtWczcdg2FJ9RFQ7A==/78065325589712.jpg.png"},{"name":"天亮以后说再见","artist":"曲肖冰","url":"http://music.163.com/song/media/outer/url?id=1336789644.mp3","cover":"http://p1.music.126.net/_P71psYXWlTrEWEuyyN7QA==/109951163770392080.jpg"}]')
+    });
+});
+</script>
                     
 
                     
