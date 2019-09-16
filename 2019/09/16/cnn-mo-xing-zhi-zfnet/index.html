@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="AI圣经《深度学习》读书笔记----第二章：线性代数, Mrs.GUO的个人博客">
-    <meta name="description" content="
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;线性代数是数学的一个分支，应用于科学和工程中。线性代数主要是面向连续数学，而非离散数学。掌握好线性代数对于学习机器学习算法是必要的，尤其是深度">
+    <meta name="keywords" content="CNN模型之AlexNet, Mrs.GUO的个人博客">
+    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在I">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>AI圣经《深度学习》读书笔记----第二章：线性代数 | Mrs.GUO的个人博客</title>
+    <title>CNN模型之AlexNet | Mrs.GUO的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        AI圣经《深度学习》读书笔记----第二章：线性代数
+                        CNN模型之AlexNet
                     </div>
                 </div>
             </div>
@@ -386,8 +385,12 @@
                                 <span class="chip bg-color">深度学习</span>
                             </a>
                         
-                            <a href="/tags/读书笔记/" target="_blank">
-                                <span class="chip bg-color">读书笔记</span>
+                            <a href="/tags/卷积神经网络/" target="_blank">
+                                <span class="chip bg-color">卷积神经网络</span>
+                            </a>
+                        
+                            <a href="/tags/CNN/" target="_blank">
+                                <span class="chip bg-color">CNN</span>
                             </a>
                         
                     </div>
@@ -398,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
-                                读书笔记
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                卷积神经网络模型
                             </a>
                         
                     </div>
@@ -410,21 +413,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-21
+                    2019-09-16
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.3k
+                        506
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        8 分
+                        1 分
                     </div>
                     
                 
@@ -440,36 +443,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线性代数是数学的一个分支，应用于科学和工程中。线性代数主要是面向连续数学，而非离散数学。掌握好线性代数对于学习机器学习算法是必要的，尤其是深度学习算法。因此，本章学习必要的线性代数知识。</p>
-</blockquote>
-<h4 id="知识点一：标量、向量、矩阵和张量"><a href="#知识点一：标量、向量、矩阵和张量" class="headerlink" title="知识点一：标量、向量、矩阵和张量"></a>知识点一：标量、向量、矩阵和张量</h4><p><strong>标量(scalar)：</strong> 一个标量就是一个单独的数，不同于线性代数中研究的其他大部分对象。当介绍标量时，会明确标量的类型。<br><strong>向量(vector)：</strong> 一个向量是一列数。这些数是有序排列的，通过次序的索引，可以得到每个单独的数。表示为</p>
-<p>$$<br>x =<br>\begin{pmatrix}<br>x_{1}\<br>x_{2}\<br>\vdots\<br>x_{n}\<br>\end{pmatrix}<br>$$<br><strong>矩阵(matrix)：</strong> 矩阵是一个二维数组，其中的每一个元素由两个索引确定。一个2行2列的矩阵表示为<br>$$<br>A =<br>\begin{pmatrix}<br>A_{1,1}&amp;A_{1,2}\<br>A_{2,1}&amp;A_{2,2}\<br>\end{pmatrix}<br>$$<br><strong>张量(tensor)：</strong> 某些情况下，会讨论坐标超过两维的数组。一般地，一个数组中的元素分布在若干维坐标的规则网格中，我们称之为张量。<br><strong>转置：</strong> 矩阵的转置是以对角线为轴的镜像。从左上角到右下角的对角线称为主对角线。表示为$(A^T)<em>{i,j}=A</em>{j,i}$。向量可看作是只有一列的矩阵，那么向量的转置就是只有一行的矩阵。标量的转置等于其本身。</p>
-<h4 id="知识点二：矩阵的运算"><a href="#知识点二：矩阵的运算" class="headerlink" title="知识点二：矩阵的运算"></a>知识点二：矩阵的运算</h4><p> <strong>矩阵相加：</strong> 当矩阵形状相同时，矩阵对应位置的元素相加，表示为$C_{i,j}=A_{i,j}+B_{i,j}$。<br> <strong>标量和矩阵相加或相乘：</strong> 只需将标量与矩阵的每个元素相乘或相加。表示为$D_{i,j}=a<em>B_{i,j}+c$<br> *</em>矩阵和向量相加：** 就是将向量和矩阵的每一行相加。表示为$C_{i,j}=A_{i,j}+b_{j}$。这种方法类似于将向量展开成一个与矩阵同维度的矩阵，然后在相加。这种方式称为<strong>广播。</strong><br> <strong>矩阵相乘：</strong> 矩阵A和B相乘，矩阵A的列数必须和矩阵B的行数相等。表示为$C_{i,j}=\sum A_{i,k}B_{k,j}$。还有一种是矩阵元素对应乘积，也就是对应元素的乘积。</p>
-<h4 id="知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量"><a href="#知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量" class="headerlink" title="知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量"></a>知识点三：单位矩阵、逆矩阵和特殊类型的矩阵与向量</h4><p> <strong>单位矩阵：</strong> 对角线为1，其他位置为0的矩阵，单位矩阵与任何向量相乘，都不会改变。<br>$$<br>A =<br>\begin{pmatrix}<br>A_{1,1}&amp;A_{1,2}\<br>A_{2,1}&amp;A_{2,2}\<br>\end{pmatrix}<br>$$<br><strong>逆矩阵：</strong> 矩阵A的逆矩阵记作$A^{-1}$，满足$A^{-1}A=I_{n}$。<br><strong>对角矩阵：</strong> 对角矩阵是在主对角线上含有非零元素，其他位置都为零。对角矩阵的逆矩阵就是将对角线元素取倒数。<br><strong>对称矩阵：</strong> 矩阵是转置和自己相等的矩阵。即$A=A^T$。<br><strong>单位向量：</strong> 是具有单位范数的向量。即$||x||_{2}=1$。<br><strong>正交矩阵：</strong> 指行向量和列向量是分别标准正交的方阵。标准正交是矩阵中的行向量或者列向量两两相乘等于0，并且范数为1.正交矩阵满足：<br>$$<br>A^TA=AA^T=I<br>$$<br>$$<br>A^{-1}=A^T<br>$$</p>
-<h4 id="知识点四：范数"><a href="#知识点四：范数" class="headerlink" title="知识点四：范数"></a>知识点四：范数</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;范数是用来衡量向量的大小，形式上，$L^p$范数可以定义为<br>$$<br>||x||<em>{p}=(\sum</em>{i} |x_{i}|^p)^{\frac{1}{p}}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，$p\geq1$。范数是将向量映射到非负值的函数。x的范数可以理解为衡量从原点到点x的距离。范数需要满足如下性质：</p>
+                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在ImageNet竞赛中取得了优异的成绩，也证明了大的卷积网路的性能优异，但是我们并不知道为什么CNN性能好。因此，这篇论文介绍了一个可视化技术来了解隐藏层做了什么以及怎么进行分类。也是基于这个技术，作者对AlexNet进行了优化，调整之后的网络的性能在很多问题上性能都好于AlexNet。</p>
+<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><p><img src="https://img-blog.csdnimg.cn/20190916154402708.png" alt="ZFNet模型结构图"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet的网络结构是基于AlexNet改进的。作者通过可视化技术发现小尺度的过滤器比大尺度的过滤器所得到的特征更加好。并且第一层的步长太大，导致后面出现混叠现象，学到的特征不是很好。因此，主要做了以下更改：</p>
 <ul>
-<li>$f(x)=0=&gt;x=0$</li>
-<li>$f(x+y)\leq f(x)+f(y)$</li>
-<li>$\forall \alpha \in \mathbb{R}f(\alpha x)=\left | \alpha  \right |f(x)$</li>
-<li><em>$L^2$范数：*</em> 又叫欧几里得范数，表示从原点到向量x的欧几里得距离。常用来衡量向量的大小。计算公式为：<br>$$<br>\left | x \right |<em>{2}=\left | x \right |=\sqrt{\sum</em>{i}x_{i}^{2}}<br>$$</li>
-<li><em>$L^{1}$范数：*</em> 当问题中，零和非零元素之间的差异非常重要时，使用$L^1$范数。表示为<br>$$<br>\left | x \right |<em>{1}=\sum</em>{i}\left | x_{i} \right |<br>$$</li>
-<li><em>$L^0$范数：*</em> 统计向量中非零元素的个数来衡量向量的大小。但是非零元素的数目并不是范数，因为对向量进行缩放，非零元素的个数不变。因此，使用$L^1$范数替代。</li>
-<li><em>$L^{\propto }$范数：*</em> 也叫最大范数。表示向量中具有最大幅值的元素的绝对值。表示为<br>$$<br>\left | x \right |<em>{\propto }=\underset{i}{max}\left | x \right |</em>{i}<br>$$</li>
-<li><em>Frobenius范数：*</em> 用来衡量矩阵的大小。表示为<br>$$<br>\left | A \right |<em>{F}=\sqrt{\sum</em>{i,j}A^{2}_{i,j} }<br>$$<h4 id="知识点五：特征值分解与奇异值分解"><a href="#知识点五：特征值分解与奇异值分解" class="headerlink" title="知识点五：特征值分解与奇异值分解"></a>知识点五：特征值分解与奇异值分解</h4></li>
-<li><em>特征分解：*</em> 是将矩阵分解为一组特征向量和特征值。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方阵A的特征向量是指与A相乘后相当于对该向量进行缩放的非零向量。表示为<br>$$<br>Av=\lambda v<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，$\lambda$为特征值，v为特征向量。我们将特征向量连接成一个矩阵，使得每一列是一个特征向量：$V=\left { v^{(1)},v^{(2)},…,v^{(3)} \right }$。同样，可以将一个特征值连接成一个向量$\lambda =\left [ \lambda _{1},…,\lambda _{n} \right ]$。因此，A的<strong>特征分解</strong>可以记作<br>$$A=Vdiag(\lambda )V^{-1}$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并不是所有的矩阵都是可以特征分解的。所有特征值都是正数的矩阵称为正定。</li>
-<li><em>奇异值分解(SVD)：*</em> 将矩阵分解为奇异向量和奇异值。每个实数矩阵都有一个奇异值分解。但是不一定存在特征值分解。奇异值分解可将矩阵A分解为<br>$$<br>A=UDV^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，A是一个$m\times n$的矩阵，U是一个$m\times m$的矩阵，D是一个$m\times n$的矩阵，V是一个$n\times n$的矩阵。矩阵U和V都是正交矩阵。D是对角矩阵。但不一定是方阵，D的对角线上的元素是矩阵A的奇异值。矩阵U的列向量是左奇异向量，矩阵V的列向量是右奇异向量。<h4 id="知识点六：Moore-Penrose伪逆"><a href="#知识点六：Moore-Penrose伪逆" class="headerlink" title="知识点六：Moore-Penrose伪逆"></a>知识点六：Moore-Penrose伪逆</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当矩阵是非方阵时，是没有逆矩阵的。当我们求解线性方程$Ax=y$时。使用A的逆矩阵$A^{-1}$来求解。得到<br>$$<br>x = A^{-1}y<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，如果矩阵A的行数大于列数，那么上述方程没有解。如果矩阵A的行数小于列数，那么上述方程可能有多个解。因此，我们使用Moore-Penrose伪逆解决这个问题。矩阵A的伪逆定义为<br>$$<br>A^{+}=\underset{\alpha \rightarrow 0}{lim}(A^{T}A+\alpha I)^{-1}A^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，我们使用如下公式计算<br>$$<br>A^{+}=VD^{+}U^{T}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，U、D和V时矩阵A奇异值分解后得到的矩阵。对角矩阵D的伪逆$D^+$是其非零元素取倒数之后在转置得到的。使用伪逆求得的x使得Ax和y的欧几里得距离最小。<h4 id="知识点七：迹运算和行列式"><a href="#知识点七：迹运算和行列式" class="headerlink" title="知识点七：迹运算和行列式"></a>知识点七：迹运算和行列式</h4></li>
-<li><em>迹运算：*</em> 返回的是矩阵对角元素的和<br>$$<br>Tr(A)=\sum_{i}A_{i,i}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以使用矩阵的迹运算，描述很多运算</li>
-<li>Frobennins范数：$\left | A \right |_{F}=\sqrt{Tr(AA^{T})}$</li>
-<li>迹运算在转置运算下是不变的：$Tr(A)=Tr(A^{T})$</li>
-<li>多个矩阵相乘得到的方阵的迹。等于把矩阵中最后一个挪到最前面之后相乘的迹：$Tr(ABC)=Tr(CAB)=Tr(BCA)$</li>
-<li>循环置换后矩阵乘积得到的矩阵形状改变，但是迹运算的结果不变:$Tr(AB)=Tr(BA)$</li>
-<li>标量在迹运算后仍是自己：$a=Tr(a)$</li>
+<li>将第一层的滤波器由$11\times 11$调整为$7\times 7$。</li>
+<li>将第一层的步长由4调整为2.</li>
 </ul>
-<p><strong>行列式：</strong> 记作$det(A)$，是一个将方阵A映射到实数的函数。行列式等于矩阵特征值的乘积。用来衡量矩阵参与矩阵乘法后空间扩大或者缩小了多少。如果为0，那么空间至少沿着某一维完全收缩。失去了所有的体积。如果行列式是1。则转换空间保持不变。</p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线性代数在机器学习中扮演着重要的角色。因此，了解线性代数的知识是必要的。本章只是介绍了线性代数的一些基本知识。如果有精力，还需要仔细学习线性代数的知识。</p>
+<p><strong>可视化技术：</strong><br> <img src="https://img-blog.csdnimg.cn/20190916155817765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如上图所示，通过反池化和反卷积得到原始图像。经过了可视化后，发现调整尺寸和步长后，得到的中间层特征更好。<br><img src="https://img-blog.csdnimg.cn/20190916160615693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经过对中间层的可视化，可以观察到模型中间层的特征。并依据特征的好坏调整模型的卷积核大小和步长。在ImageNet上取得了比AlexNet更好的成绩，获得了2013年的第一名。这个技术也让我们明白了卷积神经网络是如何工作的。最后，在代码实现中，仅仅构造了网络的结构，我使用的是cifar10数据集。如果训练需要更改网络的一些设置。</p>
 <blockquote>
-<p>友情链接：<br>github主页：<a href="https://github.com/guoyuantao" target="_blank" rel="noopener">https://github.com/guoyuantao</a><br>CSDN博客：<a href="https://blog.csdn.net/gyt15663668337" target="_blank" rel="noopener">https://blog.csdn.net/gyt15663668337</a><br>个人博客主页：<a href="https://guoyuantao.github.io/">https://guoyuantao.github.io/</a><br>QQ讨论群：218803539</p>
+<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
 </blockquote>
 
             </div>
@@ -629,9 +612,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《AI圣经《深度学习》读书笔记----第二章：线性代数》
+                    《CNN模型之AlexNet》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/21/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-er-zhang-xian-xing-dai-shu/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/16/cnn-mo-xing-zhi-zfnet/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Mrs.GUO
             </a> 采用
@@ -671,41 +654,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/05/zhou-zhi-hua-ji-qi-xue-xi-du-shu-bi-ji-di-er-zhang-mo-xing-ping-gu-yu-xuan-ze/">
+                <a href="/2019/09/16/cnn-mo-xing-zhi-zfnet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="周志华《机器学习》读书笔记----第二章：模型评估与选择">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CNN模型之AlexNet">
                         
-                        <span class="card-title">周志华《机器学习》读书笔记----第二章：模型评估与选择</span>
+                        <span class="card-title">CNN模型之AlexNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机器学习要做的工作可以这样理解：给定一些数据，在数据上训练模型，得到能解决我们实际问题的模型。在这个过程中，数据的处理，模型的选择，模型的评估都
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在I
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/周志华《机器学习》/" class="post-category" target="_blank">
-                                    周志华《机器学习》
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -713,12 +698,16 @@
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/读书笔记/" target="_blank">
-                        <span class="chip bg-color">读书笔记</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
@@ -732,32 +721,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/15/ai-sheng-jing-shen-du-xue-xi-du-shu-bi-ji-di-yi-zhang-yin-yan/">
+                <a href="/2019/09/05/cnn-mo-xing-zhi-alexnet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="AI圣经《深度学习》读书笔记----第一章：引言">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CNN模型之AlexNet">
                         
-                        <span class="card-title">AI圣经《深度学习》读书笔记----第一章：引言</span>
+                        <span class="card-title">CNN模型之AlexNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这本书从我开始学习深度学习时，就买了这本书。但是，因为自身知识储备不够，觉得这本书很难。多次想学习这本书，但是都失败了。距离本次学习，已经时隔
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet是Alex Krizhevsky等人2012年提出。这个模型具有重大的意义，将ImageNet ILSVRC-2010竞赛
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
-                                    读书笔记
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
@@ -775,8 +763,12 @@
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/读书笔记/" target="_blank">
-                        <span class="chip bg-color">读书笔记</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
