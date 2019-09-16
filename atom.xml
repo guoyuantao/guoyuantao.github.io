@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mrs.GUO的个人博客</title>
+  <title>G&amp;L的个人博客</title>
   
   <subtitle>人工智能，未来科技。</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://guoyuantao.github.io/</id>
   
   <author>
-    <name>Mrs.GUO</name>
+    <name>G&amp;L</name>
     
   </author>
   

@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="周志华《机器学习》读书笔记----第二章：模型评估与选择, Mrs.GUO的个人博客">
+    <meta name="keywords" content="周志华《机器学习》读书笔记----第二章：模型评估与选择, G&amp;L的个人博客">
     <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;机器学习要做的工作可以这样理解：给定一些数据，在数据上训练模型，得到能解决我们实际问题的模型。在这个过程中，数据的处理，模型的选择，模型的评估都">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>周志华《机器学习》读书笔记----第二章：模型评估与选择 | Mrs.GUO的个人博客</title>
+    <title>周志华《机器学习》读书笔记----第二章：模型评估与选择 | G&amp;L的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -41,7 +41,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Mrs.GUO的个人博客</span>
+                    <span class="logo-span">G&L的个人博客</span>
                 </a>
             </div>
             
@@ -116,7 +116,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Mrs.GUO的个人博客</div>
+        <div class="logo-name">G&L的个人博客</div>
         <div class="logo-desc">
             
             志向和热爱是伟大行为的双翼。
@@ -416,7 +416,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        3.6k
+                        3.7k
                     </div>
                     
 
@@ -456,7 +456,7 @@
 <h5 id="2-错误率与精度"><a href="#2-错误率与精度" class="headerlink" title="2. 错误率与精度"></a>2. 错误率与精度</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>错误率</strong>是分类错误的样本数占样本总数的比例，<strong>精度</strong>是分类正确的样本数占样本总数的比例。<br>错误率：<br>$$<br>E(f;D)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}(f(x_{i})\neq y_{i})<br>$$<br>精度：<br>$$<br>acc(f;D)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}(f(x_{i})=  y_{i})=1-E(f;D)<br>$$</p>
 <h5 id="3-查准率、查全率与F1"><a href="#3-查准率、查全率与F1" class="headerlink" title="3. 查准率、查全率与F1"></a>3. 查准率、查全率与F1</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>查准率</strong>是在所有预测为正例的结果中，真实为正例的比例。<strong>查全率</strong>是所有真实为正例的样本中，预测出为正例所占的比例。查准率与查全率是为了应对我们存在不同需求时的性能度量。二分类问题中，将样例根据真实类别与学习器预测类别的组合划分为真正例(TP)、假正例(FP)、真反例(TN)、假反例(FN)四种情况。<strong>F1</strong>度量是综合考虑了查准率和查全率。</p>
 <table>
-    <tr>
+    <tbody><tr>
         <th rowspan="2">真实情况</th>
         <th colspan="2">预测结果</th>
     </tr>
@@ -474,14 +474,14 @@
         <td>FP(假正例)</td>
         <td>TN(真反例)</td>
     </tr>
-</table>
+</tbody></table>
 
 <p>查准率：<br>$$<br>P=\frac{TP}{TP+FP}<br>$$<br>查全率：<br>$$<br>R=\frac{TP}{TP+FN}<br>$$<br>F1度量：<br>$$<br>F1=\frac{2\times P\times R}{R+P}<br>$$</p>
 <h5 id="4-ROC与AUC"><a href="#4-ROC与AUC" class="headerlink" title="4. ROC与AUC"></a>4. ROC与AUC</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ROC</strong>的全称是“受试者工作特征”曲线，ROC曲线的纵轴是“真正例率”(TPR)，横轴是“假正例率”(FPR)。<br>TPR：<br>$$<br>TPR=\frac{TP}{TP+FN}<br>$$<br>FPR:<br>$$<br>FPR=\frac{FP}{FP+TN}<br>$$</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>AUC</strong>代表的是ROC曲线与坐标轴围成的面积。</p>
 <h5 id="5-代价敏感错误率与代价曲线"><a href="#5-代价敏感错误率与代价曲线" class="headerlink" title="5. 代价敏感错误率与代价曲线"></a>5. 代价敏感错误率与代价曲线</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在现实的任务中，不同类型的错误所造成的后果不同。为了权衡不同类型错误所造成的不同损失，可以为错误赋予<strong>非均等代价</strong>。以二分类为例，设定一个代价矩阵，其中$cost_{ij}$表示将第i类样本预测为第j类样本的代价。一般来说，$cost_{ii}=0$.若将第0类判别为第1类所造成的损失更大。则$cost_{01}&gt;cost_{10}$。</p>
 <table>
-    <tr>
+    <tbody><tr>
         <th rowspan="2">真实类别</th>
         <th colspan="2">预测类别</th>
     </tr>
@@ -499,10 +499,9 @@
         <td>cost10</td>
         <td>0</td>
     </tr>
-</table>
+</tbody></table>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，我们希望最小化总体代价。将第0类作为正类，第1类作为反类。令$D^{+}$与$D^{-}$分别代表数据D的正例子集和反例子集。则<strong>代价敏感错误率</strong>为
-$$<br>E(f;D;cost)=\frac{1}{m}(\sum_{x_{i}\in D^{+}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{01}+\sum_{x_{i}\in D^{-}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{10})<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，ROC曲线不能直接反应出学习器的期望总体代价，我么可以使用<strong>代价曲线</strong>。代价曲线的横轴取值为$[0,1]$的正例概率代价：<br>$$<br>P(+)cost=\frac{p\times cost_{01}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$<br>p代表样例为正例的概率。纵轴是取值为[0,1]的归一化代价：<br>$$<br>cost_{norm}=\frac{FNR\times p\times cost_{01}+FPR\times (1-p)\times cost_{10}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，我们希望最小化总体代价。将第0类作为正类，第1类作为反类。令$D^{+}$与$D^{-}$分别代表数据D的正例子集和反例子集。则<strong>代价敏感错误率</strong>为<br>$$<br>E(f;D;cost)=\frac{1}{m}(\sum_{x_{i}\in D^{+}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{01}+\sum_{x_{i}\in D^{-}}\mathbb{I}(f(x_{i}\neq y_{i})\times cost_{10})<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在非均等代价下，ROC曲线不能直接反应出学习器的期望总体代价，我么可以使用<strong>代价曲线</strong>。代价曲线的横轴取值为$[0,1]$的正例概率代价：<br>$$<br>P(+)cost=\frac{p\times cost_{01}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$<br>p代表样例为正例的概率。纵轴是取值为[0,1]的归一化代价：<br>$$<br>cost_{norm}=\frac{FNR\times p\times cost_{01}+FPR\times (1-p)\times cost_{10}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$</p>
 <h4 id="四、比较检验"><a href="#四、比较检验" class="headerlink" title="四、比较检验"></a>四、比较检验</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先使用某种实验的评估方法测得学习器的某个性能度量结果，然后对这些结果进行比较选择模型。但是，怎么进行比较，在机器学习中的性能比较涉及几个重要因素：</p>
 <ol>
 <li>我们得到的是在测试集上的性能，我们希望比较的是泛化性能。那测试性能是否可以代表泛化性能。</li>
@@ -520,9 +519,26 @@ $$<br>E(f;D;cost)=\frac{1}{m}(\sum_{x_{i}\in D^{+}}\mathbb{I}(f(x_{i}\neq y_{i})
 <li>McNemar检验</li>
 <li>Friedman检验与Nemenyi后续检验</li>
 </ul>
-<h5 id="1-偏差与方差"><a href="#1-偏差与方差" class="headerlink" title="1. 偏差与方差"></a>1. 偏差与方差</h5><p>我们试图理解学习算法为什么具有这样的性能，<strong>偏差-方差分解</strong>是解释学习算法泛化性能的一种重要工具。偏差-方差分解试图对学习算法的期望泛化错误率进行拆解。测试样本$x$。$x$在数据集中的标记为$y_{D}$，$x$的真实标记$y$。$f(x;D)$为模型的输出结果。<strong>偏差</strong>度量了学习算法的期望预测与真实结果的偏离程度，刻画了算法的本身拟合能力。<strong>方差</strong>度量了同样大小的训练集的变动所导致的学习性能的变化，刻画了数据扰动所造成的影响。<strong>噪声</strong>表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界。刻画了问题的本身难度。<br>学习算法的期望预测：$\overline{f}(x)=E_{D}[f(x;D)]$<br>样本数相同的不同训练集产生的方差：$var(x)=E_{D}[(f(x;D)-\overline{f}(x))^{2}]$<br>噪声：$\varepsilon^{2}=E_{D}[(y_{D}-y)^{2}]$<br>偏差：$bias^{2}(x)=(\overline{f}(x)-y)^{2}$<br>算法的<strong>期望泛化误差</strong>：
-$$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可以分解为偏差、方差和噪声之和。因此，泛化性能是由学习算法的能力、数据的充分性以及学习任务本身的难度所共同决定的。</p>
-
+<h5 id="1-偏差与方差"><a href="#1-偏差与方差" class="headerlink" title="1. 偏差与方差"></a>1. 偏差与方差</h5><p>我们试图理解学习算法为什么具有这样的性能，<strong>偏差-方差分解</strong>是解释学习算法泛化性能的一种重要工具。偏差-方差分解试图对学习算法的期望泛化错误率进行拆解。测试样本$x$。$x$在数据集中的标记为$y_{D}$，$x$的真实标记$y$。$f(x;D)$为模型的输出结果。<strong>偏差</strong>度量了学习算法的期望预测与真实结果的偏离程度，刻画了算法的本身拟合能力。<strong>方差</strong>度量了同样大小的训练集的变动所导致的学习性能的变化，刻画了数据扰动所造成的影响。<strong>噪声</strong>表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界。刻画了问题的本身难度。<br>学习算法的期望预测：$\overline{f}(x)=E_{D}[f(x;D)]$<br>样本数相同的不同训练集产生的方差：$var(x)=E_{D}[(f(x;D)-\overline{f}(x))^{2}]$<br>噪声：$\varepsilon^{2}=E_{D}[(y_{D}-y)^{2}]$<br>偏差：$bias^{2}(x)=(\overline{f}(x)-y)^{2}$<br>算法的<strong>期望泛化误差</strong>：<br>$$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可以分解为偏差、方差和噪声之和。因此，泛化性能是由学习算法的能力、数据的充分性以及学习任务本身的难度所共同决定的。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -684,7 +700,7 @@ $$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可�
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/05/zhou-zhi-hua-ji-qi-xue-xi-du-shu-bi-ji-di-er-zhang-mo-xing-ping-gu-yu-xuan-ze/" property="cc:attributionName"
                rel="cc:attributionURL">
-                Mrs.GUO
+                G&L
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -871,8 +887,8 @@ $$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可�
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: Mrs.GUO的个人博客<br />'
-            + '作者: Mrs.GUO<br />'
+            + '来源: G&L的个人博客<br />'
+            + '作者: G&L<br />'
             + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -989,7 +1005,7 @@ $$<br>E(f;D)=bias^{2}(x)+var(x)+\varepsilon ^{2}<br>$$<br>期望泛化误差可�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">21.6k</span>
+                <span class="white-color">22.3k</span>
             
 
             
