@@ -420,7 +420,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        506
+                        501
                     </div>
                     
 
@@ -446,7 +446,7 @@
                 <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在ImageNet竞赛中取得了优异的成绩，也证明了大的卷积网路的性能优异，但是我们并不知道为什么CNN性能好。因此，这篇论文介绍了一个可视化技术来了解隐藏层做了什么以及怎么进行分类。也是基于这个技术，作者对AlexNet进行了优化，调整之后的网络的性能在很多问题上性能都好于AlexNet。</p>
 <h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><p><img src="https://img-blog.csdnimg.cn/20190916154402708.png" alt="ZFNet模型结构图"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet的网络结构是基于AlexNet改进的。作者通过可视化技术发现小尺度的过滤器比大尺度的过滤器所得到的特征更加好。并且第一层的步长太大，导致后面出现混叠现象，学到的特征不是很好。因此，主要做了以下更改：</p>
 <ul>
-<li>将第一层的滤波器由$11\times 11$调整为$7\times 7$。</li>
+<li>将第一层的滤波器由11x11调整为7x7。</li>
 <li>将第一层的步长由4调整为2.</li>
 </ul>
 <p><strong>可视化技术：</strong><br> <img src="https://img-blog.csdnimg.cn/20190916155817765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如上图所示，通过反池化和反卷积得到原始图像。经过了可视化后，发现调整尺寸和步长后，得到的中间层特征更好。<br><img src="https://img-blog.csdnimg.cn/20190916160615693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
