@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>G&amp;L的个人博客</title>
+  <title>G&amp;L博客</title>
   
-  <subtitle>一个人的青春，一个人的未来</subtitle>
+  <subtitle>一人的青春，一人的未来</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoyuantao.github.io/"/>
