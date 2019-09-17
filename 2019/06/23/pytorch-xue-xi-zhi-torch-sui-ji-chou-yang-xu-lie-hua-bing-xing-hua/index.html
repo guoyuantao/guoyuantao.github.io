@@ -32,12 +32,12 @@ seed(int or long) – 种子
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
-
-<header class="navbar-fixed">
+    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -103,7 +103,7 @@ seed(int or long) – 种子
             
             <i class="fa fa-comments"></i>
             
-            <span>Contact</span>
+            <span>留言板</span>
         </a>
     </li>
     
@@ -215,6 +215,7 @@ seed(int or long) – 种子
     </ul>
 </div>
 
+
         </div>
 
         
@@ -278,7 +279,7 @@ seed(int or long) – 种子
 
 </header>
 
-
+    
 
 
 
@@ -714,11 +715,15 @@ torch<span class="token punctuation">.</span>load<span class="token punctuation"
 
 <div id="article-share">
     
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
     
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
 </div>
 
-<script src="/libs/share/js/social-share.min.js"></script>
 
             
 
@@ -928,43 +933,6 @@ dim(int, 可选
 </div>
 
 
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: G&L的个人博客<br />'
-            + '作者: G&L<br />'
-            + '链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -1064,33 +1032,63 @@ dim(int, 可选
 </main>
 
 
-<footer class="page-footer bg-color">
+
+    <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://guoyuantao.github.io/" target="_blank">Mrs.GUO</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+            本站由&nbsp;&copy;<a href="http://guoyuantao.github.io" target="_blank">G&L</a>&nbsp;基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>&nbsp;主题搭建
+            <br>
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">22.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="fa fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fa fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            <br>
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+            <script>
+                var now = new Date();
 
+                function createtime() {
+                    var grt = new Date("07/28/2019 00:00:00");
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                }
+                setInterval("createtime()", 250);
+            </script>
             
-                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">22.3k</span>
-            
-
-            
-			
-                <br>
-                
-                <span id="busuanzi_container_site_pv">
-                    <i class="fa fa-heart-o"></i>
-                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-                </span>
-                
-                
-                <span id="busuanzi_container_site_uv">
-                    <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
-                </span>
-                
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
@@ -1100,9 +1098,21 @@ dim(int, 可选
 
 
 
-    <a href="mailto:https://www.126.com/" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:gyt0713@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fa fa-envelope-open"></i>
     </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2391855138" class="tooltipped" data-tooltip="QQ联系我: 2391855138" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
 
 
 
@@ -1111,6 +1121,7 @@ dim(int, 可选
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
+
 </div>
     </div>
 </footer>
@@ -1118,7 +1129,7 @@ dim(int, 可选
 <div class="progress-bar"></div>
 
 
-<!-- 搜索遮罩框 -->
+    <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1136,7 +1147,7 @@ $(function () {
     searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
-<!-- 回到顶部按钮 -->
+    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fa fa-angle-up"></i>
@@ -1144,14 +1155,14 @@ $(function () {
 </div>
 
 
-<script src="/libs/materialize/materialize.min.js"></script>
-<script src="/libs/masonry/masonry.pkgd.min.js"></script>
-<script src="/libs/aos/aos.js"></script>
-<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-<script src="/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
@@ -1165,12 +1176,56 @@ $(function () {
 </script>
 
 
-
+    
     <script src="/libs/others/clicklove.js"></script>
-
-
+    
+    
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
 
+    
+    <script src="//code.tidio.co/nqdr5ow9ldk7cfigr4da7fbrkntz2ptg.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(change_Tidio, 50);
+
+            function change_Tidio() {
+                var tidio = $("#tidio-chat iframe");
+                if (tidio.css("display") == "block" && tidio.css("bottom") == "0px" && $(window).width() >
+                    690 || parseInt(tidio.css("height")) < 230) {
+                    document.getElementById("tidio-chat-iframe").style.bottom = ($("div.toc-title").length && $(
+                            window).width() > 690) > 0 ?
+                        "85px" :
+                        "30px"; //更改bottom为100px 自定义
+                    document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >=
+                        520 ? "520px" : tidio.css("height");
+                    document.getElementById("tidio-chat-iframe").style.right = "-10px";
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                }
+                if (tidio.css("display") == "block" && parseInt(tidio.css("height")) >= 230) {
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    document.getElementById("tidio-chat-iframe").style.right = "0px";
+                }
+            }
+        });
+    </script>
+    
+
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="--1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js"></script>
+    
 
 </body>
+
 </html>
