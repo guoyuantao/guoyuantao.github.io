@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>CNN模型之NIN</title>
+      <link href="/2019/09/25/cnn-mo-xing-zhi-nin/"/>
+      <url>/2019/09/25/cnn-mo-xing-zhi-nin/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIN网络是由Min Lin等人在2014年提出的一个网络嵌套模型，使用微神经网络替换卷积神经网络中的卷积核。通过微神经网络来抽象感受野内的数据。称这种微神经网络结构为<strong>mplconv</strong>。这篇论文的创新之处主要体现在两个地方，分别是：</p><ol><li>使用微神经网络替换传统卷积神经网络的卷积核。</li><li>使用全局平均池化替代全连接层。<br><img src="https://img-blog.csdnimg.cn/20190925161649531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt=" Comparison of linear convolution layer and mlpconv layer"></li></ol><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微神经网络是由多层感知机实现的，上图中(a)图是传统的通过卷积核窗口在输入数据上滑动，对感受野内的数据进行抽象化。这种方式是线性的。(b)中就是论文提出的<strong>微神经网络</strong>。这是一种非线性的方式。通过实验，这种方法可以更好的抽象数据的特征。</p><h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><p><img src="https://img-blog.csdnimg.cn/20190925162130780.png" alt="NIN网络结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIN网络中包括三个mplconv层和一个平均池化层的叠加。</p><ul><li>第一个mplconv：$5\times5$conv(ReLU) + $1\times1$conv(ReLU) + $1\times1$conv(ReLU+MaxPool+Droput)</li><li>第二个mplconv：$5\times5$conv(ReLU) + $1\times1$conv(ReLU) + $1\times1$conv(ReLU+AvgPool+Droput)</li><li>第三个mplconv：$3\times3$conv(ReLU) + $1\times1$conv(ReLU) + $1\times1$conv(ReLU)</li><li>平均池化层：通过平均池化得到的结果输入softmax中。</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从网络的结构中，我们可以注意到MPL的实现是通过$1\times 1$的卷积核实现，$1\times 1$的卷积核可以实现跨通道的交互和信息融合，可以对通道数进行降维和升维。在之后的ResNet、GoogLeNet网络中也用到。另外一个改进是全局平均池化代替全连接层。我们都知道全连接层参数多且容易发生过拟合。通过mplconv最后一层让每一类对应一个特征图。然后使用平均池化进行运算，在输入到softmax中得到最后的分类结果。并且全局平均池化也起到了正则化的作用。实验结果如下：<br><img src="https://img-blog.csdnimg.cn/20190925163909540.png" alt="实验结果"></p><h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIN网络可以总结为两个方面的改进，一是使用微神经网络代替卷积核，二是使用全局平均池化代替全连接层。经过在cifar-10数据上实验，此网络的结果要好于当前的最好模型。在看这个网络时， 我也看了很多其他的网络，也听说过这个网络。当我读完论文之后，确实给我拓宽了思路，原来这块也可以更改。同样可以达到更好的结果。因此。我的感悟还是要见多识广。学习别人的思路。</p><blockquote><p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 卷积神经网络模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 卷积神经网络 </tag>
+            
+            <tag> CNN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CNN模型之ZFNet</title>
       <link href="/2019/09/16/cnn-mo-xing-zhi-zfnet/"/>
       <url>/2019/09/16/cnn-mo-xing-zhi-zfnet/</url>
