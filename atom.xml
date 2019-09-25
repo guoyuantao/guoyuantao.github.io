@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoyuantao.github.io/"/>
-  <updated>2019-09-25T08:54:22.082Z</updated>
+  <updated>2019-09-25T14:07:48.098Z</updated>
   <id>http://guoyuantao.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://guoyuantao.github.io/2019/09/25/cnn-mo-xing-zhi-vggnet/"/>
+    <id>http://guoyuantao.github.io/2019/09/25/cnn-mo-xing-zhi-vggnet/</id>
+    <published>2019-09-25T14:10:36.252Z</published>
+    <updated>2019-09-25T14:07:48.098Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: CNN模型之VGGNet&lt;br&gt;date: 2019-09-25 22:07:30&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;mathjax: true&lt;br&gt;tags:
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CNN模型之NIN</title>
