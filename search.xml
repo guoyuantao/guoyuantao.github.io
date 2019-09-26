@@ -4,13 +4,31 @@
   
     
     <entry>
-      <title></title>
+      <title>CNN模型之VGGNet</title>
       <link href="/2019/09/25/cnn-mo-xing-zhi-vggnet/"/>
       <url>/2019/09/25/cnn-mo-xing-zhi-vggnet/</url>
       
-        <content type="html"><![CDATA[<hr><p>title: CNN模型之VGGNet<br>date: 2019-09-25 22:07:30<br>top: false<br>cover: false<br>mathjax: true<br>tags: [人工智能,深度学习,卷积神经网络,CNN]<br>categories: “卷积神经网络模型”</p><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名和定位项目的第一名。这个网络据说是基于NIN网络的思想。与比赛中的第一名GooLeNet从NIN开始向两个方向发展。VGGNet的理念是更深的网络性能更好。因此，VGGNet的主要理念有：</p><ol><li>网络层数越多，也就是网络越深，网络的性能越好。</li><li>网络越深越不好训练，容易过拟合。因此，采用小卷积核。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190925211856290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="VGGNet网络结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图中所示，论文中一共提供了六种结构，可以分为VGG11、VGG13、VGG16和VGG19。其中VGG16和VGG19是我们常用的网络。它们的结构可分为两部分，第一部分为卷积层，主要目的是提取特征。第二部分为全连接层，主要目的是进行分类。在网络中主要的操作有</li></ol><ul><li>输入图像预处理只做了减均值操作，可以减去128或者减去所有像素的均值，收敛会快一些，性能不会差太多。</li><li>隐藏层使用ReLU，效率更高。不使用LRN。LRN也被证实没多大用处。在之后的模型也不被使用。</li><li>使用$3\times 3$和$1\times 1$的卷积核，非常小的感受野，这样就可以把网络加深，使用多个卷积核的总参数变少。</li><li>$1\times 1$的卷积增加了决策函数的非线性，相当于全连接。可进行通道的降维或者升维。</li><li>两个连续的$3\times 3$卷积核相当于一个$5\times 5$，三个相当于$7\times 7$。好处是网络结构更深，增加了非线性能力，参数更少了。</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在模型中，优化方法使用含有动量的随机梯度下降，损失函数中加入了L2正则化，全连接层的前两层加入了Dropout防止过拟合。网络的测试结果为<br><img src="https://img-blog.csdnimg.cn/20190925215521567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="测试结果"></p><h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet虽然是2014年分类任务的第二名，但是与第一名相差并不多，并且对之后的模型发展影响巨大。VGGNet网络得出的结论有</p><ul><li>LRN，局部归一化并不能改善网络的性能</li><li>随着网络的加深，分类误差降低，特征收敛越快，受样本变化的影响越小。</li><li>数据增加等操作可以增强模型的鲁棒性。</li><li>多裁剪评估比密集评估，效果更好。</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet网络是一个非常好的网络，在很多任务中，都以它为基础模型，在此基础上进行更改。学习VGGNet模型，要知道它的网络结构，以及设计思想和最终的实验结论。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名和定位项目的第一名。这个网络据说是基于NIN网络的思想。与比赛中的第一名GooLeNet从NIN开始向两个方向发展。VGGNet的理念是更深的网络性能更好。因此，VGGNet的主要理念有：</p><ol><li>网络层数越多，也就是网络越深，网络的性能越好。</li><li>网络越深越不好训练，容易过拟合。因此，采用小卷积核。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190925211856290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="VGGNet网络结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图中所示，论文中一共提供了六种结构，可以分为VGG11、VGG13、VGG16和VGG19。其中VGG16和VGG19是我们常用的网络。它们的结构可分为两部分，第一部分为卷积层，主要目的是提取特征。第二部分为全连接层，主要目的是进行分类。在网络中主要的操作有</li></ol><ul><li>输入图像预处理只做了减均值操作，可以减去128或者减去所有像素的均值，收敛会快一些，性能不会差太多。</li><li>隐藏层使用ReLU，效率更高。不使用LRN。LRN也被证实没多大用处。在之后的模型也不被使用。</li><li>使用$3\times 3$和$1\times 1$的卷积核，非常小的感受野，这样就可以把网络加深，使用多个卷积核的总参数变少。</li><li>$1\times 1$的卷积增加了决策函数的非线性，相当于全连接。可进行通道的降维或者升维。</li><li>两个连续的$3\times 3$卷积核相当于一个$5\times 5$，三个相当于$7\times 7$。好处是网络结构更深，增加了非线性能力，参数更少了。</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在模型中，优化方法使用含有动量的随机梯度下降，损失函数中加入了L2正则化，全连接层的前两层加入了Dropout防止过拟合。网络的测试结果为<br><img src="https://img-blog.csdnimg.cn/20190925215521567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="测试结果"></p><h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet虽然是2014年分类任务的第二名，但是与第一名相差并不多，并且对之后的模型发展影响巨大。VGGNet网络得出的结论有</p><ul><li>LRN，局部归一化并不能改善网络的性能</li><li>随着网络的加深，分类误差降低，特征收敛越快，受样本变化的影响越小。</li><li>数据增加等操作可以增强模型的鲁棒性。</li><li>多裁剪评估比密集评估，效果更好。</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet网络是一个非常好的网络，在很多任务中，都以它为基础模型，在此基础上进行更改。学习VGGNet模型，要知道它的网络结构，以及设计思想和最终的实验结论。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 卷积神经网络模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 卷积神经网络 </tag>
+            
+            <tag> CNN </tag>
+            
+        </tags>
       
     </entry>
     

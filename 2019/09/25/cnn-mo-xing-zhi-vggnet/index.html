@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="G&amp;L博客">
-    <meta name="description" content="
-title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax: truetags: [人工智能,深度学习,卷积神经网络,CNN]categories: ">
+    <meta name="keywords" content="CNN模型之VGGNet, G&amp;L博客">
+    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>G&amp;L博客</title>
+    <title>CNN模型之VGGNet | G&amp;L博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -308,13 +307,13 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        CNN模型之VGGNet
                     </div>
                 </div>
             </div>
@@ -423,12 +422,37 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/人工智能/" target="_blank">
+                                <span class="chip bg-color">人工智能</span>
+                            </a>
+                        
+                            <a href="/tags/深度学习/" target="_blank">
+                                <span class="chip bg-color">深度学习</span>
+                            </a>
+                        
+                            <a href="/tags/卷积神经网络/" target="_blank">
+                                <span class="chip bg-color">卷积神经网络</span>
+                            </a>
+                        
+                            <a href="/tags/CNN/" target="_blank">
+                                <span class="chip bg-color">CNN</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                卷积神经网络模型
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -443,7 +467,7 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        833
+                        795
                     </div>
                     
 
@@ -466,9 +490,7 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: CNN模型之VGGNet<br>date: 2019-09-25 22:07:30<br>top: false<br>cover: false<br>mathjax: true<br>tags: [人工智能,深度学习,卷积神经网络,CNN]<br>categories: “卷积神经网络模型”</p>
-<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名和定位项目的第一名。这个网络据说是基于NIN网络的思想。与比赛中的第一名GooLeNet从NIN开始向两个方向发展。VGGNet的理念是更深的网络性能更好。因此，VGGNet的主要理念有：</p>
+                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名和定位项目的第一名。这个网络据说是基于NIN网络的思想。与比赛中的第一名GooLeNet从NIN开始向两个方向发展。VGGNet的理念是更深的网络性能更好。因此，VGGNet的主要理念有：</p>
 <ol>
 <li>网络层数越多，也就是网络越深，网络的性能越好。</li>
 <li>网络越深越不好训练，容易过拟合。因此，采用小卷积核。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190925211856290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="VGGNet网络结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图中所示，论文中一共提供了六种结构，可以分为VGG11、VGG13、VGG16和VGG19。其中VGG16和VGG19是我们常用的网络。它们的结构可分为两部分，第一部分为卷积层，主要目的是提取特征。第二部分为全连接层，主要目的是进行分类。在网络中主要的操作有</li>
@@ -669,7 +691,7 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《》
+                    《CNN模型之VGGNet》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/25/cnn-mo-xing-zhi-vggnet/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -712,7 +734,7 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
         repo: 'guoyuantao.github.io',
         owner: 'guoyuantao',
         admin: "guoyuantao",
-        id: '2019-09-25T22-10-36',
+        id: '2019-09-25T22-07-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -742,16 +764,15 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CNN模型之VGGNet">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">CNN模型之VGGNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax: truetags: [人工智能,深度学习,卷积神经网络,CNN]categories: 
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名
                         
                     </div>
                     <div class="publish-info">
@@ -760,13 +781,37 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            G&L
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/人工智能/" target="_blank">
+                        <span class="chip bg-color">人工智能</span>
+                    </a>
+                    
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -972,6 +1017,13 @@ title: CNN模型之VGGNetdate: 2019-09-25 22:07:30top: falsecover: falsemathjax:
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
