@@ -4,12 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Pytorch学习之torch----随机抽样、序列化、并行化, G&amp;L博客">
-    <meta name="description" content="1. torch.manual_seed(seed)说明： 设置生成随机数的种子，返回一个torch._C.Generator对象。使用随机数种子之后，生成的随机数是相同的。参数：
-
-seed(int or long) – 种子
-
-&gt;&gt;&gt; ">
+    <meta name="keywords" content="CNN模型之GoogLeNet, G&amp;L博客">
+    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +13,7 @@ seed(int or long) – 种子
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Pytorch学习之torch----随机抽样、序列化、并行化 | G&amp;L博客</title>
+    <title>CNN模型之GoogLeNet | G&amp;L博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -311,13 +307,13 @@ seed(int or long) – 种子
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Pytorch学习之torch----随机抽样、序列化、并行化
+                        CNN模型之GoogLeNet
                     </div>
                 </div>
             </div>
@@ -432,12 +428,16 @@ seed(int or long) – 种子
                                 <span class="chip bg-color">人工智能</span>
                             </a>
                         
-                            <a href="/tags/Pytorch/" target="_blank">
-                                <span class="chip bg-color">Pytorch</span>
+                            <a href="/tags/深度学习/" target="_blank">
+                                <span class="chip bg-color">深度学习</span>
                             </a>
                         
-                            <a href="/tags/编程框架/" target="_blank">
-                                <span class="chip bg-color">编程框架</span>
+                            <a href="/tags/卷积神经网络/" target="_blank">
+                                <span class="chip bg-color">卷积神经网络</span>
+                            </a>
+                        
+                            <a href="/tags/CNN/" target="_blank">
+                                <span class="chip bg-color">CNN</span>
                             </a>
                         
                     </div>
@@ -448,8 +448,8 @@ seed(int or long) – 种子
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                卷积神经网络模型
                             </a>
                         
                     </div>
@@ -460,21 +460,21 @@ seed(int or long) – 种子
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-23
+                    2019-09-26
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        541
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        2 分
                     </div>
                     
                 
@@ -490,107 +490,22 @@ seed(int or long) – 种子
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-torch-manual-seed-seed"><a href="#1-torch-manual-seed-seed" class="headerlink" title="1. torch.manual_seed(seed)"></a>1. torch.manual_seed(seed)</h3><p><strong>说明：</strong> 设置生成随机数的种子，返回一个torch._C.Generator对象。使用随机数种子之后，生成的随机数是相同的。<br><strong>参数：</strong></p>
+                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLeNet。2014年的ILSVRC分类任务中力压VGGNet赢得了分类任务的冠军。又名Inception。这个网络主要的特点是提高了网络内部计算资源的利用。从网络的深度和宽度两个方面都有所增加。是一个22层的卷积神经网络。要比VGGNet的19层更深。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet的最大特点就是其Inception结构，通过构建密集的块结构(Inception)来近似最优的稀疏结构，从而达到提高性能而又不大量增加计算量的目的。Inception结果为<br><img src="https://img-blog.csdnimg.cn/20190926143148446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="Inception 模块"><br>在Inception模块中，包含了很多种卷积核，还有池化操作。(b)图中是带有降维的Inception模块。</p>
 <ul>
-<li>seed(int or long) – 种子</li>
+<li>使用$1\times 1$、$3\times 3$、$5\times 5$大小的卷积核，padding不同尺寸，使输出图像大小一致，然后将得到的特征图拼接在一起。</li>
+<li>层数加深，在不同深处增加loss来避免梯度回传消失。这两个loss就是辅助分类器。</li>
+<li>$1\times 1$卷积核用来降维。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190926144624328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="GoogLeNet网络"><br><img src="https://img-blog.csdnimg.cn/20190926144708195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="网络配置"></li>
+<li>AvgPool层设置$5\times 5$并且步长为3.</li>
+<li>128个$1\times 1$的卷积用来降维，并使用ReLU激活函数</li>
+<li>全连接层具有1024个节点，并使用ReLU激活函数</li>
+<li>Dropout操作设置为0.7</li>
+<li>最后是一个线性层是softmax loss 作为分类器。</li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> torch
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>manual_seed<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span>torch<span class="token punctuation">.</span>_C<span class="token punctuation">.</span>Generator object at <span class="token number">0x0000019684586350</span><span class="token operator">></span>
-<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.7576</span><span class="token punctuation">,</span> <span class="token number">0.2793</span><span class="token punctuation">,</span> <span class="token number">0.4031</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">0.7347</span><span class="token punctuation">,</span> <span class="token number">0.0293</span><span class="token punctuation">,</span> <span class="token number">0.7999</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>manual_seed<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span>torch<span class="token punctuation">.</span>_C<span class="token punctuation">.</span>Generator object at <span class="token number">0x0000019684586350</span><span class="token operator">></span>
-<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> b
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.7576</span><span class="token punctuation">,</span> <span class="token number">0.2793</span><span class="token punctuation">,</span> <span class="token number">0.4031</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">0.7347</span><span class="token punctuation">,</span> <span class="token number">0.0293</span><span class="token punctuation">,</span> <span class="token number">0.7999</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">==</span> b
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span></code></pre>
-<h3 id="2-torch-initial-seed"><a href="#2-torch-initial-seed" class="headerlink" title="2. torch.initial_seed()"></a>2. torch.initial_seed()</h3><p><strong>说明：</strong>返回生成随机数的原始种子值</p>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>manual_seed<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span>torch<span class="token punctuation">.</span>_C<span class="token punctuation">.</span>Generator object at <span class="token number">0x0000019684586350</span><span class="token operator">></span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>initial_seed<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token number">4</span></code></pre>
-<h3 id="3-torch-get-rng-state"><a href="#3-torch-get-rng-state" class="headerlink" title="3. torch.get_rng_state()"></a>3. torch.get_rng_state()</h3><p><strong>说明：</strong> 返回随机生成器状态(ByteTensor)</p>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>initial_seed<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token number">4</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>get_rng_state<span class="token punctuation">(</span><span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span></code></pre>
-<h3 id="4-torch-set-rng-state"><a href="#4-torch-set-rng-state" class="headerlink" title="4. torch.set_rng_state()"></a>4. torch.set_rng_state()</h3><p><strong>说明：</strong> 设定随机生成器状态<br><strong>参数：</strong></p>
-<ul>
-<li>new_state(ByteTensor) – 期望的状态</li>
-</ul>
-<h3 id="5-torch-default-generator"><a href="#5-torch-default-generator" class="headerlink" title="5. torch.default_generator"></a>5. torch.default_generator</h3><p><strong>说明：</strong>默认的随机生成器。等于&lt;torch._C.Generator object&gt;</p>
-<h3 id="6-torch-bernoulli-input-out-None"><a href="#6-torch-bernoulli-input-out-None" class="headerlink" title="6. torch.bernoulli(input, out=None)"></a>6. torch.bernoulli(input, out=None)</h3><p><strong>说明：</strong>从伯努利分布中抽取二元随机数(0或1)。输入张量包含用于抽取二元值的概率。因此，输入中的所有值都必须在[0,1]区间内。输出张量的第i个元素值，将会以输入张量的第i个概率值等于1。返回值将会是与输入相同大小的张量，每个值为0或者1.<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 输入为伯努利分布的概率值</li>
-<li>out(Tensor,可选) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>uniform_<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.5596</span><span class="token punctuation">,</span> <span class="token number">0.5591</span><span class="token punctuation">,</span> <span class="token number">0.0915</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">0.2100</span><span class="token punctuation">,</span> <span class="token number">0.0072</span><span class="token punctuation">,</span> <span class="token number">0.0390</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">0.9929</span><span class="token punctuation">,</span> <span class="token number">0.9131</span><span class="token punctuation">,</span> <span class="token number">0.6186</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>bernoulli<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="7-torch-multinomial-input-num-samples-replacement-False-out-None"><a href="#7-torch-multinomial-input-num-samples-replacement-False-out-None" class="headerlink" title="7. torch.multinomial(input, num_samples, replacement=False, out=None)"></a>7. torch.multinomial(input, num_samples, replacement=False, out=None)</h3><p><strong>说明：</strong> 返回一个张量，每行包含从input相应行中定义的多项分布中抽取的num_samples个样本。要求输入input每行的值不需要总和为1，但是必须非负且总和不能为0。当抽取样本时，依次从左到右排列(第一个样本对应第一列)。如果输入input是一个向量，输出out也是一个相同长度num_samples的向量。如果输入input是m行的矩阵，输出out是形如m x n的矩阵。并且如果参数replacement为True，则样本抽取可以重复。否则，一个样本在每行不能被重复。<br><strong>参数：</strong></p>
-<ul>
-<li>input(Tensor) – 包含概率的张量</li>
-<li>num_samples(int) – 抽取的样本数</li>
-<li>replacement(bool) – 布尔值，决定是否能重复抽取</li>
-<li>out(Tensor) – 结果张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> weights <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> weights
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> torch<span class="token punctuation">.</span>multinomial<span class="token punctuation">(</span>weights<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> replacement<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="8-torch-normal-means-std-out-None"><a href="#8-torch-normal-means-std-out-None" class="headerlink" title="8. torch.normal(means, std, out=None)"></a>8. torch.normal(means, std, out=None)</h3><p><strong>说明：</strong>返回一个张量，包含从给定参数means，std的离散正态分布中抽取随机数。均值means是一个张量，包含每个输出元素相关的正态分布的均值。std是一个张量。包含每个输出元素相关的正态分布的标准差。均值和标准差的形状不须匹配，但每个张量的元素个数必须想听。<br><strong>参数：</strong></p>
-<ul>
-<li>means(Tensor) – 均值</li>
-<li>std(Tensor) – 标准差</li>
-<li>out(Tensor) – 输出张量</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> n_data <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> n_data
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> x0 <span class="token operator">=</span> torch<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> n_data<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> x0
-tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1.6544</span><span class="token punctuation">,</span> <span class="token number">0.9805</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">2.1114</span><span class="token punctuation">,</span> <span class="token number">2.7113</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1.0646</span><span class="token punctuation">,</span> <span class="token number">1.9675</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">2.7652</span><span class="token punctuation">,</span> <span class="token number">3.2138</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span><span class="token number">1.1204</span><span class="token punctuation">,</span> <span class="token number">2.0293</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<h3 id="9-torch-save-obj-f-pickle-module-lt-module-‘pickle’-from-‘-home-lzjs-…"><a href="#9-torch-save-obj-f-pickle-module-lt-module-‘pickle’-from-‘-home-lzjs-…" class="headerlink" title="9. torch.save(obj, f, pickle_module=<module ‘pickle’ from ‘/home/lzjs/…)"></a>9. torch.save(obj, f, pickle_module=&lt;module ‘pickle’ from ‘/home/lzjs/…)</h3><p><strong>说明：</strong> 保存一个对象到一个硬盘文件上。<br><strong>参数：</strong></p>
-<ul>
-<li>obj – 保存对象</li>
-<li>f – 类文件对象或一个保存文件名的字符串</li>
-<li>pickle_module – 用于pickling源数据和对象的模块</li>
-<li>pickle_protocol – 指定pickle protocal可以覆盖默认参数</li>
-</ul>
-<h3 id="10-torch-load-f-map-location-None-pickle-module-lt-module-‘pickle’-from-‘-home-lzjs-…"><a href="#10-torch-load-f-map-location-None-pickle-module-lt-module-‘pickle’-from-‘-home-lzjs-…" class="headerlink" title="10. torch.load(f, map_location=None, pickle_module=<module ‘pickle’ from ‘/home/lzjs/…)"></a>10. torch.load(f, map_location=None, pickle_module=&lt;module ‘pickle’ from ‘/home/lzjs/…)</h3><p><strong>说明：</strong> 从磁盘文件中读取一个通过torch.save()保存的对象。torch.load()可通过参数map_location动态地进行内存重映射，使其能从不动设备中读取文件。一般调用时，需两个参数：storage和location tag。返回不同地址中的storage，或者返回None。如果这个参数是字典的话，意味着从文件的地址标记到当前系统的地址标记的映射。<br><strong>参数：</strong></p>
-<ul>
-<li>f – l类文件对象或一个保存文件名的字符串</li>
-<li>map_location – 一个函数或字典规定如何remap存储位置</li>
-<li>pickle_module – 用于unpickling元数据和对象的模块</li>
-</ul>
-<pre class=" language-python"><code class="language-python">torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'tensors.pt'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># 加载所有的张量到CPU</span>
-torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'tensor.pt'</span><span class="token punctuation">,</span> map_location<span class="token operator">=</span><span class="token keyword">lambda</span> storage<span class="token punctuation">,</span> loc<span class="token punctuation">:</span>storage<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># 加载张量到GPU</span>
-torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'tensors.pt'</span><span class="token punctuation">,</span> map_location<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'cuda:1'</span><span class="token punctuation">:</span><span class="token string">'cuda:0'</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<h3 id="11-torch-get-num-threads"><a href="#11-torch-get-num-threads" class="headerlink" title="11. torch.get_num_threads()"></a>11. torch.get_num_threads()</h3><p><strong>说明：</strong> 获得用于并行化CPU操作的OpenMP线程数</p>
-<h3 id="12-torch-set-num-threads"><a href="#12-torch-set-num-threads" class="headerlink" title="12. torch.set_num_threads()"></a>12. torch.set_num_threads()</h3><p><strong>说明：</strong> 设定用于并行化CPU操作的OpenMP线程数</p>
+<p>实验结果：<br><img src="https://img-blog.csdnimg.cn/20190926145949668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="分类性能"></p>
+<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet网络通过构造密集构造块来近似预期的最佳稀疏结构，此方法的优点是在适度增加计算需求的情况下显著提高了网络的性能。实验结果也表明Inception结构的能力。</p>
+<blockquote>
+<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -771,9 +686,9 @@ torch<span class="token punctuation">.</span>load<span class="token punctuation"
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Pytorch学习之torch----随机抽样、序列化、并行化》
+                    《CNN模型之GoogLeNet》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/23/pytorch-xue-xi-zhi-torch-sui-ji-chou-yang-xu-lie-hua-bing-xing-hua/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/26/cnn-mo-xing-zhi-googlenet/" property="cc:attributionName"
                rel="cc:attributionURL">
                 G&L
             </a> 采用
@@ -814,7 +729,7 @@ torch<span class="token punctuation">.</span>load<span class="token punctuation"
         repo: 'guoyuantao.github.io',
         owner: 'guoyuantao',
         admin: "guoyuantao",
-        id: '2019-06-23T09-27-59',
+        id: '2019-09-26T15-07-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -835,47 +750,43 @@ torch<span class="token punctuation">.</span>load<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/06/23/pytorch-xue-xi-zhi-torch-shu-xue-cao-zuo-yi/">
+                <a href="/2019/09/26/cnn-mo-xing-zhi-googlenet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Pytorch学习之torch----数学操作(一)">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CNN模型之GoogLeNet">
                         
-                        <span class="card-title">Pytorch学习之torch----数学操作(一)</span>
+                        <span class="card-title">CNN模型之GoogLeNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.abs(input, out=None)说明： 计算输入张量的每个元素绝对值参数：
-
-input(Tensor) – 输入张量
-out(可选) – 输出
-
->>> import torch
->>> torch.abs(to
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -883,12 +794,16 @@ out(可选) – 输出
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
@@ -902,34 +817,31 @@ out(可选) – 输出
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/22/pytorch-xue-xi-zhi-torch-suo-yin-qie-pian-lian-jie-bian-yi-cao-zuo/">
+                <a href="/2019/09/25/cnn-mo-xing-zhi-vggnet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Pytorch学习之torch----索引、切片、连接、变异操作">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CNN模型之VGGNet">
                         
-                        <span class="card-title">Pytorch学习之torch----索引、切片、连接、变异操作</span>
+                        <span class="card-title">CNN模型之VGGNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. torch.cat(seq, dim=0, out=None)说明： 在给定维度上对输入的张量序列seq进行连接操作参数：
-
-seq(Tensor的序列) – 可以是相同类型的Tensor的任何Python序列
-dim(int, 可选
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pytorch/" class="post-category" target="_blank">
-                                    Pytorch
+                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
+                                    卷积神经网络模型
                                 </a>
                             
                             
@@ -943,12 +855,16 @@ dim(int, 可选
                         <span class="chip bg-color">人工智能</span>
                     </a>
                     
-                    <a href="/tags/Pytorch/" target="_blank">
-                        <span class="chip bg-color">Pytorch</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/编程框架/" target="_blank">
-                        <span class="chip bg-color">编程框架</span>
+                    <a href="/tags/卷积神经网络/" target="_blank">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/" target="_blank">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
@@ -1096,6 +1012,13 @@ dim(int, 可选
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
