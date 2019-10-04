@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="CNN模型之GoogLeNet, G&amp;L博客">
-    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe">
+    <meta name="keywords" content="特征工程入门与实践----特征工程简介, G&amp;L博客">
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>CNN模型之GoogLeNet | G&amp;L博客</title>
+    <title>特征工程入门与实践----特征工程简介 | G&amp;L博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,13 +307,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        CNN模型之GoogLeNet
+                        特征工程入门与实践----特征工程简介
                     </div>
                 </div>
             </div>
@@ -424,20 +424,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/人工智能/" target="_blank">
-                                <span class="chip bg-color">人工智能</span>
-                            </a>
-                        
-                            <a href="/tags/深度学习/" target="_blank">
-                                <span class="chip bg-color">深度学习</span>
-                            </a>
-                        
-                            <a href="/tags/卷积神经网络/" target="_blank">
-                                <span class="chip bg-color">卷积神经网络</span>
-                            </a>
-                        
-                            <a href="/tags/CNN/" target="_blank">
-                                <span class="chip bg-color">CNN</span>
+                            <a href="/tags/特征工程，数据挖掘，数据分析/" target="_blank">
+                                <span class="chip bg-color">特征工程，数据挖掘，数据分析</span>
                             </a>
                         
                     </div>
@@ -448,8 +436,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
-                                卷积神经网络模型
+                            <a href="/categories/特征工程/" class="post-category" target="_blank">
+                                特征工程
                             </a>
                         
                     </div>
@@ -460,21 +448,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-26
+                    2019-10-01
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        541
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -490,21 +478,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLeNet。2014年的ILSVRC分类任务中力压VGGNet赢得了分类任务的冠军。又名Inception。这个网络主要的特点是提高了网络内部计算资源的利用。从网络的深度和宽度两个方面都有所增加。是一个22层的卷积神经网络。要比VGGNet的19层更深。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet的最大特点就是其Inception结构，通过构建密集的块结构(Inception)来近似最优的稀疏结构，从而达到提高性能而又不大量增加计算量的目的。Inception结果为<br><img src="https://img-blog.csdnimg.cn/20190926143148446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="Inception 模块"><br>在Inception模块中，包含了很多种卷积核，还有池化操作。(b)图中是带有降维的Inception模块。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习的知识来构建一个AI系统，从用户那里读取到原始数据，让计算机来帮助我们达到识别的目的。为了解决某个问题，需要收集大量的数据，这些数据都是在实际的情况中自然形成的，往往有杂乱或者不完整的情况。因此，我们需要对原始数据做处理。这就是所谓的<strong>特征工程</strong>。在日常的工作中80%的时间都用在捕获、清洗和组织数据上，20%的时间用在构造机器学习流水线上。下图展示了不同工作时间的比例。<br><img src="https://img-blog.csdnimg.cn/20191004085835215.png" alt="不同工作的时间比例"></p>
 <ul>
-<li>使用$1\times 1$、$3\times 3$、$5\times 5$大小的卷积核，padding不同尺寸，使输出图像大小一致，然后将得到的特征图拼接在一起。</li>
-<li>层数加深，在不同深处增加loss来避免梯度回传消失。这两个loss就是辅助分类器。</li>
-<li>$1\times 1$卷积核用来降维。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190926144624328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="GoogLeNet网络"><br><img src="https://img-blog.csdnimg.cn/20190926144708195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="网络配置"></li>
-<li>AvgPool层设置$5\times 5$并且步长为3.</li>
-<li>128个$1\times 1$的卷积用来降维，并使用ReLU激活函数</li>
-<li>全连接层具有1024个节点，并使用ReLU激活函数</li>
-<li>Dropout操作设置为0.7</li>
-<li>最后是一个线性层是softmax loss 作为分类器。</li>
+<li>设置训练集：3%</li>
+<li>清洗和组织数据：60%</li>
+<li>收集数据集：19%</li>
+<li>挖掘数据模式：9%</li>
+<li>调整算法：4%</li>
 </ul>
-<p>实验结果：<br><img src="https://img-blog.csdnimg.cn/20190926145949668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="分类性能"></p>
-<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet网络通过构造密集构造块来近似预期的最佳稀疏结构，此方法的优点是在适度增加计算需求的情况下显著提高了网络的性能。实验结果也表明Inception结构的能力。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;准备数据包括捕获数据、存储数据、清洗数据。<strong>清洗数据</strong>的意思是将数据转换为云系统和数据库可以轻松识别的形式。<strong>组织数据</strong>是将数据集的格式转换为更干净的格式。我们主要专注于特征工程，着眼于清洗和组织数据的过程，为机器学习流水线所服务。因此，所谓<strong>特征工程</strong>就是将数据转换为能更好的表示潜在问题的特征，而最终的目的是提高机器学习的性能。下面我们就要了解几个相关的概念。</p>
+<ol>
+<li><strong>特征</strong>：特征是对机器学习算法有意义的属性，对应表格数据，一列就是一个特征。</li>
+<li><strong>响应(标签)</strong>：响应也是属性的一个，但是这个属性是我们有希望进行预测的。</li>
+<li><strong>监督学习</strong>：利用有标签的数据，通过机器学习方法进行预测或者分类的学习过程。</li>
+<li><strong>无监督学习</strong>：利用无标签数据，通过机器学习算法进行预测或者分类的学习过程。</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们要做的就是通过特征工程，将杂乱、有问题的数据转化为干净、整洁的数据。这样我们就可以通过机器学习的算法来解决相应的问题。特征工程能提高机器学习的性能。评价一个特征工程的好坏的步骤为：<br>（1）在应用任何特征工程之前，得到机器学习模型的基准性能。<br>（2）应用一种或多种特征工程。<br>（3）对于每种特征工程获取一个性能指标，并与基准性能进行对比。<br>（4）如果性能增量大于某个阈值，则认为这种特征工程是有益的，可以应用在机器学习流水线上。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来我们将学习以下几部分内容，来深入理解特征工程都在做什么：</p>
+<ul>
+<li>特征理解</li>
+<li>特征增强</li>
+<li>特征选择</li>
+<li>特征构建</li>
+<li>特征转换</li>
+<li>特征学习</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后，说一下我自己是怎么开始认识到特征工程的重要，在我们的学习中，都是使用一些被处理好的数据来实现我们的模型。并且大多数人都将学习重点放在了模型上。这也造成了很多人都不关心特征工程这部分。直到最近参加了数学建模，选了一道需要特征工程相关知识的题，才感觉到自己对这方面知识的欠缺。最后买了这本书《特征工程入门与实践》。希望学完这本书，可以增加自己对特征工程的了解。</p>
 <blockquote>
-<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
+<p>注：本文的内容与图片来源于《特征工程入门与实践》。如有您也想学习相关知识，建议买一本来看。</p>
 </blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -686,9 +686,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《CNN模型之GoogLeNet》
+                    《特征工程入门与实践----特征工程简介》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/26/cnn-mo-xing-zhi-googlenet/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/01/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-gong-cheng-jian-jie/" property="cc:attributionName"
                rel="cc:attributionURL">
                 G&L
             </a> 采用
@@ -729,7 +729,7 @@
         repo: 'guoyuantao.github.io',
         owner: 'guoyuantao',
         admin: "guoyuantao",
-        id: '2019-09-26T15-07-30',
+        id: '2019-10-01T15-07-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -754,24 +754,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/01/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-gong-cheng-jian-jie/">
+                <a href="/2019/10/03/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-li-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="特征工程入门与实践----特征工程简介">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="特征工程入门与实践----特征理解">
                         
-                        <span class="card-title">特征工程入门与实践----特征工程简介</span>
+                        <span class="card-title">特征工程入门与实践----特征理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征理解，简单说就是理解数据中都有什么，对数据的理解方便我们认清数据，从而对数据进行操作，构造有用的特征。我们将从以下几个方面来认清数据：
+
+结
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-01
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-03
                         </span>
                         <span class="publish-author">
                             
@@ -803,24 +805,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/25/cnn-mo-xing-zhi-vggnet/">
+                <a href="/2019/09/26/cnn-mo-xing-zhi-googlenet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CNN模型之VGGNet">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CNN模型之GoogLeNet">
                         
-                        <span class="card-title">CNN模型之VGGNet</span>
+                        <span class="card-title">CNN模型之GoogLeNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名
+                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-26
                             </span>
                         <span class="publish-author">
                             

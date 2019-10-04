@@ -4,8 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="CNN模型之GoogLeNet, G&amp;L博客">
-    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe">
+    <meta name="keywords" content="特征工程入门与实践----特征增强, G&amp;L博客">
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;特征增强是对数据的进一步修改，我们开始清洗和增强数据。主要涉及的操作有
+
+识别数据中的缺失值
+删除有害数据
+输入缺失值
+对数据进行归一化/标准化">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>CNN模型之GoogLeNet | G&amp;L博客</title>
+    <title>特征工程入门与实践----特征增强 | G&amp;L博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,13 +312,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        CNN模型之GoogLeNet
+                        特征工程入门与实践----特征增强
                     </div>
                 </div>
             </div>
@@ -424,20 +429,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/人工智能/" target="_blank">
-                                <span class="chip bg-color">人工智能</span>
-                            </a>
-                        
-                            <a href="/tags/深度学习/" target="_blank">
-                                <span class="chip bg-color">深度学习</span>
-                            </a>
-                        
-                            <a href="/tags/卷积神经网络/" target="_blank">
-                                <span class="chip bg-color">卷积神经网络</span>
-                            </a>
-                        
-                            <a href="/tags/CNN/" target="_blank">
-                                <span class="chip bg-color">CNN</span>
+                            <a href="/tags/特征工程，数据挖掘，数据分析/" target="_blank">
+                                <span class="chip bg-color">特征工程，数据挖掘，数据分析</span>
                             </a>
                         
                     </div>
@@ -448,8 +441,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
-                                卷积神经网络模型
+                            <a href="/categories/特征工程/" class="post-category" target="_blank">
+                                特征工程
                             </a>
                         
                     </div>
@@ -460,21 +453,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-26
+                    2019-10-04
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        541
+                        2.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        10 分
                     </div>
                     
                 
@@ -490,22 +483,209 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLeNet。2014年的ILSVRC分类任务中力压VGGNet赢得了分类任务的冠军。又名Inception。这个网络主要的特点是提高了网络内部计算资源的利用。从网络的深度和宽度两个方面都有所增加。是一个22层的卷积神经网络。要比VGGNet的19层更深。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet的最大特点就是其Inception结构，通过构建密集的块结构(Inception)来近似最优的稀疏结构，从而达到提高性能而又不大量增加计算量的目的。Inception结果为<br><img src="https://img-blog.csdnimg.cn/20190926143148446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="Inception 模块"><br>在Inception模块中，包含了很多种卷积核，还有池化操作。(b)图中是带有降维的Inception模块。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征增强是对数据的进一步修改，我们开始清洗和增强数据。主要涉及的操作有</p>
 <ul>
-<li>使用$1\times 1$、$3\times 3$、$5\times 5$大小的卷积核，padding不同尺寸，使输出图像大小一致，然后将得到的特征图拼接在一起。</li>
-<li>层数加深，在不同深处增加loss来避免梯度回传消失。这两个loss就是辅助分类器。</li>
-<li>$1\times 1$卷积核用来降维。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190926144624328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="GoogLeNet网络"><br><img src="https://img-blog.csdnimg.cn/20190926144708195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="网络配置"></li>
-<li>AvgPool层设置$5\times 5$并且步长为3.</li>
-<li>128个$1\times 1$的卷积用来降维，并使用ReLU激活函数</li>
-<li>全连接层具有1024个节点，并使用ReLU激活函数</li>
-<li>Dropout操作设置为0.7</li>
-<li>最后是一个线性层是softmax loss 作为分类器。</li>
+<li>识别数据中的缺失值</li>
+<li>删除有害数据</li>
+<li>输入缺失值</li>
+<li>对数据进行归一化/标准化</li>
 </ul>
-<p>实验结果：<br><img src="https://img-blog.csdnimg.cn/20190926145949668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="分类性能"></p>
-<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet网络通过构造密集构造块来近似预期的最佳稀疏结构，此方法的优点是在适度增加计算需求的情况下显著提高了网络的性能。实验结果也表明Inception结构的能力。</p>
-<blockquote>
-<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
-</blockquote>
+<h5 id="1-识别数据中的缺失值"><a href="#1-识别数据中的缺失值" class="headerlink" title="1. 识别数据中的缺失值"></a>1. 识别数据中的缺失值</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征增强的第一种方法是识别数据的缺失值，可以让我们更好的明白如何使用真是世界中的数据。通常，数据因为一些原因，导致数据缺失，不完整。我们需要做的就是识别出数据中的缺失值。并对缺失值进行处理。本文使用皮马印第安人糖尿病预测数据集。这个数据集包含768行数据点，9列特征。预测21岁以上的女性皮马印第安人5年内是否会患糖尿病。数据每列的含义如下：<br>（1）怀孕次数<br>（2）口服葡萄糖耐量实验中的2小时血浆葡萄糖浓度<br>（3）舒张压<br>（4）三头肌皮褶厚度<br>（5）2小时血清胰岛素浓度<br>（6）体重指数<br>（7）糖尿病家族函数<br>（8）年龄<br>（9）类变量(0或1,代表有无糖尿病)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先我们先来了解一下数据</p>
+<pre><code># 导入探索性数据分析所需的包
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+plt.style.use('fivethirtyeight')
+
+# 添加标题
+pima_column_names = ['times_pregnant', 'plasma_glucose_concentration', 'diastolic_blood_pressure', 'triceps_thickness',
+                    'serum_insulin', 'bmi', 'pedigree_function', 'age', 'onset_diabetes']
+pima = pd.read_csv('./data/pima.data', names=pima_column_names)
+pima.head()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004142223109.png" alt="数据"></p>
+<pre><code># 计算一下空准确率
+pima['onset_diabetes'].value_counts(normalize=True)</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004142341291.png" alt="结果"></p>
+<pre><code># 对plasma_glucose_concentration列绘制两类的直方图
+col = 'plasma_glucose_concentration'
+plt.hist(pima[pima['onset_diabetes'] == 0][col], 10, alpha=0.5, label='non-diabetes')   # 不患糖尿病
+plt.hist(pima[pima['onset_diabetes'] == 1][col], 10, alpha=0.5, label='diabetes')  # 患糖尿病
+plt.legend(loc='upper right')
+plt.xlabel(col)
+plt.ylabel('Frequency')
+plt.title('Histogram of {}'.format(col))
+plt.show()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004142409752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="患病与不患病的血糖浓度频率直方图"></p>
+<pre><code># 线性相关矩阵量化变量间的关系
+# 数据相关矩阵的热力图
+sns.heatmap(pima.corr())</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004142610107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="数据相关热力图"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从上面的分析中，我们首先可以得到患者和常人的血糖浓度是有很大的差异的。并且血糖浓度与患者是否患病的相关性很大。下面我们来分析一下数据是否存在缺失值。</p>
+<pre><code># 查看数据中是否存在缺失值
+pima.isnull().sum()</code></pre><p><img src="https://img-blog.csdnimg.cn/201910041432437.png" alt="结果"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从上面的结果我们可以看到并没有缺失值，我们在看一下关于数据的基本描述性统计。</p>
+<pre><code># 查看数据的基本描述性统计
+pima.describe()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004143411926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="结果"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以看到BMI指标的最小值是0.这是有悖于医学常识的。这有可能是缺失或不存在的点都用0填充了。从数据中可以看到，有好几列都是0.但是onset——diabetes中的0代表没有糖尿病，人也可以怀孕0次。所以这两列没有问题，其他的列的缺失值用0填充了。</p>
+<ul>
+<li>plasma_glucose_concentration</li>
+<li>diastolic_blood_pressure</li>
+<li>triceps_thickness</li>
+<li>serum_insulin</li>
+<li>bmi<h5 id="2-处理数据中的缺失值"><a href="#2-处理数据中的缺失值" class="headerlink" title="2. 处理数据中的缺失值"></a>2. 处理数据中的缺失值</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，对存在缺失值的列，使用None代替0。然后在查看是否存在缺失值。</li>
+</ul>
+<pre><code># 直接对所有列操作
+columns = ['serum_insulin', 'bmi', 'plasma_glucose_concentration', 'diastolic_blood_pressure', 'triceps_thickness']
+for col in columns:
+    pima[col].replace([0], [None], inplace=True)
+
+# 查看缺失值情况
+pima.isnull().sum()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004144030184.png" alt="结果"></p>
+<h6 id="（1）删除有害的行"><a href="#（1）删除有害的行" class="headerlink" title="（1）删除有害的行"></a>（1）删除有害的行</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先删除有害的行，然后对删除前后的数据做一个分析，最后应用机器学习算法评估一下当前数据的性能。<br><strong>删除存在缺失值的数据</strong>：</p>
+<pre><code># 删除存在缺失的行
+pima_dropped = pima.dropna()
+# 检查删除了多少行
+num_rows_lost = round(100*(pima.shape[0] - pima_dropped.shape[0]) / float(pima.shape[0]))
+print("retained {}% of rows".format(num_rows_lost))</code></pre><p>retained 49% of rows<br><strong>数据分析</strong>：</p>
+<pre><code># 继续对数据做一下探索性分析
+# 未删除数据的空准确率
+pima['onset_diabetes'].value_counts(normalize=True)</code></pre><p>0    0.651042<br>1    0.348958<br>Name: onset_diabetes, dtype: float64</p>
+<pre><code># 删除数据后的空准确率
+pima_dropped['onset_diabetes'].value_counts(normalize=True)</code></pre><p>0    0.668367<br>1    0.331633<br>Name: onset_diabetes, dtype: float64</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从空准确率来看，前后的True和False并无太大的变化。接下来比较一下删除前后的个属性均值。</p>
+<pre><code># 未删除数据的均值
+pima.mean()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004144853612.png" alt="结果"></p>
+<pre><code># 删除数据后的均值
+pima_dropped.mean()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004144926336.png" alt="结果"></p>
+<pre><code># 使用条形图进行可视化
+# 均值变化百分比条形图
+ax = ((pima_dropped.mean() - pima.mean()) / pima.mean()).plot(kind='bar', title='% change in average column values')
+ax.set_ylabel('% change')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004145010209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="均值变化条形图"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以看到，怀孕次数的均值在删除缺失值后下降了14%，糖尿病血系功能也上升了11%。都变化的比较大。删除行会严重影响数据的形状，所以我们应该保留尽可能多的数据。在我们进行其他操作前，我们使用一个机器学习算法验证一下当前数据情况的模型性能。<br><strong>评估性能</strong>：</p>
+<pre><code># 导入机器学习
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import GridSearchCV
+
+# 删除标签数据
+X_dropped = pima_dropped.drop('onset_diabetes', axis=1)  # 特征
+print("leanrning from {} rows".format(X_dropped.shape[0]))
+y_dropped = pima_dropped['onset_diabetes']   # 标签
+
+# KNN的模型参数
+knn_params = {'n_neighbors': [1, 2, 3, 4, 5, 6, 7]}
+
+# KNN模型
+knn = KNeighborsClassifier()
+
+# 使用网格搜索优化
+grid = GridSearchCV(knn, knn_params)
+grid.fit(X_dropped, y_dropped)
+
+# 输出结果
+print(grid.best_score_, grid.best_params_)</code></pre><p>结果：0.7448979591836735 {‘n_neighbors’: 7}</p>
+<h6 id="（2）填充缺失值"><a href="#（2）填充缺失值" class="headerlink" title="（2）填充缺失值"></a>（2）填充缺失值</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们检查一下缺失值的情况。然后使用sklearn模块的方法填充缺失值，最后在检查缺失值情况，用机器学期方法验证一下模型的性能。<br><strong>检查缺失值：</strong></p>
+<pre><code># 在此查看缺失值情况
+pima.isnull().sum()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004154718649.png" alt="结果"><br><strong>填充缺失值：</strong></p>
+<pre><code># 使用scikit-learn预处理类的Imputer模块
+from sklearn.preprocessing import Imputer
+
+# 实例化对象
+imputer = Imputer(strategy='mean')
+# 创建新对象
+pima_imputed = imputer.fit_transform(pima)
+# 将得到的ndarray类型转化为DataFrame
+pima_imputed = pd.DataFrame(pima_imputed, columns=pima_column_names)
+pima_imputed.head()</code></pre><p><img src="https://img-blog.csdnimg.cn/2019100415481054.png" alt="填充后的数据"><br><strong>检查缺失值情况并评估性能：</strong></p>
+<pre><code># 判断是否有缺失值
+pima_imputed.isnull().sum()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004154909841.png" alt="结果"></p>
+<pre><code># 尝试一下填充一些别的值，查看对KNN模型的影响
+# 用0填充
+pima_zero = pima.fillna(0)  
+X_zero = pima_zero.drop('onset_diabetes', axis=1)
+y_zero = pima_zero['onset_diabetes']
+
+# knn模型参数
+knn_params = {'n_neighbors': [1, 2, 3, 4, 5, 6, 7]}
+# 网格搜索
+grid = GridSearchCV(knn, knn_params)
+grid.fit(X_zero, y_zero)
+
+# 输出
+print(grid.best_score_, grid.best_params_)</code></pre><p>结果：0.7330729166666666 {‘n_neighbors’: 6}</p>
+<h5 id="3-标准化和归一化"><a href="#3-标准化和归一化" class="headerlink" title="3. 标准化和归一化"></a>3. 标准化和归一化</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们现在要做的是进一步增强机器学习流水线，进行一下探索性数据分析。</p>
+<pre><code>impute = Imputer(strategy='mean')
+# 填充所有的缺失值
+pima_imputed_mean = pd.DataFrame(impute.fit_transform(pima), columns=pima_column_names)
+# 画直方图
+pima_imputed_mean.hist(figsize=(15, 15))</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004155539881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="部分结果"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从这分析中可以发现，某些特征数据的尺度不同。有一些机器学习模型受数据尺度的影响很大。因此，我们可以使用某种归一化/标准化操作。<br><strong>归一化：</strong>将行和列对齐并转化为一致的规则。将所有定量列转化为同一个静态范围中的值。<br><strong>标准化：</strong>通过确保所有行和列在机器学习中得到平等对待，让数据的处理保持一致。</p>
+<h6 id="（1）z分数标准化"><a href="#（1）z分数标准化" class="headerlink" title="（1）z分数标准化"></a>（1）z分数标准化</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z分数标准化利用了统计学最简单的z分数思想。将特征重新缩放，均值为0、标准差为1。通过缩放特征、统一化均值和方差，可以让机器学习模型达到最优化。公式为<br>$$<br>z=\frac{x-\mu }{\sigma }<br>$$<br>其中$\mu$为均值，$\sigma$为标准差。</p>
+<pre><code># 取此列均值
+mu = pima['plasma_glucose_concentration'].mean()
+# 取此列标准差
+sigma = pima['plasma_glucose_concentration'].std()
+# 对每个值计算z分数
+print(((pima['plasma_glucose_concentration'] - mu) / sigma).head())</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004161219925.png" alt="标准化后的数据"></p>
+<pre><code># 使用内置的z分数归一化
+from sklearn.preprocessing import StandardScaler
+
+# 用z分数标准化
+scaler = StandardScaler()
+
+glucose_z_score_standardized = scaler.fit_transform(pima[['plasma_glucose_concentration']])
+# 直方图
+ax = pd.Series(glucose_z_score_standardized.reshape(-1,)).hist()
+ax.set_title('Distribution of plasma_glucose_concentration after Z Score Scaling')</code></pre><p><img src="https://img-blog.csdnimg.cn/201910041614471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="标准化后的数据直方图"></p>
+<pre><code># 将z分数标准化插入到机器学习流水线上
+knn_params = {'imputer__strategy': ['mean', 'median'], 'classify__n_neighbors': [1, 2, 3, 4, 5, 6, 7]}
+
+mean_impute_standardize = Pipeline([('imputer', Imputer()), ('standardize', StandardScaler()), ('classify', knn)])
+
+X = pima.drop('onset_diabetes', axis=1)
+y = pima['onset_diabetes']
+
+grid = GridSearchCV(mean_impute_standardize, knn_params)
+grid.fit(X, y)
+
+print(grid.best_score_, grid.best_params_)</code></pre><p>结果：0.7421875 {‘classify__n_neighbors’: 7, ‘imputer__strategy’: ‘median’}</p>
+<h6 id="（2）min-max标准化"><a href="#（2）min-max标准化" class="headerlink" title="（2）min-max标准化"></a>（2）min-max标准化</h6><p>$$<br>m=\frac{x-x_{min} }{x_{max}-x_{min}}<br>$$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，$x_{min}$为该列最小值，$x_{max}$为该列最大值。<br><strong>标准化</strong></p>
+<pre><code># 导入sklearn模块
+from sklearn.preprocessing import MinMaxScaler
+
+# 实例化
+min_max = MinMaxScaler()
+
+# min-max标准化
+pima_min_maxed = pd.DataFrame(min_max.fit_transform(pima_imputed), columns=pima_column_names)
+
+# 得到描述性统计
+pima_min_maxed.describe()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004162442416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="标准化后的数据"><br><strong>评估性能</strong></p>
+<pre><code>knn_params = {'imputer__strategy': ['mean', 'median'], 'classify__n_neighbors': [1, 2, 3, 4, 5, 6, 6]}
+
+mean_impute_standardize = Pipeline([('imputer', Imputer()), ('standardize', MinMaxScaler()), ('classify', knn)])
+
+X = pima.drop('onset_diabetes', axis=1)
+y = pima['onset_diabetes']
+
+grid = GridSearchCV(mean_impute_standardize, knn_params)
+grid.fit(X, y)
+
+print(grid.best_score_, grid.best_params_)</code></pre><p>结果：0.74609375 {‘classify__n_neighbors’: 4, ‘imputer__strategy’: ‘mean’}</p>
+<h6 id="（3）行归一化"><a href="#（3）行归一化" class="headerlink" title="（3）行归一化"></a>（3）行归一化</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行归一化是针对行进行操作的，保证每行有单位范数，也就是每行的向量长度相同。<br>$$<br>\left | x \right |=\sqrt{(x_{1}^{2}+x_{2}^{2}+…+x_{n}^{2})}<br>$$<br><strong>归一化</strong></p>
+<pre><code># 引入行归一化
+from sklearn.preprocessing import Normalizer
+
+# 实例化
+normalize = Normalizer()
+
+pima_normalized = pd.DataFrame(normalize.fit_transform(pima_imputed), columns=pima_column_names)
+
+# 行归一化后矩阵的平均范数
+np.sqrt((pima_normalized**2).sum(axis=1)).mean()</code></pre><p>结果：1.0<br><strong>评估性能</strong></p>
+<pre><code>knn_params = {'imputer__strategy': ['mean', 'median'], 'classify__n_neighbors': [1, 2, 3, 4, 5, 6, 6]}
+
+mean_impute_standardize = Pipeline([('imputer', Imputer()), ('normalize', Normalizer()), ('classify', knn)])
+
+X = pima.drop('onset_diabetes', axis=1)
+y = pima['onset_diabetes']
+
+grid = GridSearchCV(mean_impute_standardize, knn_params)
+grid.fit(X, y)
+
+print(grid.best_score_, grid.best_params_)</code></pre><p>结果：0.6822916666666666 {‘classify__n_neighbors’: 6, ‘imputer__strategy’: ‘mean’}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从本章的学习中，我们处理了数据中的缺失值，并使用标准化/归一化的方法继续处理数据。然后我们评估了性能。得到的结果是使用均值填充数据，然后用min-max标准化处理出具。得到0.7461的准确率。注意，虽然这个数据比删除存在缺失值的数据准确率没有高很多。但是这是使用全部数据训练的结果。更具有一般化。泛化性能将更好。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -686,9 +866,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《CNN模型之GoogLeNet》
+                    《特征工程入门与实践----特征增强》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/26/cnn-mo-xing-zhi-googlenet/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/04/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-zeng-qiang/" property="cc:attributionName"
                rel="cc:attributionURL">
                 G&L
             </a> 采用
@@ -729,7 +909,7 @@
         repo: 'guoyuantao.github.io',
         owner: 'guoyuantao',
         admin: "guoyuantao",
-        id: '2019-09-26T15-07-30',
+        id: '2019-10-04T15-07-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -750,29 +930,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/10/01/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-gong-cheng-jian-jie/">
+                <a href="/2019/10/04/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-zeng-qiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="特征工程入门与实践----特征工程简介">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="特征工程入门与实践----特征增强">
                         
-                        <span class="card-title">特征工程入门与实践----特征工程简介</span>
+                        <span class="card-title">特征工程入门与实践----特征增强</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征增强是对数据的进一步修改，我们开始清洗和增强数据。主要涉及的操作有
+
+识别数据中的缺失值
+删除有害数据
+输入缺失值
+对数据进行归一化/标准化
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -785,6 +971,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -803,31 +990,33 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/25/cnn-mo-xing-zhi-vggnet/">
+                <a href="/2019/10/03/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-li-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CNN模型之VGGNet">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="特征工程入门与实践----特征理解">
                         
-                        <span class="card-title">CNN模型之VGGNet</span>
+                        <span class="card-title">特征工程入门与实践----特征理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征理解，简单说就是理解数据中都有什么，对数据的理解方便我们认清数据，从而对数据进行操作，构造有用的特征。我们将从以下几个方面来认清数据：
+
+结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
-                                    卷积神经网络模型
+                            <a href="/categories/特征工程/" class="post-category" target="_blank">
+                                    特征工程
                                 </a>
                             
                             
@@ -837,20 +1026,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/人工智能/" target="_blank">
-                        <span class="chip bg-color">人工智能</span>
-                    </a>
-                    
-                    <a href="/tags/深度学习/" target="_blank">
-                        <span class="chip bg-color">深度学习</span>
-                    </a>
-                    
-                    <a href="/tags/卷积神经网络/" target="_blank">
-                        <span class="chip bg-color">卷积神经网络</span>
-                    </a>
-                    
-                    <a href="/tags/CNN/" target="_blank">
-                        <span class="chip bg-color">CNN</span>
+                    <a href="/tags/特征工程，数据挖掘，数据分析/" target="_blank">
+                        <span class="chip bg-color">特征工程，数据挖掘，数据分析</span>
                     </a>
                     
                 </div>

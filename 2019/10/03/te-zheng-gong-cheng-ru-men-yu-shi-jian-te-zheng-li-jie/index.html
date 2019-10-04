@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="CNN模型之GoogLeNet, G&amp;L博客">
-    <meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLe">
+    <meta name="keywords" content="特征工程入门与实践----特征理解, G&amp;L博客">
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;特征理解，简单说就是理解数据中都有什么，对数据的理解方便我们认清数据，从而对数据进行操作，构造有用的特征。我们将从以下几个方面来认清数据：
+
+结">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>CNN模型之GoogLeNet | G&amp;L博客</title>
+    <title>特征工程入门与实践----特征理解 | G&amp;L博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,13 +309,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        CNN模型之GoogLeNet
+                        特征工程入门与实践----特征理解
                     </div>
                 </div>
             </div>
@@ -424,20 +426,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/人工智能/" target="_blank">
-                                <span class="chip bg-color">人工智能</span>
-                            </a>
-                        
-                            <a href="/tags/深度学习/" target="_blank">
-                                <span class="chip bg-color">深度学习</span>
-                            </a>
-                        
-                            <a href="/tags/卷积神经网络/" target="_blank">
-                                <span class="chip bg-color">卷积神经网络</span>
-                            </a>
-                        
-                            <a href="/tags/CNN/" target="_blank">
-                                <span class="chip bg-color">CNN</span>
+                            <a href="/tags/特征工程，数据挖掘，数据分析/" target="_blank">
+                                <span class="chip bg-color">特征工程，数据挖掘，数据分析</span>
                             </a>
                         
                     </div>
@@ -448,8 +438,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
-                                卷积神经网络模型
+                            <a href="/categories/特征工程/" class="post-category" target="_blank">
+                                特征工程
                             </a>
                         
                     </div>
@@ -460,21 +450,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-26
+                    2019-10-03
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        541
+                        1.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        6 分
                     </div>
                     
                 
@@ -490,22 +480,116 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet，2014年由Google团队的Christian Szegedy等人提出，为了向LeNet致敬，所以取名GoogLeNet。2014年的ILSVRC分类任务中力压VGGNet赢得了分类任务的冠军。又名Inception。这个网络主要的特点是提高了网络内部计算资源的利用。从网络的深度和宽度两个方面都有所增加。是一个22层的卷积神经网络。要比VGGNet的19层更深。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet的最大特点就是其Inception结构，通过构建密集的块结构(Inception)来近似最优的稀疏结构，从而达到提高性能而又不大量增加计算量的目的。Inception结果为<br><img src="https://img-blog.csdnimg.cn/20190926143148446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="Inception 模块"><br>在Inception模块中，包含了很多种卷积核，还有池化操作。(b)图中是带有降维的Inception模块。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征理解，简单说就是理解数据中都有什么，对数据的理解方便我们认清数据，从而对数据进行操作，构造有用的特征。我们将从以下几个方面来认清数据：</p>
 <ul>
-<li>使用$1\times 1$、$3\times 3$、$5\times 5$大小的卷积核，padding不同尺寸，使输出图像大小一致，然后将得到的特征图拼接在一起。</li>
-<li>层数加深，在不同深处增加loss来避免梯度回传消失。这两个loss就是辅助分类器。</li>
-<li>$1\times 1$卷积核用来降维。<h4 id="二、模型结构"><a href="#二、模型结构" class="headerlink" title="二、模型结构"></a>二、模型结构</h4><img src="https://img-blog.csdnimg.cn/20190926144624328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="GoogLeNet网络"><br><img src="https://img-blog.csdnimg.cn/20190926144708195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="网络配置"></li>
-<li>AvgPool层设置$5\times 5$并且步长为3.</li>
-<li>128个$1\times 1$的卷积用来降维，并使用ReLU激活函数</li>
-<li>全连接层具有1024个节点，并使用ReLU激活函数</li>
-<li>Dropout操作设置为0.7</li>
-<li>最后是一个线性层是softmax loss 作为分类器。</li>
+<li>结构化数据与非结构化数据</li>
+<li>定量数据与定性数据</li>
+<li>数据的4个等级</li>
+<li>探索性数据分析和数据可视化</li>
+<li>描述性统计</li>
 </ul>
-<p>实验结果：<br><img src="https://img-blog.csdnimg.cn/20190926145949668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="分类性能"></p>
-<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoogLeNet网络通过构造密集构造块来近似预期的最佳稀疏结构，此方法的优点是在适度增加计算需求的情况下显著提高了网络的性能。实验结果也表明Inception结构的能力。</p>
-<blockquote>
-<p>友情链接：<br>代码实现：<a href="https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch" target="_blank" rel="noopener">https://github.com/guoyuantao/CNN_Model/tree/master/CNN_on_cifar_ByPytorch</a><br>联系方式：2391855138(加好友请备注)</p>
-</blockquote>
+<h5 id="1-结构化数据和非结构化数据"><a href="#1-结构化数据和非结构化数据" class="headerlink" title="1. 结构化数据和非结构化数据"></a>1. 结构化数据和非结构化数据</h5><p><strong>结构化(有组织)数据</strong>：分成观察值和特征的数据，以表格的形式组织，行是观察值，列是特征。例如，科学仪器报告的气象数据，是存在表格的行列结构。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191004103250519.png" alt="结构化数据"><br><strong>非结构化(无组织)数据</strong>：作为自由流动的实体，不遵循标准组织结构的数据。例如，服务器日志和推文。<br><img src="https://img-blog.csdnimg.cn/20191004103730746.png" alt="非结构化数据"></p>
+<h5 id="2-定量数据和定性数据"><a href="#2-定量数据和定性数据" class="headerlink" title="2. 定量数据和定性数据"></a>2. 定量数据和定性数据</h5><p><strong>定量数据</strong>：本质上是数值，应该是衡量某样东西的数量。<br><strong>定性数据</strong>：本质上是类别，应该是描述某样东西的性质。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先导入一个数据，这个数据是旧金山做不同工作的工资。</p>
+<pre><code># 导包
+# 数学计算包
+import numpy as np
+# 存储表格数据
+import pandas as pd
+# 数据可视化包
+import matplotlib.pyplot as plt
+import seaborn as sns
+# 允许行内渲染图形
+%matplotlib inline
+# 流行的数据可视化主题
+plt.style.use('fivethirtyeight')
+
+# 导入数据
+salary_ranges = pd.read_csv('./data/Salary_Ranges_by_Job_Classification.csv')
+
+# 查看前几行
+salary_ranges.head()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004113854263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="数据展示"></p>
+<pre><code># 查看数据的信息
+salary_ranges.info()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004113943494.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="数据信息"></p>
+<pre><code># 查看数据是否存在缺失
+salary_ranges.isnull().sum()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004114050424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="是否存在缺失值"></p>
+<pre><code># 数据的描述性统计
+salary_ranges.describe()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004114151371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="数据的统计特性"></p>
+<h5 id="3-数据的4个等级"><a href="#3-数据的4个等级" class="headerlink" title="3. 数据的4个等级"></a>3. 数据的4个等级</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每个等级都有不同的控制和数学操作等级。了解数据让我们选择合适的可视化类型和操作。</p>
+<h6 id="（1）定类等级"><a href="#（1）定类等级" class="headerlink" title="（1）定类等级"></a>（1）定类等级</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定类等级，其结构最弱。数据只按名称分类。例如血型和人名。这些数据都是定性的。定类等级的数据上不能执行任何定量的数学操作。如下，对工作种类进行计数，出现次数最多的工作种类是00000。</p>
+<pre><code># 对工作种类进行计数
+salary_ranges['Grade'].value_counts().head()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004121341631.png" alt="工作种类计数"></p>
+<pre><code># 对工作种类绘制条形图
+salary_ranges['Grade'].value_counts().sort_values(ascending=False).head(20).plot(kind='bar')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004121730784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="工作种类条形图"></p>
+<pre><code># 绘制饼图
+salary_ranges['Grade'].value_counts().sort_values(ascending=False).head(5).plot(kind='pie')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004121917567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="工作种类饼图"></p>
+<h6 id="（2）定序等级"><a href="#（2）定序等级" class="headerlink" title="（2）定序等级"></a>（2）定序等级</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定序等级继承了定类等级的属性，而且有重要的附加属性。定序等级的数据可以自然排序，但其天然数据属性仍然是类别。定序等级数据也是定性的。其可以像定类等级一样计数，还可以；引入比较和排序。还可以绘制茎叶图和箱线图。例如考试的等级(F、D、C、B、A)。我们使用旧金山国际机场的数据来实现操作。在这个数据的Q7A_ART属性是关于；艺术品和展览的，能选择的是0，1，2，3，4，5，6，每个数字都有含义。我们只考虑1-5。</p>
+<pre><code># 导入数据集
+customer = pd.read_csv('./data/2013_SFO_Customer_survey.csv')
+customer.shape
+
+# 只考虑1-5
+art_ratings = art_ratings[(art_ratings &gt;= 1) &amp; (art_ratings &lt;= 6)]
+# 将值转为字符串
+art_ratings = art_ratings.astype(str)
+art_ratings.describe()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004123045191.png" alt="数据信息"></p>
+<pre><code># 使用条形图进行可视化
+art_ratings.value_counts().plot(kind='bar')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004123130100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="条形图"></p>
+<pre><code># 使用箱线图进行可视化
+art_ratings.value_counts().plot(kind='box')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004123200840.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="箱线图"></p>
+<h6 id="（3）定距等级"><a href="#（3）定距等级" class="headerlink" title="（3）定距等级"></a>（3）定距等级</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定距等级的数据是定量的数据。定距等级的数据之差是有意的。因此，不仅可以对值进行排序和比较，还可以进行加减法的运算。例如，当我们考虑温度的时候，上海的温度是32度，哈尔滨的温度是4度，32-4=28代表两地的温差为28度。相反，对于李克特量表做这种减法则没有任何意义。</p>
+<pre><code># 加载数据
+climate = pd.read_csv('./data/GlobalLandTemperaturesByCity.csv')
+# 移除缺失值
+climate.dropna(axis=0, inplace=True)
+climate.head()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004124223971.png" alt="移除缺失值后的数据"></p>
+<pre><code># 对温度画直方图，擦好看温度分布
+climate['AverageTemperature'].hist()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004124517544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="温度分布直方图"></p>
+<pre><code># 将dt栏转换为日期，取年份
+climate['dt'] = pd.to_datetime(climate['dt'])
+climate['year'] = climate['dt'].map(lambda value: value.year)
+
+# 只看美国
+climate_sub_us = climate.loc[climate['Country'] == 'United States']
+climate_sub_us['century'] = climate_sub_us['year'].map(lambda x: int(x/100+1))
+
+# 使用新的centery列，对每个世纪化直方图
+climate_sub_us['AverageTemperature'].hist(by=climate_sub_us['century'], sharex=True, sharey=True, figsize=(10, 10), bins=20)</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004124637683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="不同世纪的温度情况"></p>
+<pre><code>climate_sub_us.groupby('century')['AverageTemperature'].mean().plot(kind='line')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004124717143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="温度变换折线图"><br>在气候变化数据集中，我们针对year和averageTemperature两列数据进行描绘。</p>
+<pre><code>x = climate_sub_us['year']
+y = climate_sub_us['AverageTemperature']
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.scatter(x, y)
+plt.show()
+
+# 用groupby清除美国气温的噪声
+climate_sub_us.groupby('year').mean()['AverageTemperature'].plot()
+
+# 用滑动均值平滑图像
+climate_sub_us.groupby('year').mean()['AverageTemperature'].rolling(10).mean().plot()</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004124955638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="温度随year的变化"></p>
+<h6 id="（4）定比等级"><a href="#（4）定比等级" class="headerlink" title="（4）定比等级"></a>（4）定比等级</h6><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定比等级处理的也是定量数据，拥有最高程度的控制和数学运算能力。除了加减运算，还有一个绝对零点的概念，可以做乘除运算。例如，100元是50元的两倍。$100/50=2$。</p>
+<pre><code># 那个工资最高
+fig = plt.figure(figsize=(15, 5))
+ax = fig.gca()
+
+salary_ranges.groupby('Grade')[['Biweekly High Rate']].mean().sort_values('Biweekly High Rate', ascending=False).head(20).plot.bar(stacked=False, ax=ax, color='darkorange')
+ax.set_title('Top 20 Grade by Mean Biweekly High Rate')</code></pre><p><img src="https://img-blog.csdnimg.cn/20191004130454634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="不同工作的工资(top20)"></p>
+<pre><code># 哪个工作工资最低
+fig = plt.figure(figsize=(15, 5))
+ax = fig.gca()
+salary_ranges.groupby('Grade')[['Biweekly High Rate']].mean().sort_values('Biweekly High Rate', ascending=False).tail(20).plot.bar(stacked=False, ax=ax, color='darkorange')
+ax.set_title('Bottom 20 Grade by Mean Biweekly High Rate')</code></pre><p><img src="https://img-blog.csdnimg.cn/2019100413054433.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="不同工作的工资(Bottom20)"></p>
+<pre><code># 计算最高工资和最低工资的比值
+sorted_df = salary_ranges.groupby('Grade')[['Biweekly High Rate']].mean().sort_values('Biweekly High Rate', ascending=False)
+sorted_df.iloc[0][0] / sorted_df.iloc[-1][0]</code></pre><p>13.931919540229886</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在本文中，最主要的内容是我们将数据分为了4个不同的等级。不同的等级我们有不同的操作和可视化方法。应用这些方法我们可以加深对数据的理解与认识。当我们拿到一个新数据集时，应首先做如下操作：</p>
+<ol>
+<li>判断数据是结构化的还是非结构化的</li>
+<li>每列的数据是定量的还是定性的</li>
+<li>每列处于的数据等级，是定类、定序、定距还是定比？</li>
+<li>可以用什么图标可视化，条形图、饼图等。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20191004131137485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d5dDE1NjYzNjY4MzM3,size_16,color_FFFFFF,t_70" alt="特征理解：处理数据流程"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -686,9 +770,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《CNN模型之GoogLeNet》
+                    《特征工程入门与实践----特征理解》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/26/cnn-mo-xing-zhi-googlenet/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/03/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-li-jie/" property="cc:attributionName"
                rel="cc:attributionURL">
                 G&L
             </a> 采用
@@ -729,7 +813,7 @@
         repo: 'guoyuantao.github.io',
         owner: 'guoyuantao',
         admin: "guoyuantao",
-        id: '2019-09-26T15-07-30',
+        id: '2019-10-03T15-07-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -754,24 +838,29 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/01/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-gong-cheng-jian-jie/">
+                <a href="/2019/10/04/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-zeng-qiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="特征工程入门与实践----特征工程简介">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="特征工程入门与实践----特征增强">
                         
-                        <span class="card-title">特征工程入门与实践----特征工程简介</span>
+                        <span class="card-title">特征工程入门与实践----特征增强</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特征增强是对数据的进一步修改，我们开始清洗和增强数据。主要涉及的操作有
+
+识别数据中的缺失值
+删除有害数据
+输入缺失值
+对数据进行归一化/标准化
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-01
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-04
                         </span>
                         <span class="publish-author">
                             
@@ -803,31 +892,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/25/cnn-mo-xing-zhi-vggnet/">
+                <a href="/2019/10/01/te-zheng-gong-cheng-ru-men-yu-shi-jian-te-zheng-gong-cheng-jian-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CNN模型之VGGNet">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="特征工程入门与实践----特征工程简介">
                         
-                        <span class="card-title">CNN模型之VGGNet</span>
+                        <span class="card-title">特征工程入门与实践----特征工程简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VGGNet是于2014年由牛津大学计算机视觉组和DeepMind公司共同研究的。在2014年的ILSVRC比赛上获得了分类项目的第二名
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能的发展，让我们将那些需要手动操作才能处理的问题，让计算机也可以解决。例如，自然语言处理、人脸识别和图片分类等。因此，我们需要借助机器学习
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/卷积神经网络模型/" class="post-category" target="_blank">
-                                    卷积神经网络模型
+                            <a href="/categories/特征工程/" class="post-category" target="_blank">
+                                    特征工程
                                 </a>
                             
                             
@@ -837,20 +926,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/人工智能/" target="_blank">
-                        <span class="chip bg-color">人工智能</span>
-                    </a>
-                    
-                    <a href="/tags/深度学习/" target="_blank">
-                        <span class="chip bg-color">深度学习</span>
-                    </a>
-                    
-                    <a href="/tags/卷积神经网络/" target="_blank">
-                        <span class="chip bg-color">卷积神经网络</span>
-                    </a>
-                    
-                    <a href="/tags/CNN/" target="_blank">
-                        <span class="chip bg-color">CNN</span>
+                    <a href="/tags/特征工程，数据挖掘，数据分析/" target="_blank">
+                        <span class="chip bg-color">特征工程，数据挖掘，数据分析</span>
                     </a>
                     
                 </div>
