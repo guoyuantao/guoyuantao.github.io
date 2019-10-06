@@ -459,28 +459,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     
     
     <div class="carousel-item amber white-text carousel-post bg-cover"
-            style="background-image: url('/medias/featureimages/5.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">CNN模型之ZFNet</div>
-                    <div class="description center-align">
-                    
-                        一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在I
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/2019/09/16/cnn-mo-xing-zhi-zfnet/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover"
             style="background-image: url('/medias/featureimages/22.jpg');">
         <div class="container">
             <div class="row">
@@ -493,6 +471,28 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     </div>
                     <div class="cover-btns">
                         <a href="/2019/09/05/cnn-mo-xing-zhi-lenet-5/" class="waves-effect waves-light btn" target="_blank">
+                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="carousel-item amber white-text carousel-post bg-cover"
+            style="background-image: url('/medias/featureimages/5.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <div class="title center-align">CNN模型之ZFNet</div>
+                    <div class="description center-align">
+                    
+                        一、介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZFNet是Matthew D.Zeiler于2013年提出，并获得了13年ImageNet的冠军。2012年AlexNet问世，并在I
+                    
+                    </div>
+                    <div class="cover-btns">
+                        <a href="/2019/09/16/cnn-mo-xing-zhi-zfnet/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon fa fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -658,6 +658,41 @@ $(function () {
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"情深深雨濛濛","artist":"杨胖雨","url":"http://music.163.com/song/media/outer/url?id=1367368790.mp3","cover":"http://p1.music.126.net/EEoGnr4Fm1KoYWtVPr2cwQ==/109951164096171163.jpg"},{"name":"问","artist":"林忆莲","url":"http://music.163.com/song/media/outer/url?id=255950.mp3","cover":"http://p2.music.126.net/DwgWuxtWczcdg2FJ9RFQ7A==/78065325589712.jpg.png"},{"name":"天亮以后说再见","artist":"曲肖冰","url":"http://music.163.com/song/media/outer/url?id=1336789644.mp3","cover":"http://p1.music.126.net/_P71psYXWlTrEWEuyyN7QA==/109951163770392080.jpg"},{"name":"那女孩对我说","artist":"Uu","url":"http://music.163.com/song/media/outer/url?id=1372796676.mp3","cover":"http://p2.music.126.net/tXo6kGSy27gXlQzOI2O5BA==/109951164161042589.jpg"}]')
+    });
+});
+</script>
                     
 
                     
